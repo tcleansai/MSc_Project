@@ -1,0 +1,68 @@
+\chapter{Processing and Methodologies}
+
+\section{Processing Flow}
+
+\section{Face Alignment}
+The aim of face alignment is to localize the feature points on face images. The points are usually around eyes, nose, mouth, and outline. Face alignment techniques are essential on face recognition, modelling and synthesis. There are three main different approaches Parametrized Appearance Models(PAMs), Discriminative approaches, Part-based deformable models. Parametrized appearance models contains many models such as active appearance models (AAMs), morphrable models, eigentrackings, and template tracking \cite{xiong2013supervised}. All these models are using PCA method to parametrize a face. A face could approximately decomposed as linear combination of shape basis and appearance basis. The problem of face alignment could be refer as minimizing the difference between the constructed PAM and the face. Common approach is use Gauss-Newton methods \cite{xiong2013supervised}. Discriminative approaches are to learn the linear regression between the head move and appearance change. Part-based deformable model perform face alignment by maximizing the posterior likelihood of part locations given image\cite{xiong2013supervised}. 
+
+\subsection{Aative Appearance Model}
+
+Active Appearance Model (AAMs) is defined as a generative model of a certain visual phenomenon in \cite{matthews2004active}. AAMs are closely related to concept of morphable models, constrained models and active blobs. In face alignment it is a face model consists of linear shape model and appearance model. There are two types of AAMs, one refers as independent shape and appearance models, which model shape and appearance independently, and the other refers as combined shape and appearance models, which parameterized shape and appearance model with a single set of linear parameters \cite{matthews2004active}. Normally AAMs appears along with a fitting algorithm. However, in the following context, it only refers to a model.\cite{matthews2004active} gave a well explain about what is an AAM.\newline
+Shape of a face is definded as a mesh and is represented as coordinates of v vertices of the face points:
+\begin{equation}
+s = (x_{1},y_{1},x_{2},y_{2},...,x_{v},y_{v})^{T}
+\end{equation}
+\newline
+$s$ also can be expressed as a base shape $s_{0}$ plus linear combination of $n$ shape vectors $s_{i}$:
+\begin{equation}
+s = s_{i} + \sum_{i =1}^{n}p_{i}s_{i}
+\end{equation}
+\newline
+For all pixels x in the mesh $s_{0}$, appearance $A(0)$ can be expressed as base appearance $A_{0}(x)$ and m appearance images $A_{i}(x)$.
+\begin{equation}
+A(x) = A_{0}(x) + \sum_{i=1}^{m}\lambda_{i}A_{i}(x) \qquad \forall x \in s_{0}
+\end{equation}
+\newline
+Next equation defines the appearance of $s$. $W(x:p)$ is the warp from $s_{0}$ to $s$. Then the model $M$ set the appearance of $W(x:p)$ to $A(x)$.
+\begin{equation}
+M(W(x:p)) = A(x)
+\end{equation}
+\newline
+Combined AAMs
+\newline
+Combined AAMs just use parameter $c = (c_{1},c_{2},...)^{T}$ to parametrize shape:
+\begin{equation}
+s = s_{0} + \sum_{i=1}^{l}c_{i}s_{i}
+\end{equation}
+and appearance:
+\begin{equation}
+A(x) = A_{0}(x) + \sum_{i=1}^{l}c_{i}A_{i}(x)
+\end{equation}
+
+\subsection{Trackers}
+In the processing of face alignment I tried three trackers, but mainly using two trackers, one is from Intraface \cite{xiong2013supervised} and the other DRMF \cite{asthana2013robust}. 
+\paragraph{Intraface}
+\cite{xiong2013supervised} implies image alignment  can be posed as solving a nonlinear optimization problem. It uses Supervised Descent Method for minimising Non-linear Least Square(NLS) function, which avoids calculating the Hessian and the Jacobian that could be computationally expensive.
+\newline
+Examples:
+\paragraph{DRMF}
+DRMF uses novel discriminative regression based on Constrained Local Models(CLMs) for face alignment.
+\newline
+Examples
+\subsection{Comparison}
+\cite{xiong2013supervised} implies that face alignment problem are usually treated as  solving continuous nonlinear optimisation problem. \cite{xiong2013supervised} uses supervised descent method (SDM) for minimising the  Non-linear Least Square (NLS) function. \cite{asthana2013robust} uses discriminative regression approach for constrained local method (CLM). However, from the computing time and alignment results, \cite{xiong2013supervised} is better than \cite{asthana2013robust} in many aspects.
+\newline
+Description
+\section{Remove Head-pose}
+The algroithm of removing head-pose from tracking points is in \cite{saragih2011deformable}.The following are some example of orginal track points and deformed points:
+\section{Warping}
+In order to have the appearance image of the face after removed head-pose, it is necessary to warp the face with head pose. Basic idea is to for each triangles builded by tracking points, the image points in the triagnles are projected to the corresponding triagnles built by deformed points. The following are some examples of face before and after warping:
+\section{Feature Extraction}
+The image after warping is not directly used for classfication. The data for classfication is the features of the image. There are many techniques to extract features from images, in this experiment, Local Binary Pattern are used for extracting image feature.
+\subsection{Local Binary Pattern}
+Effective facial representation of the original face iamges is an important part of successful facial expression recognition.
+\section{Postprocessing}
+Due to the time limits, in the experiment part, we only use support vector machine to do classfication.
+\paragraph{Normalization}
+
+\paragraph{Scaling}

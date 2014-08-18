@@ -1,0 +1,34 @@
+\contentsline {chapter}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {1.1}Motivation}{2}
+\contentsline {section}{\numberline {1.2}Thesis}{2}
+\contentsline {section}{\numberline {1.3}Contribution}{2}
+\contentsline {chapter}{\numberline {2}Background}{3}
+\contentsline {section}{\numberline {2.1}Automatic Speeech Recognition}{3}
+\contentsline {section}{\numberline {2.2}Visual Front End}{3}
+\contentsline {subsection}{\numberline {2.2.1}Face and Facial Part Detection}{3}
+\contentsline {subsection}{\numberline {2.2.2}Region of Interest}{3}
+\contentsline {section}{\numberline {2.3}Facial Expression}{3}
+\contentsline {section}{\numberline {2.4}Nonlinguistic Vocalization}{3}
+\contentsline {chapter}{\numberline {3}Processing and Methodologies}{4}
+\contentsline {section}{\numberline {3.1}Processing Flow}{4}
+\contentsline {section}{\numberline {3.2}Face Alignment}{4}
+\contentsline {subsection}{\numberline {3.2.1}Aative Appearance Model}{4}
+\contentsline {subsection}{\numberline {3.2.2}Trackers}{5}
+\contentsline {paragraph}{Intraface}{5}
+\contentsline {paragraph}{DRMF}{5}
+\contentsline {subsection}{\numberline {3.2.3}Comparison}{5}
+\contentsline {section}{\numberline {3.3}Remove Head-pose}{5}
+\contentsline {section}{\numberline {3.4}Warping}{5}
+\contentsline {section}{\numberline {3.5}Feature Extraction}{6}
+\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{6}
+\contentsline {section}{\numberline {3.6}Postprocessing}{6}
+\contentsline {paragraph}{Normalization}{6}
+\contentsline {paragraph}{Scaling}{6}
+\contentsline {chapter}{\numberline {4}Experiment and Results}{7}
+\contentsline {section}{\numberline {4.1}Database}{7}
+\contentsline {subsection}{\numberline {4.1.1}Feature and Data}{7}
+\contentsline {section}{\numberline {4.2}Methodology}{7}
+\contentsline {paragraph}{RBF}{7}
+\contentsline {section}{\numberline {4.3}Experiments}{7}
+\contentsline {section}{\numberline {4.4}Results and Analysis}{7}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{8}

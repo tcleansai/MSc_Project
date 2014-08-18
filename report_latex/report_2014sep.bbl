@@ -1,0 +1,32 @@
+\begin{thebibliography}{1}
+
+\bibitem{asthana2013robust}
+Akshay Asthana, Stefanos Zafeiriou, Shiyang Cheng, and Maja Pantic.
+\newblock Robust discriminative response map fitting with constrained local
+  models.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2013 IEEE
+  Conference on}, pages 3444--3451. IEEE, 2013.
+
+\bibitem{matthews2004active}
+Iain Matthews and Simon Baker.
+\newblock Active appearance models revisited.
+\newblock {\em International Journal of Computer Vision}, 60(2):135--164, 2004.
+
+\bibitem{potamianos2003recent}
+Gerasimos Potamianos, Chalapathy Neti, Guillaume Gravier, Ashutosh Garg, and
+  Andrew~W Senior.
+\newblock Recent advances in the automatic recognition of audiovisual speech.
+\newblock {\em Proceedings of the IEEE}, 91(9):1306--1326, 2003.
+
+\bibitem{saragih2011deformable}
+Jason~M Saragih, Simon Lucey, and Jeffrey~F Cohn.
+\newblock Deformable model fitting by regularized landmark mean-shift.
+\newblock {\em International Journal of Computer Vision}, 91(2):200--215, 2011.
+
+\bibitem{xiong2013supervised}
+Xuehan Xiong and Fernando De~la Torre.
+\newblock Supervised descent method and its applications to face alignment.
+\newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2013 IEEE
+  Conference on}, pages 532--539. IEEE, 2013.
+
+\end{thebibliography}
