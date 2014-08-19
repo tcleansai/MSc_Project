@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.2.19)  19 AUG 2014 01:07
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.2.19)  19 AUG 2014 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -146,38 +146,7 @@ LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
 )
-(./report_2014sep.aux
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-
-LaTeX Warning: Label `overflow' multiply defined.
-
-)
+(./report_2014sep.aux)
 \openout1 = `report_2014sep.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -309,66 +278,78 @@ File: imgs/ProcedureChart.png Graphic file (type png)
 
 <use imgs/ProcedureChart.png>
 Package pdftex.def Info: imgs/ProcedureChart.png used on input line 7.
-(pdftex.def)             Requested size: 256.0748pt x 168.77312pt.
+(pdftex.def)             Requested size: 426.79134pt x 281.29742pt.
 
 <imgs/DataFlowChart.png, id=27, 1656.1875pt x 752.8125pt>
 File: imgs/DataFlowChart.png Graphic file (type png)
 
 <use imgs/DataFlowChart.png>
 Package pdftex.def Info: imgs/DataFlowChart.png used on input line 14.
-(pdftex.def)             Requested size: 256.0748pt x 116.39755pt.
+(pdftex.def)             Requested size: 426.79134pt x 193.9921pt.
+
+Underfull \vbox (badness 6625) has occurred while \output is active []
+
  [4
 
- <./imgs/ProcedureChart.png (PNG copy)> <./imgs/DataFlowChart.png (PNG copy)>]
-<imgs/Tracking_Intraface_eating_red.png, id=32, 965.10562pt x 965.10562pt>
+ <./imgs/ProcedureChart.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
+
+ []
+
+[5 <./imgs/DataFlowChart.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+
+ []
+
+<imgs/Tracking_Intraface_eating_red.png, id=35, 965.10562pt x 965.10562pt>
 File: imgs/Tracking_Intraface_eating_red.png Graphic file (type png)
 
 <use imgs/Tracking_Intraface_eating_red.png>
 Package pdftex.def Info: imgs/Tracking_Intraface_eating_red.png used on input l
-ine 64.
+ine 69.
 (pdftex.def)             Requested size: 256.0748pt x 256.07574pt.
 
-<imgs/Talking_Intraface_140711_176_184.png, id=34, 374.14781pt x 374.14781pt>
+<imgs/Talking_Intraface_140711_176_184.png, id=37, 374.14781pt x 374.14781pt>
 File: imgs/Talking_Intraface_140711_176_184.png Graphic file (type png)
 
 <use imgs/Talking_Intraface_140711_176_184.png>
 Package pdftex.def Info: imgs/Talking_Intraface_140711_176_184.png used on inpu
-t line 71.
+t line 75.
 (pdftex.def)             Requested size: 256.0748pt x 256.08417pt.
 
-<imgs/Talking_DRMF_140711_176_184.png, id=35, 1356.56813pt x 1356.56813pt>
+<imgs/Talking_DRMF_140711_176_184.png, id=38, 1356.56813pt x 1356.56813pt>
 File: imgs/Talking_DRMF_140711_176_184.png Graphic file (type png)
 
 <use imgs/Talking_DRMF_140711_176_184.png>
 Package pdftex.def Info: imgs/Talking_DRMF_140711_176_184.png used on input lin
-e 82.
+e 85.
 (pdftex.def)             Requested size: 256.0748pt x 256.07396pt.
- [5]
-<imgs/Tracking_DRMF_eating.png, id=44, 965.10562pt x 965.10562pt>
+ [6]
+<imgs/Tracking_DRMF_eating.png, id=47, 965.10562pt x 965.10562pt>
 File: imgs/Tracking_DRMF_eating.png Graphic file (type png)
 
 <use imgs/Tracking_DRMF_eating.png>
-Package pdftex.def Info: imgs/Tracking_DRMF_eating.png used on input line 89.
+Package pdftex.def Info: imgs/Tracking_DRMF_eating.png used on input line 91.
 (pdftex.def)             Requested size: 256.0748pt x 256.07574pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 96--98
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
 
  []
 
 
 Underfull \vbox (badness 2310) has occurred while \output is active []
 
- [6 <./imgs/Tracking_Intraface_eating_red.png> <./imgs/Talking_Intraface_140711
+ [7 <./imgs/Tracking_Intraface_eating_red.png> <./imgs/Talking_Intraface_140711
 _176_184.png>]
-<imgs/Tracking_Intraface_DRMF_compare_00.png, id=50, 1928.70563pt x 1928.70563p
+<imgs/Tracking_Intraface_DRMF_compare_00.png, id=53, 1928.70563pt x 1928.70563p
 t>
 File: imgs/Tracking_Intraface_DRMF_compare_00.png Graphic file (type png)
  <use imgs/Tracking_Intraface_DRMF_compare_00.png>
 Package pdftex.def Info: imgs/Tracking_Intraface_DRMF_compare_00.png used on in
-put line 101.
+put line 102.
 (pdftex.def)             Requested size: 256.0748pt x 256.06729pt.
 
-<imgs/Tracking_Intraface_DRMF_comparison.png, id=51, 1928.70563pt x 1928.70563p
+<imgs/Tracking_Intraface_DRMF_comparison.png, id=54, 1928.70563pt x 1928.70563p
 t>
 File: imgs/Tracking_Intraface_DRMF_comparison.png Graphic file (type png)
  <use imgs/Tracking_Intraface_DRMF_comparison.png>
@@ -376,72 +357,69 @@ Package pdftex.def Info: imgs/Tracking_Intraface_DRMF_comparison.png used on in
 put line 108.
 (pdftex.def)             Requested size: 256.0748pt x 256.06729pt.
 
-<imgs/160954_Deform_213.png, id=52, 679.78969pt x 288.3272pt>
+<imgs/160954_Deform_213.png, id=55, 679.78969pt x 288.3272pt>
 File: imgs/160954_Deform_213.png Graphic file (type png)
 
 <use imgs/160954_Deform_213.png>
-Package pdftex.def Info: imgs/160954_Deform_213.png used on input line 119.
+Package pdftex.def Info: imgs/160954_Deform_213.png used on input line 118.
 (pdftex.def)             Requested size: 256.0748pt x 108.61076pt.
 
 Underfull \vbox (badness 3333) has occurred while \output is active []
 
- [7 <./imgs/Talking_DRMF_140711_176_184.png> <./imgs/Tracking_DRMF_eating.png>]
+ [8 <./imgs/Talking_DRMF_140711_176_184.png> <./imgs/Tracking_DRMF_eating.png>]
 
-<imgs/160954_Deform_233.png, id=58, 681.29532pt x 284.56313pt>
+<imgs/160954_Deform_233.png, id=61, 681.29532pt x 284.56313pt>
 File: imgs/160954_Deform_233.png Graphic file (type png)
 
 <use imgs/160954_Deform_233.png>
-Package pdftex.def Info: imgs/160954_Deform_233.png used on input line 126.
+Package pdftex.def Info: imgs/160954_Deform_233.png used on input line 124.
 (pdftex.def)             Requested size: 256.0748pt x 106.9584pt.
 
-<imgs/Warping_Intraface_213.png, id=59, 1206.00563pt x 603.75563pt>
+<imgs/Warping_Intraface_213.png, id=62, 1206.00563pt x 603.75563pt>
 File: imgs/Warping_Intraface_213.png Graphic file (type png)
 
 <use imgs/Warping_Intraface_213.png>
-Package pdftex.def Info: imgs/Warping_Intraface_213.png used on input line 136.
+Package pdftex.def Info: imgs/Warping_Intraface_213.png used on input line 133.
 
 (pdftex.def)             Requested size: 256.0748pt x 128.19273pt.
- [8 <./imgs/Tracking_Intraface_DRMF_compare_00.png> <./imgs/Tracking_Intraface_
-DRMF_comparison.png>] [9 <./imgs/160954_Deform_213.png (PNG copy)> <./imgs/1609
-54_Deform_233.png (PNG copy)> <./imgs/Warping_Intraface_213.png>]) (./chapter2/
-chapter2.tex [10]
+ [9 <./imgs/Tracking_Intraface_DRMF_compare_00.png> <./imgs/Tracking_Intraface_
+DRMF_comparison.png>] [10 <./imgs/160954_Deform_213.png (PNG copy)> <./imgs/160
+954_Deform_233.png (PNG copy)> <./imgs/Warping_Intraface_213.png>]) (./chapter2
+/chapter2.tex [11]
 Chapter 4.
-) (./conclusion/conclusion.tex [11
+) (./conclusion/conclusion.tex [12
 
 ]
 Chapter 5.
-) (./report_2014sep.bbl [12
+) (./report_2014sep.bbl [13
 
-]) [13
+]) [14
 
-] (./report_2014sep.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+] (./report_2014sep.aux) ) 
 Here is how much of TeX's memory you used:
- 2784 strings out of 493315
- 39550 string characters out of 6137904
- 107771 words of memory out of 5000000
- 6169 multiletter control sequences out of 15000+600000
+ 2783 strings out of 493315
+ 39540 string characters out of 6137904
+ 107721 words of memory out of 5000000
+ 6168 multiletter control sequences out of 15000+600000
  11267 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,6n,23p,1206b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><
-/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
-cal/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
-l/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/t
-exlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
-xlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on report_2014sep.pdf (16 pages, 24167929 bytes).
+ 38i,6n,23p,1409b,227s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2013/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb>
+Output written on report_2014sep.pdf (17 pages, 24171967 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 122 PDF objects out of 1000 (max. 8388607)
+ 73 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

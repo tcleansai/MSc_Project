@@ -11,24 +11,29 @@
 \contentsline {section}{\numberline {2.4}Nonlinguistic Vocalization}{3}
 \contentsline {chapter}{\numberline {3}Processing and Methodologies}{4}
 \contentsline {section}{\numberline {3.1}Processing Flow}{4}
-\contentsline {section}{\numberline {3.2}Face Alignment}{4}
+\contentsline {paragraph}{Processing Chart}{4}
+\contentsline {paragraph}{Data flow Chart}{5}
+\contentsline {section}{\numberline {3.2}Face Alignment}{5}
 \contentsline {subsection}{\numberline {3.2.1}Aative Appearance Model}{5}
-\contentsline {subsection}{\numberline {3.2.2}Trackers}{5}
-\contentsline {paragraph}{Intraface}{6}
-\contentsline {paragraph}{DRMF}{6}
-\contentsline {subsection}{\numberline {3.2.3}Comparison}{7}
-\contentsline {section}{\numberline {3.3}Remove Head-pose}{8}
-\contentsline {section}{\numberline {3.4}Warping}{8}
-\contentsline {section}{\numberline {3.5}Feature Extraction}{9}
-\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{9}
-\contentsline {section}{\numberline {3.6}Postprocessing}{9}
-\contentsline {paragraph}{Normalization}{10}
-\contentsline {paragraph}{Scaling}{10}
-\contentsline {chapter}{\numberline {4}Experiment and Results}{11}
-\contentsline {section}{\numberline {4.1}Database}{11}
-\contentsline {subsection}{\numberline {4.1.1}Feature and Data}{11}
-\contentsline {section}{\numberline {4.2}Methodology}{11}
-\contentsline {paragraph}{RBF}{11}
-\contentsline {section}{\numberline {4.3}Experiments}{11}
-\contentsline {section}{\numberline {4.4}Results and Analysis}{11}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{12}
+\contentsline {paragraph}{Shape}{6}
+\contentsline {paragraph}{Appearance}{6}
+\contentsline {paragraph}{Model}{6}
+\contentsline {subsection}{\numberline {3.2.2}Trackers}{6}
+\contentsline {paragraph}{Intraface}{7}
+\contentsline {paragraph}{DRMF}{7}
+\contentsline {subsection}{\numberline {3.2.3}Comparison}{8}
+\contentsline {section}{\numberline {3.3}Remove Head-pose}{9}
+\contentsline {section}{\numberline {3.4}Warping}{9}
+\contentsline {section}{\numberline {3.5}Feature Extraction}{10}
+\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{10}
+\contentsline {section}{\numberline {3.6}Postprocessing}{10}
+\contentsline {paragraph}{Normalization}{11}
+\contentsline {paragraph}{Scaling}{11}
+\contentsline {chapter}{\numberline {4}Experiment and Results}{12}
+\contentsline {section}{\numberline {4.1}Database}{12}
+\contentsline {subsection}{\numberline {4.1.1}Feature and Data}{12}
+\contentsline {section}{\numberline {4.2}Methodology}{12}
+\contentsline {paragraph}{RBF}{12}
+\contentsline {section}{\numberline {4.3}Experiments}{12}
+\contentsline {section}{\numberline {4.4}Results and Analysis}{12}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{13}
