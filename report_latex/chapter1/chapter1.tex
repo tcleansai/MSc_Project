@@ -2,6 +2,18 @@
 
 \section{Processing Flow}
 
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/ProcedureChart.png}
+\caption{Eating sequence tracked by Intraface}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/DataFlowChart.png}
+\caption{Eating sequence tracked by Intraface}
+\end{figure}
+
 \section{Face Alignment}
 The aim of face alignment is to localize the feature points on face images. The points are usually around eyes, nose, mouth, and outline. Face alignment techniques are essential on face recognition, modelling and synthesis. There are three main different approaches Parametrized Appearance Models(PAMs), Discriminative approaches, Part-based deformable models. Parametrized appearance models contains many models such as active appearance models (AAMs), morphrable models, eigentrackings, and template tracking \cite{xiong2013supervised}. All these models are using PCA method to parametrize a face. A face could approximately decomposed as linear combination of shape basis and appearance basis. The problem of face alignment could be refer as minimizing the difference between the constructed PAM and the face. Common approach is use Gauss-Newton methods \cite{xiong2013supervised}. Discriminative approaches are to learn the linear regression between the head move and appearance change. Part-based deformable model perform face alignment by maximizing the posterior likelihood of part locations given image\cite{xiong2013supervised}. 
 
@@ -45,18 +57,76 @@ In the processing of face alignment I tried three trackers, but mainly using two
 \cite{xiong2013supervised} implies image alignment  can be posed as solving a nonlinear optimization problem. It uses Supervised Descent Method for minimising Non-linear Least Square(NLS) function, which avoids calculating the Hessian and the Jacobian that could be computationally expensive.
 \newline
 Examples:
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/Tracking_Intraface_eating_red.png}
+\caption{Eating sequence tracked by Intraface}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/Talking_Intraface_140711_176_184.png}
+\caption{Talking sequence tracked by Intraface}
+\end{figure}
+
 \paragraph{DRMF}
 DRMF uses novel discriminative regression based on Constrained Local Models(CLMs) for face alignment.
 \newline
-Examples
+Examples:
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/Talking_DRMF_140711_176_184.png}
+\caption{Talking sequence tracked by DRMF}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/Tracking_DRMF_eating.png}
+\caption{Eating sequence tracked by DRMF}
+\end{figure}
+
+
 \subsection{Comparison}
 \cite{xiong2013supervised} implies that face alignment problem are usually treated as  solving continuous nonlinear optimisation problem. \cite{xiong2013supervised} uses supervised descent method (SDM) for minimising the  Non-linear Least Square (NLS) function. \cite{asthana2013robust} uses discriminative regression approach for constrained local method (CLM). However, from the computing time and alignment results, \cite{xiong2013supervised} is better than \cite{asthana2013robust} in many aspects.
 \newline
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/Tracking_Intraface_DRMF_compare_00.png}
+\caption{Talking sequence tracked by DRMF}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/Tracking_Intraface_DRMF_comparison.png}
+\caption{Talking sequence tracked by DRMF}
+\end{figure}
+
 Description
 \section{Remove Head-pose}
 The algroithm of removing head-pose from tracking points is in \cite{saragih2011deformable}.The following are some example of orginal track points and deformed points:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/160954_Deform_213.png}
+\caption{Talking sequence tracked by DRMF}
+\end{figure}
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/160954_Deform_233.png}
+\caption{Talking sequence tracked by DRMF}
+\end{figure}
+
 \section{Warping}
 In order to have the appearance image of the face after removed head-pose, it is necessary to warp the face with head pose. Basic idea is to for each triangles builded by tracking points, the image points in the triagnles are projected to the corresponding triagnles built by deformed points. The following are some examples of face before and after warping:
+
+\begin{figure}[ht!]
+\centering
+\includegraphics[width=90mm]{imgs/Warping_Intraface_213.png}
+\caption{Talking sequence tracked by DRMF}
+\end{figure}
+
 \section{Feature Extraction}
 The image after warping is not directly used for classfication. The data for classfication is the features of the image. There are many techniques to extract features from images, in this experiment, Local Binary Pattern are used for extracting image feature.
 \subsection{Local Binary Pattern}
