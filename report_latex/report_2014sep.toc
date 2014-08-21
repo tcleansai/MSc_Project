@@ -20,20 +20,24 @@
 \contentsline {paragraph}{Model}{6}
 \contentsline {subsection}{\numberline {3.2.2}Trackers}{6}
 \contentsline {paragraph}{Intraface}{7}
+\contentsline {paragraph}{Tracking Points}{7}
+\contentsline {paragraph}{Eating and Talkingsequence}{7}
 \contentsline {paragraph}{DRMF}{7}
+\contentsline {paragraph}{Tracking Points}{7}
+\contentsline {paragraph}{Talking and Talking Sequence}{7}
 \contentsline {subsection}{\numberline {3.2.3}Comparison}{8}
-\contentsline {section}{\numberline {3.3}Remove Head-pose}{9}
+\contentsline {section}{\numberline {3.3}Remove Head-pose}{8}
 \contentsline {section}{\numberline {3.4}Warping}{9}
-\contentsline {section}{\numberline {3.5}Feature Extraction}{10}
-\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{10}
-\contentsline {section}{\numberline {3.6}Postprocessing}{10}
-\contentsline {paragraph}{Normalization}{11}
-\contentsline {paragraph}{Scaling}{11}
-\contentsline {chapter}{\numberline {4}Experiment and Results}{12}
-\contentsline {section}{\numberline {4.1}Database}{12}
-\contentsline {subsection}{\numberline {4.1.1}Feature and Data}{12}
-\contentsline {section}{\numberline {4.2}Methodology}{12}
-\contentsline {paragraph}{RBF}{12}
-\contentsline {section}{\numberline {4.3}Experiments}{12}
-\contentsline {section}{\numberline {4.4}Results and Analysis}{12}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{13}
+\contentsline {section}{\numberline {3.5}Feature Extraction}{9}
+\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{9}
+\contentsline {section}{\numberline {3.6}Postprocessing}{9}
+\contentsline {paragraph}{Normalization}{10}
+\contentsline {paragraph}{Scaling}{10}
+\contentsline {chapter}{\numberline {4}Experiment and Results}{14}
+\contentsline {section}{\numberline {4.1}Database}{14}
+\contentsline {subsection}{\numberline {4.1.1}Feature and Data}{14}
+\contentsline {section}{\numberline {4.2}Methodology}{14}
+\contentsline {paragraph}{RBF}{14}
+\contentsline {section}{\numberline {4.3}Experiments}{14}
+\contentsline {section}{\numberline {4.4}Results and Analysis}{14}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{15}

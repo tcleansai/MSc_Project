@@ -59,74 +59,71 @@ A(x) = A_{0}(x) + \sum_{i=1}^{l}c_{i}A_{i}(x)
 \end{equation}
 
 \subsection{Trackers}
-In the processing of face alignment I tried three trackers, but mainly using two trackers, one is from Intraface \cite{xiong2013supervised} and the other DRMF \cite{asthana2013robust}. 
+I tried two main trackers for tracking characteristic facial points, one is Intraface \cite{xiong2013supervised} which use suppervised decent method, the other is DRMF \cite{asthana2013robust} which use discriminative response map fitting. The number of landmark points, tracking effect and programming execution time are quite different.
 \paragraph{Intraface}
-\cite{xiong2013supervised} implies image alignment  can be posed as solving a nonlinear optimization problem. It uses Supervised Descent Method for minimising Non-linear Least Square(NLS) function, which avoids calculating the Hessian and the Jacobian that could be computationally expensive.
+\cite{xiong2013supervised} implies image alignment  can be posed as solving a nonlinear optimization problem. It uses Supervised Descent Method for minimising Non-linear Least Square(NLS) function, which avoids calculating the Hessian and the Jacobian that could be computationally expensive. Intraface tracks points very effective and efficient.
 \newline
-Examples:
-\begin{figure}[ht!]
+\paragraph{Tracking Points}
+\paragraph{Eating and Talkingsequence}
+\begin{figure}[h!]
 \centering
-\includegraphics[width=90mm]{imgs/Tracking_Intraface_eating_red.png}
+\includegraphics[width=130mm]{imgs/Tracking_Intraface_eating_red.png}
 \caption{Eating sequence tracked by Intraface}
 \end{figure}
-
-\begin{figure}[ht!]
+A image sequences of eating tracked by Intraface is shown above. The point are aligned very precisely along the face.
+\begin{figure}[h!]
 \centering
-\includegraphics[width=90mm]{imgs/Talking_Intraface_140711_176_184.png}
+\includegraphics[width=130mm]{imgs/Talking_Intraface_140711_176_184.png}
 \caption{Talking sequence tracked by Intraface}
 \end{figure}
-
+A image sequence of talking tracked by Intraface is shown above.
 \paragraph{DRMF}
-DRMF uses novel discriminative regression based on Constrained Local Models(CLMs) for face alignment.
+DRMF uses novel discriminative regression based on Constrained Local Models(CLMs) for face alignment. The basic idea of DRMF is to fit a face for each frame of a video. There are 66 points tracked by this video.
 \newline
-Examples:
-\begin{figure}[ht!]
+\paragraph{Tracking Points}
+\paragraph{Talking and Talking Sequence}
+A image sequences of eating tracked by Intraface is shown below.
+\begin{figure}[h!]
 \centering
-\includegraphics[width=90mm]{imgs/Talking_DRMF_140711_176_184.png}
+\includegraphics[width=130mm]{imgs/Talking_DRMF_140711_176_184.png}
 \caption{Talking sequence tracked by DRMF}
 \end{figure}
-
-\begin{figure}[ht!]
+\begin{figure}[h!]
 \centering
-\includegraphics[width=90mm]{imgs/Tracking_DRMF_eating.png}
+\includegraphics[width=130mm]{imgs/Tracking_DRMF_eating.png}
 \caption{Eating sequence tracked by DRMF}
 \end{figure}
 
-
 \subsection{Comparison}
-\cite{xiong2013supervised} implies that face alignment problem are usually treated as  solving continuous nonlinear optimisation problem. \cite{xiong2013supervised} uses supervised descent method (SDM) for minimising the  Non-linear Least Square (NLS) function. \cite{asthana2013robust} uses discriminative regression approach for constrained local method (CLM). However, from the computing time and alignment results, \cite{xiong2013supervised} is better than \cite{asthana2013robust} in many aspects.
-\newline
-
-\begin{figure}[ht!]
+The following are some examples for comparing two trackers. There are two version of DRMF tracker one is implemented by CUDA language the other is by C language. Although the C version of DRMF is very slow and very easy to run out of memory, the version implementd by CUDA is very fast as CUDA is using parallel computing. However, DRMF is not as accurate as Intraface and not suitable for this project. In many situations, DRMF try to fit a face and the fitting result is awful. The images with red points are tracked by Intraface, and the images with blue points is tracked by DRMF.
+\begin{figure}[h!]
 \centering
-\includegraphics[width=90mm]{imgs/Tracking_Intraface_DRMF_compare_00.png}
-\caption{Talking sequence tracked by DRMF}
+\includegraphics[width=130mm]{imgs/Tracking_Intraface_DRMF_compare_00.png}
+\caption{Tracking result, red points tracked by Intraface and blue points tracked by DRMF}
 \end{figure}
-
-\begin{figure}[ht!]
+From figure above, it seems both tracker can only be used to trak one face at one time. DRMF detect the smaller face instead of the bigger one is possiblly because of the algorithm. The second and third frames are tracked by DRMF is not very accurate on the nose area. As the track point of mouth, intraface is better than DRMF.
+\begin{figure}[h!]
 \centering
-\includegraphics[width=90mm]{imgs/Tracking_Intraface_DRMF_comparison.png}
-\caption{Talking sequence tracked by DRMF}
+\includegraphics[width=130mm]{imgs/Tracking_Intraface_DRMF_comparison.png}
+\caption{Tracking result, red points tracked by Intraface and blue points tracked by DRMF}
 \end{figure}
-
-Description
+In some frame, partial of face is out of frame. Intraface is better dealing with this type of situation. Intraface ignore those points that out of the images. DRMF tries to fit a face forcibly. It often lead to bad influence on the traking result shown in the figure.
 \section{Remove Head-pose}
-The algroithm of removing head-pose from tracking points is in \cite{saragih2011deformable}.The following are some example of orginal track points and deformed points:
-
-\begin{figure}[ht!]
+The algroithm of removing head-pose from tracking points is in \cite{saragih2011deformable}. The following are some example of orginal track points and deformed points. Remove head pose of face and the warp the face to frontal direction is the most important part of extracting appearance feature. Here are two examples, from example one, rotation on x-y direction is mostly removed. In example two, the algorithm also show some efficient on remove head-pose of x-z direction and y-z direction.
+\begin{figure}[h!]
 \centering
-\includegraphics[width=90mm]{imgs/160954_Deform_213.png}
-\caption{Talking sequence tracked by DRMF}
+\includegraphics[width=150mm]{imgs/160954_Deform_213.png}
+\caption{Traking points and Deformed Points, Example 1}
 \end{figure}
 
-\begin{figure}[ht!]
+\begin{figure}[h!]
 \centering
-\includegraphics[width=90mm]{imgs/160954_Deform_233.png}
-\caption{Talking sequence tracked by DRMF}
+\includegraphics[width=150mm]{imgs/160954_Deform_233.png}
+\caption{Traking points and Deformed Points, Example 2}
 \end{figure}
 
 \section{Warping}
-In order to have the appearance image of the face after removed head-pose, it is necessary to warp the face with head pose. Basic idea is to for each triangles builded by tracking points, the image points in the triagnles are projected to the corresponding triagnles built by deformed points. The following are some examples of face before and after warping:
+In order to have the appearance image of the face after removed head-pose, it is necessary to warp the face with head pose. Basic idea is to for each triangles builded by shape points, the image points in the triagnles are projected to the corresponding triagnles built by deformed points. The following are some examples of face before and after warping:
 
 \begin{figure}[ht!]
 \centering
@@ -135,11 +132,11 @@ In order to have the appearance image of the face after removed head-pose, it is
 \end{figure}
 
 \section{Feature Extraction}
-The image after warping is not directly used for classfication. The data for classfication is the features of the image. There are many techniques to extract features from images, in this experiment, Local Binary Pattern are used for extracting image feature.
+The image after warping is not directly used for classfication, image feature are stelected to represent the image. Points, edges, ojects and texture are important features of an image. In this project, Local Binary Pattern are used for calssification as it's a very powerful feature for texuture classfication. 
 \subsection{Local Binary Pattern}
-Effective facial representation of the original face iamges is an important part of successful facial expression recognition.
+LBP is chosen to be the feature for representing region of interest. \cite{shan2009facial} obtained best recognition result by using Support Vector Machine with Boosted-LBP features. Moreover, \cite{shan2009facial} shows LBP features perform stably and robustly on low-resolution face images. In the beginning, LBP was used for texture analysis, it has natural advantage on computational simplicity and ignoring illumination changes.
 \section{Postprocessing}
-Due to the time limits, in the experiment part, we only use support vector machine to do classfication.
+
 \paragraph{Normalization}
 
 \paragraph{Scaling}
