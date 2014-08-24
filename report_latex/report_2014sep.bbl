@@ -7,6 +7,18 @@ Akshay Asthana, Stefanos Zafeiriou, Shiyang Cheng, and Maja Pantic.
 \newblock In {\em Computer Vision and Pattern Recognition (CVPR), 2013 IEEE
   Conference on}, pages 3444--3451. IEEE, 2013.
 
+\bibitem{ben2010user}
+Asa Ben-Hur and Jason Weston.
+\newblock A user’s guide to support vector machines.
+\newblock In {\em Data mining techniques for the life sciences}, pages
+  223--239. Springer, 2010.
+
+\bibitem{CC01a}
+Chih-Chung Chang and Chih-Jen Lin.
+\newblock {LIBSVM}: A library for support vector machines.
+\newblock {\em ACM Transactions on Intelligent Systems and Technology},
+  2:27:1--27:27, 2011.
+
 \bibitem{matthews2004active}
 Iain Matthews and Simon Baker.
 \newblock Active appearance models revisited.
@@ -22,6 +34,12 @@ Gerasimos Potamianos, Chalapathy Neti, Guillaume Gravier, Ashutosh Garg, and
 Jason~M Saragih, Simon Lucey, and Jeffrey~F Cohn.
 \newblock Deformable model fitting by regularized landmark mean-shift.
 \newblock {\em International Journal of Computer Vision}, 91(2):200--215, 2011.
+
+\bibitem{shan2009facial}
+Caifeng Shan, Shaogang Gong, and Peter~W McOwan.
+\newblock Facial expression recognition based on local binary patterns: A
+  comprehensive study.
+\newblock {\em Image and Vision Computing}, 27(6):803--816, 2009.
 
 \bibitem{xiong2013supervised}
 Xuehan Xiong and Fernando De~la Torre.
