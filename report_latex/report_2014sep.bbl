@@ -24,6 +24,11 @@ Iain Matthews and Simon Baker.
 \newblock Active appearance models revisited.
 \newblock {\em International Journal of Computer Vision}, 60(2):135--164, 2004.
 
+\bibitem{pantic2007machine}
+Maja Pantic and Marian~Stewart Bartlett.
+\newblock Machine analysis of facial expressions.
+\newblock 2007.
+
 \bibitem{potamianos2003recent}
 Gerasimos Potamianos, Chalapathy Neti, Guillaume Gravier, Ashutosh Garg, and
   Andrew~W Senior.

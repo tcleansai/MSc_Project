@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: report_2014sep.aux
 The style file: plain.bst
 Database file #1: bibliography/bibliography.bib
-You've used 8 entries,
+Warning--empty journal in pantic2007machine
+You've used 9 entries,
             2118 wiz_defined-function locations,
-            550 strings with 5425 characters,
-and the built_in function-call counts, 3378 in all, are:
-= -- 355
-> -- 139
+            555 strings with 5556 characters,
+and the built_in function-call counts, 3617 in all, are:
+= -- 377
+> -- 152
 < -- 3
-+ -- 55
-- -- 46
-* -- 243
-:= -- 527
-add.period$ -- 27
-call.type$ -- 8
-change.case$ -- 47
++ -- 60
+- -- 50
+* -- 255
+:= -- 571
+add.period$ -- 30
+call.type$ -- 9
+change.case$ -- 52
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 127
-empty$ -- 266
-format.name$ -- 46
-if$ -- 728
+cite$ -- 10
+duplicate$ -- 137
+empty$ -- 283
+format.name$ -- 50
+if$ -- 775
 int.to.chr$ -- 0
-int.to.str$ -- 8
-missing$ -- 8
-newline$ -- 43
-num.names$ -- 16
-pop$ -- 46
+int.to.str$ -- 9
+missing$ -- 9
+newline$ -- 48
+num.names$ -- 18
+pop$ -- 53
 preamble$ -- 1
-purify$ -- 39
+purify$ -- 43
 quote$ -- 0
-skip$ -- 96
+skip$ -- 104
 stack$ -- 0
-substring$ -- 285
+substring$ -- 290
 swap$ -- 39
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
-warning$ -- 0
-while$ -- 35
-width$ -- 9
-write$ -- 93
+type$ -- 36
+warning$ -- 1
+while$ -- 37
+width$ -- 10
+write$ -- 102
+(There was 1 warning)

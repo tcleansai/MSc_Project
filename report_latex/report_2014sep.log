@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.2.19)  24 AUG 2014 22:57
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.2.19)  26 AUG 2014 22:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -154,21 +154,97 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks22
 \@floatcapt=\box29
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2011/11/23 v2.0 Making table heads with diagonal lines
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2011/04/05 v0.2y Improved picture commands (HjG,RN,JT)
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2011/04/05 v0.1t pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2011/04/05 v0.1t Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks23
+\@arclen=\dimen122
+\@arcrad=\dimen123
+\@tempdimd=\dimen124
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count105
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count106
+\FP@xia=\count107
+\FP@xib=\count108
+\FP@xfa=\count109
+\FP@xfb=\count110
+\FP@rega=\count111
+\FP@regb=\count112
+\FP@regs=\count113
+\FP@times=\count114
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count115
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+\diagbox@boxa=\box30
+\diagbox@boxb=\box31
+\diagbox@boxm=\box32
+\diagbox@wd=\dimen125
+\diagbox@ht=\dimen126
+\diagbox@sepl=\dimen127
+\diagbox@sepr=\dimen128
+)
 (./report_2014sep.aux)
 \openout1 = `report_2014sep.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
-LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -206,17 +282,17 @@ LaTeX Font Info:    ... okay on input line 18.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count105
-\scratchdimen=\dimen122
-\scratchbox=\box30
-\nofMPsegments=\count106
-\nofMParguments=\count107
-\everyMPshowfont=\toks23
-\MPscratchCnt=\count108
-\MPscratchDim=\dimen123
-\MPnumerator=\count109
-\makeMPintoPDFobject=\count110
-\everyMPtoPDFconversion=\toks24
+\scratchcounter=\count116
+\scratchdimen=\dimen129
+\scratchbox=\box33
+\nofMPsegments=\count117
+\nofMParguments=\count118
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count119
+\MPscratchDim=\dimen130
+\MPnumerator=\count120
+\makeMPintoPDFobject=\count121
+\everyMPtoPDFconversion=\toks25
 ) (/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -279,136 +355,162 @@ Chapter 1.
 Chapter 2.
 [3
 
-]) (./chapter1/chapter1.tex [4]
+] [4]) (./chapter1/chapter1.tex [5]
 Chapter 3.
-<imgs/ProcedureChart.png, id=32, 883.3pt x 582.175pt>
+<imgs/ProcedureChart.png, id=35, 883.3pt x 582.175pt>
 File: imgs/ProcedureChart.png Graphic file (type png)
 
 <use imgs/ProcedureChart.png>
 Package pdftex.def Info: imgs/ProcedureChart.png used on input line 7.
 (pdftex.def)             Requested size: 469.47049pt x 309.42184pt.
- [5
+ [6
 
  <./imgs/ProcedureChart.png (PNG copy)>]
-<imgs/DataFlowChart.png, id=36, 1656.1875pt x 752.8125pt>
+<imgs/DataFlowChart.png, id=39, 1656.1875pt x 752.8125pt>
 File: imgs/DataFlowChart.png Graphic file (type png)
 
 <use imgs/DataFlowChart.png>
 Package pdftex.def Info: imgs/DataFlowChart.png used on input line 15.
 (pdftex.def)             Requested size: 469.47049pt x 213.3936pt.
- [6 <./imgs/DataFlowChart.png (PNG copy)>] [7]
-<imgs/Tracking_Intraface_eating_red.png, id=46, 965.10562pt x 965.10562pt>
+ [7 <./imgs/DataFlowChart.png (PNG copy)>]
+<imgs/AAM_Model.png, id=43, 986.68625pt x 643.40375pt>
+File: imgs/AAM_Model.png Graphic file (type png)
+
+<use imgs/AAM_Model.png>
+Package pdftex.def Info: imgs/AAM_Model.png used on input line 62.
+(pdftex.def)             Requested size: 227.62204pt x 148.42154pt.
+ [8]
+<imgs/FacialIndexIntraface.png, id=50, 479.54156pt x 402.00188pt>
+File: imgs/FacialIndexIntraface.png Graphic file (type png)
+
+<use imgs/FacialIndexIntraface.png>
+Package pdftex.def Info: imgs/FacialIndexIntraface.png used on input line 75.
+(pdftex.def)             Requested size: 227.62204pt x 190.81792pt.
+
+<imgs/Tracking_Intraface_eating_red.png, id=51, 965.10562pt x 965.10562pt>
 File: imgs/Tracking_Intraface_eating_red.png Graphic file (type png)
 
 <use imgs/Tracking_Intraface_eating_red.png>
 Package pdftex.def Info: imgs/Tracking_Intraface_eating_red.png used on input l
-ine 72.
+ine 83.
 (pdftex.def)             Requested size: 312.9803pt x 312.9782pt.
 
-<imgs/Talking_Intraface_140711_176_184.png, id=48, 374.14781pt x 374.14781pt>
+<imgs/Talking_Intraface_140711_176_184.png, id=53, 374.14781pt x 374.14781pt>
 File: imgs/Talking_Intraface_140711_176_184.png Graphic file (type png)
 
 <use imgs/Talking_Intraface_140711_176_184.png>
 Package pdftex.def Info: imgs/Talking_Intraface_140711_176_184.png used on inpu
-t line 75.
+t line 86.
 (pdftex.def)             Requested size: 312.9803pt x 312.99747pt.
- [8] [9 <./imgs/Tracking_Intraface_eating_red.png> <./imgs/Talking_Intraface_14
-0711_176_184.png>]
-<imgs/Tracking_DRMF_eating.png, id=57, 965.10562pt x 965.10562pt>
+ [9 <./imgs/AAM_Model.png> <./imgs/FacialIndexIntraface.png (PNG copy)>] [10 <.
+/imgs/Tracking_Intraface_eating_red.png> <./imgs/Talking_Intraface_140711_176_1
+84.png>]
+<imgs/FacialIndexDRMF.png, id=63, 421.575pt x 363.60844pt>
+File: imgs/FacialIndexDRMF.png Graphic file (type png)
+
+<use imgs/FacialIndexDRMF.png>
+Package pdftex.def Info: imgs/FacialIndexDRMF.png used on input line 97.
+(pdftex.def)             Requested size: 227.62204pt x 196.32898pt.
+
+<imgs/Tracking_DRMF_eating.png, id=64, 965.10562pt x 965.10562pt>
 File: imgs/Tracking_DRMF_eating.png Graphic file (type png)
 
 <use imgs/Tracking_DRMF_eating.png>
-Package pdftex.def Info: imgs/Tracking_DRMF_eating.png used on input line 89.
+Package pdftex.def Info: imgs/Tracking_DRMF_eating.png used on input line 105.
 (pdftex.def)             Requested size: 284.52756pt x 284.52698pt.
 
-<imgs/Talking_DRMF_140711_176_184.png, id=58, 1356.56813pt x 1356.56813pt>
+<imgs/Talking_DRMF_140711_176_184.png, id=65, 1356.56813pt x 1356.56813pt>
 File: imgs/Talking_DRMF_140711_176_184.png Graphic file (type png)
 
 <use imgs/Talking_DRMF_140711_176_184.png>
 Package pdftex.def Info: imgs/Talking_DRMF_140711_176_184.png used on input lin
-e 92.
+e 108.
 (pdftex.def)             Requested size: 284.52756pt x 284.51512pt.
- [10] [11 <./imgs/Tracking_DRMF_eating.png> <./imgs/Talking_DRMF_140711_176_184
-.png>]
-<imgs/Tracking_Intraface_DRMF_compare_00.png, id=68, 1928.70563pt x 1928.70563p
+ [11 <./imgs/FacialIndexDRMF.png (PNG copy)>] [12 <./imgs/Tracking_DRMF_eating.
+png> <./imgs/Talking_DRMF_140711_176_184.png>]
+<imgs/Tracking_Intraface_DRMF_compare_00.png, id=74, 1928.70563pt x 1928.70563p
 t>
 File: imgs/Tracking_Intraface_DRMF_compare_00.png Graphic file (type png)
  <use imgs/Tracking_Intraface_DRMF_compare_00.png>
 Package pdftex.def Info: imgs/Tracking_Intraface_DRMF_compare_00.png used on in
-put line 104.
+put line 120.
 (pdftex.def)             Requested size: 312.9803pt x 312.95479pt.
 
-<imgs/Tracking_Intraface_DRMF_comparison.png, id=69, 1928.70563pt x 1928.70563p
+<imgs/Tracking_Intraface_DRMF_comparison.png, id=75, 1928.70563pt x 1928.70563p
 t>
 File: imgs/Tracking_Intraface_DRMF_comparison.png Graphic file (type png)
  <use imgs/Tracking_Intraface_DRMF_comparison.png>
 Package pdftex.def Info: imgs/Tracking_Intraface_DRMF_comparison.png used on in
-put line 106.
+put line 122.
 (pdftex.def)             Requested size: 312.9803pt x 312.95479pt.
- [12] [13 <./imgs/Tracking_Intraface_DRMF_compare_00.png> <./imgs/Tracking_Intr
-aface_DRMF_comparison.png>] <imgs/160954_Deform_213.png, id=78, 679.78969pt x 2
+ [13] [14 <./imgs/Tracking_Intraface_DRMF_compare_00.png> <./imgs/Tracking_Intr
+aface_DRMF_comparison.png>] <imgs/160954_Deform_213.png, id=84, 679.78969pt x 2
 88.3272pt>
 File: imgs/160954_Deform_213.png Graphic file (type png)
 
 <use imgs/160954_Deform_213.png>
-Package pdftex.def Info: imgs/160954_Deform_213.png used on input line 114.
+Package pdftex.def Info: imgs/160954_Deform_213.png used on input line 130.
 (pdftex.def)             Requested size: 426.79134pt x 181.01794pt.
 
-<imgs/160954_Deform_233.png, id=79, 681.29532pt x 284.56313pt>
+<imgs/160954_Deform_233.png, id=85, 681.29532pt x 284.56313pt>
 File: imgs/160954_Deform_233.png Graphic file (type png)
 
 <use imgs/160954_Deform_233.png>
-Package pdftex.def Info: imgs/160954_Deform_233.png used on input line 116.
+Package pdftex.def Info: imgs/160954_Deform_233.png used on input line 132.
 (pdftex.def)             Requested size: 426.79134pt x 178.264pt.
- [14 <./imgs/160954_Deform_213.png (PNG copy)> <./imgs/160954_Deform_233.png (P
+ [15 <./imgs/160954_Deform_213.png (PNG copy)> <./imgs/160954_Deform_233.png (P
 NG copy)>]
-<imgs/Warping_Intraface_213.png, id=83, 1206.00563pt x 603.75563pt>
+<imgs/Warping_Intraface_213.png, id=89, 1206.00563pt x 603.75563pt>
 File: imgs/Warping_Intraface_213.png Graphic file (type png)
 
 <use imgs/Warping_Intraface_213.png>
-Package pdftex.def Info: imgs/Warping_Intraface_213.png used on input line 125.
+Package pdftex.def Info: imgs/Warping_Intraface_213.png used on input line 141.
 
 (pdftex.def)             Requested size: 256.0748pt x 128.19273pt.
- [15 <./imgs/Warping_Intraface_213.png>]
-[16]) (./chapter2/chapter2.tex [17]
+ [16 <./imgs/Warping_Intraface_213.png>]
+[17]) (./chapter2/chapter2.tex [18]
 Chapter 4.
-) (./conclusion/conclusion.tex [18
+[19
 
-]
+]) (./conclusion/conclusion.tex [20]
 Chapter 5.
-) (./report_2014sep.bbl [19
+) (./report_2014sep.bbl [21
 
 ]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-) [20
+) [22
 
 ] (./report_2014sep.aux) ) 
 Here is how much of TeX's memory you used:
- 2850 strings out of 493315
- 40404 string characters out of 6137904
- 109159 words of memory out of 5000000
- 6231 multiletter control sequences out of 15000+600000
+ 3727 strings out of 493315
+ 50885 string characters out of 6137904
+ 139936 words of memory out of 5000000
+ 7055 multiletter control sequences out of 15000+600000
  11267 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,6n,23p,1409b,237s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,16n,23p,1658b,298s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb>
-Output written on report_2014sep.pdf (23 pages, 24185464 bytes).
+sfonts/cm/cmmi12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr17.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr6.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r8.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
+0.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.
+pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+>
+Output written on report_2014sep.pdf (25 pages, 24708935 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
+ 168 PDF objects out of 1000 (max. 8388607)
+ 103 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

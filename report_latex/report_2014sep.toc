@@ -7,37 +7,37 @@
 \contentsline {section}{\numberline {2.2}Visual Front End}{4}
 \contentsline {subsection}{\numberline {2.2.1}Face Detection}{4}
 \contentsline {subsection}{\numberline {2.2.2}Region of Interest}{4}
+\contentsline {subsection}{\numberline {2.2.3}Visual Feature and Postprocessing}{4}
 \contentsline {section}{\numberline {2.3}Facial Expression}{4}
-\contentsline {section}{\numberline {2.4}Nonlinguistic Vocalization}{4}
-\contentsline {chapter}{\numberline {3}Processing and Methodologies}{5}
-\contentsline {section}{\numberline {3.1}Processing Flow}{5}
-\contentsline {paragraph}{Processing Chart}{5}
-\contentsline {paragraph}{Data flow Chart}{6}
-\contentsline {section}{\numberline {3.2}Face Alignment}{6}
-\contentsline {subsection}{\numberline {3.2.1}Active Appearance Model}{7}
-\contentsline {paragraph}{Shape}{7}
-\contentsline {paragraph}{Appearance}{7}
-\contentsline {paragraph}{Model}{7}
-\contentsline {subsection}{\numberline {3.2.2}Trackers}{7}
-\contentsline {paragraph}{Intraface}{8}
-\contentsline {paragraph}{Tracking Points}{8}
-\contentsline {paragraph}{Eating and Talking Sequence}{8}
-\contentsline {paragraph}{DRMF}{10}
-\contentsline {paragraph}{Tracking Points}{10}
-\contentsline {paragraph}{Talking and Talking Sequence}{10}
-\contentsline {subsection}{\numberline {3.2.3}Comparison}{12}
-\contentsline {section}{\numberline {3.3}Remove Head-pose}{14}
-\contentsline {section}{\numberline {3.4}Warping}{15}
-\contentsline {section}{\numberline {3.5}Feature Extraction}{16}
-\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{16}
-\contentsline {section}{\numberline {3.6}Postprocessing}{17}
-\contentsline {paragraph}{Normalization}{17}
-\contentsline {paragraph}{Scaling}{17}
-\contentsline {chapter}{\numberline {4}Experiment and Results}{18}
-\contentsline {section}{\numberline {4.1}Database}{18}
-\contentsline {subsection}{\numberline {4.1.1}Feature and Data}{18}
-\contentsline {section}{\numberline {4.2}Methodology}{18}
-\contentsline {paragraph}{RBF}{18}
-\contentsline {section}{\numberline {4.3}Experiments}{18}
-\contentsline {section}{\numberline {4.4}Results and Analysis}{18}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{19}
+\contentsline {section}{\numberline {2.4}Nonlinguistic Vocalization}{5}
+\contentsline {chapter}{\numberline {3}Processing and Methodologies}{6}
+\contentsline {section}{\numberline {3.1}Processing Flow}{6}
+\contentsline {paragraph}{Processing Chart}{6}
+\contentsline {paragraph}{Data flow Chart}{7}
+\contentsline {section}{\numberline {3.2}Face Alignment}{7}
+\contentsline {subsection}{\numberline {3.2.1}Active Appearance Model}{8}
+\contentsline {paragraph}{Shape}{8}
+\contentsline {paragraph}{Appearance}{8}
+\contentsline {paragraph}{Model}{8}
+\contentsline {subsection}{\numberline {3.2.2}Trackers}{9}
+\contentsline {subsubsection}{Intraface}{9}
+\contentsline {paragraph}{Tracking Points}{9}
+\contentsline {paragraph}{Eating and Talking Sequence}{9}
+\contentsline {subsubsection}{DRMF}{11}
+\contentsline {paragraph}{Tracking Points}{11}
+\contentsline {paragraph}{Talking and Talking Sequence}{11}
+\contentsline {subsection}{\numberline {3.2.3}Comparison}{13}
+\contentsline {section}{\numberline {3.3}Remove Head-pose}{15}
+\contentsline {section}{\numberline {3.4}Warping}{16}
+\contentsline {section}{\numberline {3.5}Feature Extraction}{17}
+\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{17}
+\contentsline {section}{\numberline {3.6}Postprocessing}{18}
+\contentsline {paragraph}{Normalization}{18}
+\contentsline {paragraph}{Scaling}{18}
+\contentsline {chapter}{\numberline {4}Experiment and Results}{19}
+\contentsline {section}{\numberline {4.1}Data}{19}
+\contentsline {subsection}{\numberline {4.1.1}Feature}{19}
+\contentsline {section}{\numberline {4.2}Methodology}{20}
+\contentsline {subsection}{\numberline {4.2.1}Find Parameter $c$ and $\gamma $}{20}
+\contentsline {section}{\numberline {4.3}Results and Analysis}{20}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{21}
