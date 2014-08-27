@@ -59,17 +59,17 @@ A(x) = A_{0}(x) + \sum_{i=1}^{l}c_{i}A_{i}(x)
 \end{equation}
 \begin{figure}[ht]
 \centering
-\includegraphics[width = 80mm]{imgs/AAM_Model.png}
-\caption{An AAM instantiation}
+\includegraphics[width = \textwidth]{imgs/AAM_Model.png}
+\caption{An AAM instantiation from \cite{matthews2004active}}
 \label{fig:AAMI}
 \end{figure}
 An example of AAM instantiation is clearly shown in figure \ref{fig:AAMI}.
 \subsection{Trackers}
-There are many different trackers for tracking facial feature points. Different tracker may use different approaches, so they may be applied into different situations. I tried two main trackers for tracking characteristic facial points, one is Intraface \cite{xiong2013supervised} which use suppervised decent method, the other is DRMF \cite{asthana2013robust} which use discriminative response map fitting. Those two trackers not only using different approaches, the number of landmark points are also different.
+There are many different trackers for tracking facial feature points. Different tracker may using different approaches, so they are suitable for different situations. I tried two main trackers for tracking characteristic facial points, one is Intraface \cite{xiong2013supervised} which use suppervised decent method, the other is DRMF \cite{asthana2013robust} which use discriminative response map fitting. According to my using experiment, Intraface is very good at tracking motion face and DRMF is very good at fitting face model to a more standard face even with low resolutions. The number of facial points they track are also differnt.
 \subsubsection{Intraface}
-\cite{xiong2013supervised} implies image alignment  can be posed as solving a nonlinear optimization problem. It uses Supervised Descent Method for minimising Non-linear Least Square(NLS) function, which avoids calculating the Hessian and the Jacobian that could be computationally expensive. The running time of Intraface shows that the method is very effective and efficient.
+\cite{xiong2013supervised} implies image alignment  can be posed as solving a nonlinear optimization problem. It uses Supervised Descent Method for minimising Non-linear Least Square(NLS) function, which avoids calculating the Hessian and the Jacobian that could be computationally expensive. For this reason, the running time of Intraface shows that the method is very effective and efficient.
 \paragraph{Tracking Points}
-The following tracker show the tracking points of Intraface. This tracker tracks 49 facial feature points. As you can see the eyes, nose, mouth, unfortunately the jaw and cheek may contain visual information that would help classification. Without the bound of face, I am unable to extract the region  as I can not do warping of that area.
+Figure \ref{fig:IPI} shows the tracking points of Intraface. This tracker tracks 49 facial feature points. As you can see the eyes, nose, mouth, unfortunately the jaw and cheek may contain visual information that may help classification.
 \begin{figure}[ht]
 \centering
 \includegraphics[width = 80mm]{imgs/FacialIndexIntraface.png}
@@ -77,7 +77,8 @@ The following tracker show the tracking points of Intraface. This tracker tracks
 \label{fig:IPI}
 \end{figure}
 \paragraph{Eating and Talking Sequence}
-Figure \ref{fig:IES} show a sequence of image of eating tracked by Intraface. The point are aligned very precisely along the face. Figure \ref{fig:ITS} shows a talking sequences of image tracked by Intraface. The landmark points of mouth is very accurate.
+Figure \ref{fig:IES} shows a sequence of image of eating tracked by Intraface. The point are aligned very precisely along the face. Figure \ref{fig:ITS} shows a talking sequences of image tracked by Intraface. The landmark points of mouth is very accurate.
+\newpage
 \begin{figure}[p]
 \centering
 \includegraphics[width=110mm]{imgs/Tracking_Intraface_eating_red.png}
@@ -89,9 +90,9 @@ Figure \ref{fig:IES} show a sequence of image of eating tracked by Intraface. Th
 \end{figure}
 \newpage
 \subsubsection{DRMF}
-DRMF uses novel discriminative regression based on Constrained Local Models(CLMs) for face alignment. The basic idea of DRMF is to fit a face for each frame of a video. After locating the position of a face, the tracker tries to fit a trained constrained local model to fit the face. Sometimes the fitting result is not very good and the landmark points of mouth region is not very accurate.
+DRMF uses novel discriminative regression based on Constrained Local Models(CLMs) for face alignment\cite{asthana2013robust}. The basic idea of DRMF is to fit a face for each frame of a video. After locating the position of a face, the tracker tries to fit a trained constrained local model to fit the face. Sometimes the fitting result is not very good and the landmark points of mouth region is not very accurate.
 \paragraph{Tracking Points}
-DRMF tracked 66 facial feature points, the extra 17 points are the point around face bound. Other landmark points are the same with Intraface.
+Figure \ref{fig:DPI} shows 66 facial feature points tracked by DRMF, the extra 17 points are the point around face bound. Other landmark points are at the same order as Intraface.
 \begin{figure}[ht]
 \centering
 \includegraphics[width = 80mm]{imgs/FacialIndexDRMF.png}
@@ -99,7 +100,8 @@ DRMF tracked 66 facial feature points, the extra 17 points are the point around 
 \label{fig:DPI}
 \end{figure}
 \paragraph{Talking and Talking Sequence}
-A image sequences of eating tracked by Intraface is shown below.
+Figure \ref{fig:DES} and \ref{fig:DTS} show image sequences of eating and talking tracked by DRMF. It is easy to see that the facial feature points are not aligned as better as Intraface. However, the advantage of DRMF is that with the extract bound points of face, we are able to extract the visual information about the jaw and cheek, which may be helpful for classification.
+\newpage
 \begin{figure}[p]
 \centering
 \includegraphics[width=100mm]{imgs/Tracking_DRMF_eating.png}
@@ -111,31 +113,46 @@ A image sequences of eating tracked by Intraface is shown below.
 \end{figure}
 \newpage
 \subsection{Comparison}
-The following are some examples for comparing two trackers. Intraface is generally better than DRMF in accuracy and efficient. There are two version of DRMF tracker one is implemented by CUDA language the other is by C language. Although the C version of DRMF is very slow and very easy to run out of memory, the version implementd by CUDA is very fast as CUDA is using parallel computing. However, DRMF is not as accurate as Intraface and not suitable for this project. In many situations, DRMF try to fit a face and the fitting result is awful. The images with red points are tracked by Intraface, and the images with blue points is tracked by DRMF.
+The following are some examples for comparing two trackers. Intraface is generally better than DRMF in accuracy and efficient. There are two version of DRMF tracker one is implemented by CUDA language the other is by C language. Although the C version of DRMF is very slow and very easy to run out of memory, the version implementd by CUDA is very fast as CUDA is using parallel computing. However, for cace points alignment, DRMF is not as accurate as Intraface. In some situations, DRMF try to fit a face and the fitting result is awful. The images with red points are tracked by Intraface, and the images with blue points is tracked by DRMF.
 \newline
-From figure above, it seems both tracker can only be used to trak one face at one time. DRMF detect the smaller face instead of the bigger one is possiblly because of the algorithm. The second and third frames are tracked by DRMF is not very accurate on the nose area. As the track point of mouth, intraface is better than DRMF.
-In some frame, partial of face is out of frame. Intraface is better dealing with this type of situation. Intraface ignore those points that out of the images. DRMF tries to fit a face forcibly. It often lead to bad influence on the traking result shown in the figure.
-\begin{figure}[p]
+In figure \ref{fig:cmp01}, compare top left and top right images, we can see Intraface does not tracke the face of the smaller face, DRMF tracked the smaller face instead of the large face. This shows the advantage of DRMF on track face of low resolution face. I tried to use Intraface to track a image with multiple face, Intraface is able to track multiply faces in one image. So this means, Intraface is not good at tracking face on low resolution face. Compare the lower two images on the right hand side, the feature points of nose is not proper aligned, this is caused by imperfect of the fitting algorithm. The feature points of face bound are also not well aligned. Comparing the alignment of eye alignment on the left hand side of both traker, Intraface is better than DRMF. The feature points of right eye brows of the mid right image are also not algined precisely.
+\newline
+In figure \ref{fig:cmp02}, in the top left image, DRMF is unable to fit a face to the face as the face is facing to the left. Of course, Intraface is unable to apply face alignment to a image doesn't show half of the face like this, it choose to ignore this image. In lower two images on the left hand side shows two situations that DRMF fail to fitting face model to face because of the face is partial out of the image frame. The middle one shows that the fitting face points are force to stay in the frame and the mouth are moved up to close nose. The lower one image shows that as most of mouth region is out of frame, the model is fitted to the left eye forcefully. The middle and lower images on the right hand side shows that Intraface would ignore those points that are out of frame. It seems using Supervised Descent Method is very good at tracking face that moves. However, there is a bug of this traker, while tracking the video, if the subject moves hand to cover the mouth, the points of mouth would be pushed upwords, and it will not come back even the hand is moved away, unless, the traker loss the face and retrack the face.
+\begin{figure}
 \centering
 \includegraphics[width=110mm]{imgs/Tracking_Intraface_DRMF_compare_00.png}
-\caption{Tracking result, red points tracked by Intraface and blue points tracked by DRMF}
+\caption{Tracking result: images with red points on the left hand side are tracked by Intraface and images with blue points on the right hand side are tracked by DRMF}
+\label{fig:cmp01}
 \includegraphics[width=110mm]{imgs/Tracking_Intraface_DRMF_comparison.png}
-\caption{Tracking result, red points tracked by Intraface and blue points tracked by DRMF}
+\caption{Tracking result, images with red points on the right hand side are tracked by Intraface and images with blue points on the left hand side are tracked by DRMF}
+\label{fig:cmp02}
 \end{figure}
 \newpage
 \section{Remove Head-pose}
-The algroithm of removing head-pose from tracking points is in \cite{saragih2011deformable}. The following are some example of orginal track points and deformed points. Remove head pose of face and the warp the face to frontal direction is the most important part of extracting appearance feature. Here are two examples, from example one, rotation on x-y direction is mostly removed. In example two, the algorithm also show some efficient on remove head-pose of x-z direction and y-z direction.
+Subjects were unrestricted while they were recording the video, their head pose are vary different. The coordinate of facial feature points are different for each video frame. In order to unite the head, we need to remove the head pose from the coordinates of facial feature points.  If define the honrizontal direction is x, the vertical direction is y and z is the direction, subject facing camera. It is very easy to remove head-pose in x-y direction, just by rotating and scaling the points would remove the head-pose. If the subject had a head-pose in x-z and y-z direction, it would be hard to find the correct transformation matrix for tracked facial points. The algroithm of removing head-pose from tracking points is \cite{saragih2011deformable}. Basically, it has a deformable 3-D Constrained Local Model(CLM), minimize the error of fitting the model and the 2D points and then remove head-pose and give the new 2D points. Figure \ref{fig:RHP01} and \ref{fig:RHP02} gave two example of orginal track points and deformed points. From figure \ref{fig:RHP01} and \ref{fig:RHP02} we can see this method could remove head-pose without losing information of mouth shape.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=150mm]{imgs/160954_Deform_213.png}
 \caption{Traking points and Deformed Points, Example 1}
+\label{fig:RHP01}
 \includegraphics[width=150mm]{imgs/160954_Deform_233.png}
 \caption{Traking points and Deformed Points, Example 2}
+\label{fig:RHP02}
 \end{figure}
 \newpage
 \section{Warping}
-In order to have the appearance image of the face after removed head-pose, it is necessary to warp the face with head pose. Basic idea is to for each triangles builded by shape points, the image points in the triagnles are projected to the corresponding triagnles built by deformed points. The following are some examples of face before and after warping:
-
+There are two types of features we need to extract, shape feature and appeanrance feature, the previous section just remove heap-pose of shape feature vector. The appearance of face on image is not correctly showing a face that could be directly used for classification, as the face is not facing to frontal. In order to have head-pose free face, we need to distort the image to the one we need. In here I use Piece-wise Affine to warp the image. According to the model in Active Appearance Model. We need to warping image from one to another with respect to the mapping of shape feature points set ${X_{1},X_{2},...X_{n}}$ into another point set ${x'_{1},X'_{2},...X'_{n}}$. Each point is represented as $X = [x,y]^{T}$. The mapping function would be:
+\begin{equation}
+f(X_{i}) = X'_{i} \quad \forall \ i = 1...n
+\label{eq:W1}
+\end{equation}
+\newline
+Piece-wise Affine assume that f is locally linear. In 2-D framework like 2-D AAM, first find the mesh-grid constructed by all shape feature points. Delaunay triangulation is a good way to express it. In Delaunay triangulation, there is no points inside its circumcircle. Then the problem is to find the mapping function $f$ to map the trianglear mesh of the first point set and the second point set. For each points on each triangle of the first point set $I$ can be mapped to unique points on each triangles of the second point set $I'$ by affine transformation, which is combination of translation, rotation and scaling. Assume $X_{1}$, $X_{2}$ and $X_{3}$ are a vertices of a triangle in $I$, then the points inside the triangle can be writen as:
+\begin{align*}
+x 
+& = X_{1} + \beta (X_{2}-X_{1})+\gamma (X_{3}-X_{1}) \\
+&  = \alpha X_{1} + \beta X_{2} + \gamma X_{3}
+\end{align*}
 \begin{figure}[ht]
 \centering
 \includegraphics[width=90mm]{imgs/Warping_Intraface_213.png}

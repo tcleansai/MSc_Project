@@ -23,10 +23,10 @@
 \contentsline {subsubsection}{Intraface}{9}
 \contentsline {paragraph}{Tracking Points}{9}
 \contentsline {paragraph}{Eating and Talking Sequence}{9}
-\contentsline {subsubsection}{DRMF}{11}
-\contentsline {paragraph}{Tracking Points}{11}
-\contentsline {paragraph}{Talking and Talking Sequence}{11}
-\contentsline {subsection}{\numberline {3.2.3}Comparison}{13}
+\contentsline {subsubsection}{DRMF}{10}
+\contentsline {paragraph}{Tracking Points}{10}
+\contentsline {paragraph}{Talking and Talking Sequence}{10}
+\contentsline {subsection}{\numberline {3.2.3}Comparison}{12}
 \contentsline {section}{\numberline {3.3}Remove Head-pose}{15}
 \contentsline {section}{\numberline {3.4}Warping}{16}
 \contentsline {section}{\numberline {3.5}Feature Extraction}{17}
