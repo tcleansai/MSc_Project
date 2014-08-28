@@ -141,18 +141,47 @@ Subjects were unrestricted while they were recording the video, their head pose 
 \end{figure}
 \newpage
 \section{Warping}
-There are two types of features we need to extract, shape feature and appeanrance feature, the previous section just remove heap-pose of shape feature vector. The appearance of face on image is not correctly showing a face that could be directly used for classification, as the face is not facing to frontal. In order to have head-pose free face, we need to distort the image to the one we need. In here I use Piece-wise Affine to warp the image. According to the model in Active Appearance Model. We need to warping image from one to another with respect to the mapping of shape feature points set ${X_{1},X_{2},...X_{n}}$ into another point set ${x'_{1},X'_{2},...X'_{n}}$. Each point is represented as $X = [x,y]^{T}$. The mapping function would be:
+There are two types of features we need to extract, shape feature and appeanrance feature, the previous section just remove heap-pose of shape feature vector. The appearance of face on image is not correctly showing a face that could be directly used for classification, as the face is not facing to frontal. In order to have head-pose free face, we need to distort the image to the one we need. In here I use Piece-wise Affine\cite{AAMWarp} to warp the image. According to the model in Active Appearance Model. We need to warping image from one to another with respect to the mapping of shape feature points set ${p_{1},p_{2},...p_{n}}$ into another point set ${p'_{1},p'_{2},...p'_{n}}$. Each point is represented as $p = [x,y]^{T}$. The mapping function would be:
 \begin{equation}
-f(X_{i}) = X'_{i} \quad \forall \ i = 1...n
+f(p_{i}) = p'_{i} \quad \forall \ i = 1...n
 \label{eq:W1}
 \end{equation}
 \newline
-Piece-wise Affine assume that f is locally linear. In 2-D framework like 2-D AAM, first find the mesh-grid constructed by all shape feature points. Delaunay triangulation is a good way to express it. In Delaunay triangulation, there is no points inside its circumcircle. Then the problem is to find the mapping function $f$ to map the trianglear mesh of the first point set and the second point set. For each points on each triangle of the first point set $I$ can be mapped to unique points on each triangles of the second point set $I'$ by affine transformation, which is combination of translation, rotation and scaling. Assume $X_{1}$, $X_{2}$ and $X_{3}$ are a vertices of a triangle in $I$, then the points inside the triangle can be writen as:
-\begin{align*}
-x 
-& = X_{1} + \beta (X_{2}-X_{1})+\gamma (X_{3}-X_{1}) \\
-&  = \alpha X_{1} + \beta X_{2} + \gamma X_{3}
-\end{align*}
+Piece-wise Affine assume that f is locally linear. In 2-D framework like 2-D AAM, first find the mesh-grid constructed by all shape feature points. Delaunay triangulation is a good way to express it. In Delaunay triangulation, there is no points inside its circumcircle. Then the problem is to find the mapping function $f$ to map the trianglear mesh of the first point set and the second point set. For each points on each triangle of the first point set $I$ can be mapped to unique points on each triangles of the second point set $I'$ by affine transformation, which is combination of translation, rotation and scaling. Assume $p_{1}$, $p_{2}$ and $p_{3}$ are a vertices of a triangle in $I$, then the points inside the triangle can be writen as:
+\begin{equation}
+\begin{split}
+p 
+& = p_{1} + \beta (p_{2}-p_{1})+\gamma (p_{3}-p_{1}) \\
+& = (1-\beta-\gamma)p_{1} + \beta p_{2} + \gamma p_{3} \quad \quad assume \: \alpha + \beta + \gamma = 1\\
+&  = \alpha p_{1} + \beta p_{2} + \gamma p_{3}
+\end{split}
+\end{equation}
+\newline
+As points $p$ are in the triangle, so $\alpha\geq 0$,$\beta,\gamma \leq 1$. Then the corresponding points $p'$ in image $I'$ inside corresponding triangle would also satisfy the equation:
+\begin{equation}
+p' = f(p) = \alpha p'_{1} + \beta p'_{2} + \gamma p'_{3}
+\label{eq:FX}
+\end{equation}
+We have the three points of a triangle, it is easy to determine the value of $\alpha$,$\beta$ and $\gamma$ by solving two linear equation for a know points, $p = [x,y]^{T}$:
+\begin{equation}
+\label{eq:CABR}
+\begin{split}
+\alpha & = 1 - (\beta + \gamma) \\
+\beta  & = \frac{yx_{3}-x_{1}y-x_{3}y_{1}-y_{3}x+x_{1}y_{3}+xy_{1}}{-x_{2}y_{3}+x_{2}y_{1}+x_{1}y_{3}+x_{3}y_{2}-x_{3}y_{1}-x_{1}y_{2}} \\
+\gamma & = \frac{yx_{2}-xy_{1}-x_{1}y_{2}-x_{2}y+x_{2}y_{1}+x_{1}y}{-x_{2}y_{3}+x_{2}y_{1}+x_{1}y_{3}+x_{3}y_{2}-x_{3}y_{1}-x_{1}y_{2}}
+\end{split}
+\end{equation}
+\newline
+Equation \ref{eq:CABR} give the function to calculate $\alpha$,$\beta$,$\gamma$, with the Equation \ref{eq:FX}, we can calculate all the points in image $I'$. Peudo-code of piece-wise affine warp would be:
+\begin{enumerate}
+\item For each point $p = [x,y]^{T}$ inside image $I$
+\item Determine which triangle $p$ is in
+\item Use equation \ref{eq:CABR} to calculate $\alpha$,$\beta$,$\gamma$
+\item Use equation \ref{eq:FX} to calculate the corresponding position of $p'$
+\item set the value of $p'$ in $I$ to the value of $p$ in $I$
+\item end
+\end{enumerate}
+The follow is the warping result, the image was not highly distorted as the face is basically facing to the frontal. However, it is easy to notice the face is a little rotated to the right and there is a small change on the shape of mouth.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=90mm]{imgs/Warping_Intraface_213.png}
@@ -160,9 +189,9 @@ x
 \end{figure}
 \newpage
 \section{Feature Extraction}
-The image after warping is not directly used for classfication, image feature are stelected to represent the image. Points, edges, ojects and texture are important features of an image. In this project, Local Binary Pattern are used for calssification as it's a very powerful feature for texuture classfication. 
+The warped images are not directly used for classification, as the image would be very large and the dimension of appearance feature vector would be too large for classification. Feature extraction could keep most of image features and reduce the dimensionality. An effective facial representation from original image is vital for classification. Experiments of \cite{shan2009facial} shwos that Local Binary Pattern(LBP) features are effective and efficient for facial expression recognition. The best performance of \cite{shan2009facial} is obtaine by combing Support Vector Machine and Boosted-LBP features. \cite{shan2009facial} also shows that LBP feature perform stably and robustly on low-resolution facial expresion recognition. 
 \subsection{Local Binary Pattern}
-LBP is chosen to be the feature for representing region of interest. \cite{shan2009facial} obtained best recognition result by using Support Vector Machine with Boosted-LBP features. Moreover, \cite{shan2009facial} shows LBP features perform stably and robustly on low-resolution face images. In the beginning, LBP was used for texture analysis, it has natural advantage on computational simplicity and ignoring illumination changes.
+Ojala et al introduced the fist generation of LBP operator \cite{shan2009facial}, it was proved to be a powerful texture descriptior. 
 \newpage
 \section{Postprocessing}
 As it is known large margin classifiers are sensitive to the way features are scaled, it's better to normalize either the data or the kernal function \cite{ben2010user}. Feature of a image is represented by a vector, the number in the vector would influence the weight of feature in this dimension. As I would like to treat each dimension similar, I scale the number in the range of $[0,1]$.

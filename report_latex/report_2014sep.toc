@@ -10,6 +10,7 @@
 \contentsline {subsection}{\numberline {2.2.3}Visual Feature and Postprocessing}{4}
 \contentsline {section}{\numberline {2.3}Facial Expression}{4}
 \contentsline {section}{\numberline {2.4}Nonlinguistic Vocalization}{5}
+\contentsline {section}{\numberline {2.5}Audio-Visual Biometrics}{5}
 \contentsline {chapter}{\numberline {3}Processing and Methodologies}{6}
 \contentsline {section}{\numberline {3.1}Processing Flow}{6}
 \contentsline {paragraph}{Processing Chart}{6}

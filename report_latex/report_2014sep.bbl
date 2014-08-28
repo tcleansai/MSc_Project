@@ -1,4 +1,9 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
+
+\bibitem{aleksic2006audio}
+Petar~S Aleksic and Aggelos~K Katsaggelos.
+\newblock Audio-visual biometrics.
+\newblock {\em Proceedings of the IEEE}, 94(11):2025--2044, 2006.
 
 \bibitem{asthana2013robust}
 Akshay Asthana, Stefanos Zafeiriou, Shiyang Cheng, and Maja Pantic.
@@ -29,6 +34,12 @@ Maja Pantic and Marian~Stewart Bartlett.
 \newblock Machine analysis of facial expressions.
 \newblock 2007.
 
+\bibitem{petridis2011audiovisual}
+Stavros Petridis and Maja Pantic.
+\newblock Audiovisual discrimination between speech and laughter: Why and when
+  visual information might help.
+\newblock {\em Multimedia, IEEE Transactions on}, 13(2):216--234, 2011.
+
 \bibitem{potamianos2003recent}
 Gerasimos Potamianos, Chalapathy Neti, Guillaume Gravier, Ashutosh Garg, and
   Andrew~W Senior.
@@ -45,6 +56,10 @@ Caifeng Shan, Shaogang Gong, and Peter~W McOwan.
 \newblock Facial expression recognition based on local binary patterns: A
   comprehensive study.
 \newblock {\em Image and Vision Computing}, 27(6):803--816, 2009.
+
+\bibitem{AAMWarp}
+Mikkel~Bille Stegmann.
+\newblock Texture model formulation, 2000.
 
 \bibitem{xiong2013supervised}
 Xuehan Xiong and Fernando De~la Torre.
