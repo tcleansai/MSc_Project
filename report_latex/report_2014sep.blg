@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: report_2014sep.aux
 The style file: plain.bst
@@ -6,45 +6,45 @@ Database file #1: bibliography/bibliography.bib
 Warning--entry type for "AAMWarp" isn't style-file defined
 --line 126 of file bibliography/bibliography.bib
 Warning--empty journal in pantic2007machine
-You've used 12 entries,
+You've used 13 entries,
             2118 wiz_defined-function locations,
-            573 strings with 5917 characters,
-and the built_in function-call counts, 4500 in all, are:
-= -- 466
-> -- 185
-< -- 3
-+ -- 73
-- -- 60
-* -- 315
-:= -- 717
-add.period$ -- 38
-call.type$ -- 12
-change.case$ -- 66
+            578 strings with 6191 characters,
+and the built_in function-call counts, 4996 in all, are:
+= -- 520
+> -- 203
+< -- 4
++ -- 80
+- -- 66
+* -- 345
+:= -- 787
+add.period$ -- 42
+call.type$ -- 13
+change.case$ -- 72
 chr.to.int$ -- 0
-cite$ -- 13
-duplicate$ -- 166
-empty$ -- 361
-format.name$ -- 60
-if$ -- 958
+cite$ -- 14
+duplicate$ -- 189
+empty$ -- 402
+format.name$ -- 66
+if$ -- 1074
 int.to.chr$ -- 0
-int.to.str$ -- 12
-missing$ -- 11
-newline$ -- 62
-num.names$ -- 24
-pop$ -- 68
+int.to.str$ -- 13
+missing$ -- 12
+newline$ -- 67
+num.names$ -- 26
+pop$ -- 77
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 59
 quote$ -- 0
-skip$ -- 127
+skip$ -- 145
 stack$ -- 0
-substring$ -- 361
-swap$ -- 42
-text.length$ -- 3
+substring$ -- 398
+swap$ -- 53
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
+type$ -- 52
 warning$ -- 1
-while$ -- 47
-width$ -- 14
-write$ -- 132
+while$ -- 52
+width$ -- 15
+write$ -- 144
 (There were 2 warnings)
