@@ -41,4 +41,5 @@
 \contentsline {section}{\numberline {4.2}Methodology}{20}
 \contentsline {subsection}{\numberline {4.2.1}Find Parameter $c$ and $\gamma $}{20}
 \contentsline {section}{\numberline {4.3}Results and Analysis}{20}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{21}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{24}
+\contentsline {chapter}{\numberline {A}Classification Result}{26}

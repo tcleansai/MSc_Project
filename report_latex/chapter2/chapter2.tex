@@ -41,3 +41,147 @@ A general way to find parameter $c$ and $\gamma$ is using cross-validation and g
 In n-fold cross-validation, first equally divide the data into n fold, leave out one fold of data as testing data and use other $n-1$ fold of data to train the classifier. Thus all the data is predicted once and the cross-validation accuracy is the percentage of data are correctly classified. 
 Grid-search is try various pairs of $c$ and $\gamma$ and choose the one with best cross-validation accuracy. Grid search approach is very simply and the computational time is no more than advanced method. To shorten the time of grid search, it is better to search with a coarse grid and then proceed with a more specific search in the identified grid.
 \section{Results and Analysis}
+\newpage
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_Eating_Frame.png}
+  \caption{Class Eating - Classification Result of Frame - Frame nomalised by each video}
+  \label{fig:REF}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_Eating_Frame_1.png}
+  \caption{Class Eating - Classification Result of Frame - Frame NOT nomalised by each video}
+  \label{fig:REF1}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_Eating_Sequence.png}
+  \caption{Class Eating - Classification Result of Frame - Frame nomalised by each video}
+  \label{fig:RES}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_Eating_Sequence_1.png}
+  \caption{Class Eating - Classification Result of Frame - Frame NOT nomalised by each video}
+  \label{fig:RES1}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_Talking_Frame.png}
+  \caption{Class Talking - Classification Result of Frame - Frame nomalised by each video}
+  \label{fig:RTF}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_Talking_Frame_1.png}
+  \caption{Class Talking - Classification Result of Frame - Frame NOT nomalised by each video}
+  \label{fig:RTF1}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_Talking_Sequence.png}
+  \caption{Class Talking - Classification Result of Sequence - Frame nomalised by each video}
+  \label{fig:RTS}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_Talking_Sequence_1.png}
+  \caption{Class Talking - Classification Result of Sequence - Frame NOT nomalised by each video}
+  \label{fig:RTS1}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Frame.png}
+  \caption{Class Normal Face - Classification Result of Frame - Frame nomalised by each video}
+  \label{fig:RNF}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Frame_1.png}
+  \caption{Class Normal Face - Classification Result of Frame - Frame NOT nomalised by each video}
+  \label{fig:RNF1}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Sequence.png}
+  \caption{Class Normal Face - Classification Result of Sequence - Frame nomalised by each video}
+  \label{fig:RNS}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Sequence_1.png}
+  \caption{Class Normal Face - Classification Result of Sequence - Frame NOT nomalised by each video}
+  \label{fig:RNS1}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_F1_Frame.png}
+  \caption{Three Class - Classification Result of frame - Frame nomalised by each video}
+  \label{fig:RFF}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_F1_Frame_1.png}
+  \caption{Three Class - Classification Result of frame - Frame NOT nomalised by each video}
+  \label{fig:RFF1}
+\end{minipage}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_F1_Sequence.png}
+  \caption{Three Class - Classification Result of frame - Frame nomalised by each video}
+  \label{fig:RFS}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \captionsetup{justification=centering,margin=1cm}
+  \includegraphics[width=\linewidth]{imgs/Result_F1_Sequence_1.png}
+  \caption{Three Class - Classification Result of frame - Frame NOT nomalised by each video}
+  \label{fig:RFS1}
+\end{minipage}
+\end{figure}
