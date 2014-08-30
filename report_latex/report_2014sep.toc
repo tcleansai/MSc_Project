@@ -29,17 +29,17 @@
 \contentsline {paragraph}{Talking and Talking Sequence}{10}
 \contentsline {subsection}{\numberline {3.2.3}Comparison}{12}
 \contentsline {section}{\numberline {3.3}Remove Head-pose}{15}
-\contentsline {section}{\numberline {3.4}Warping}{16}
+\contentsline {section}{\numberline {3.4}Warping}{15}
 \contentsline {section}{\numberline {3.5}Feature Extraction}{17}
 \contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{17}
-\contentsline {section}{\numberline {3.6}Postprocessing}{18}
-\contentsline {paragraph}{Normalization}{18}
-\contentsline {paragraph}{Scaling}{18}
-\contentsline {chapter}{\numberline {4}Experiment and Results}{19}
-\contentsline {section}{\numberline {4.1}Data}{19}
-\contentsline {subsection}{\numberline {4.1.1}Feature}{19}
-\contentsline {section}{\numberline {4.2}Methodology}{20}
-\contentsline {subsection}{\numberline {4.2.1}Find Parameter $c$ and $\gamma $}{20}
-\contentsline {section}{\numberline {4.3}Results and Analysis}{20}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{24}
-\contentsline {chapter}{\numberline {A}Classification Result}{26}
+\contentsline {section}{\numberline {3.6}Postprocessing}{19}
+\contentsline {paragraph}{Normalization}{19}
+\contentsline {paragraph}{Scaling}{19}
+\contentsline {chapter}{\numberline {4}Experiment and Results}{20}
+\contentsline {section}{\numberline {4.1}Data}{20}
+\contentsline {subsection}{\numberline {4.1.1}Feature}{20}
+\contentsline {section}{\numberline {4.2}Methodology}{21}
+\contentsline {subsection}{\numberline {4.2.1}Find Parameter $c$ and $\gamma $}{21}
+\contentsline {section}{\numberline {4.3}Results and Analysis}{21}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{25}
+\contentsline {chapter}{\numberline {A}Classification Result}{27}

@@ -129,17 +129,13 @@ In figure \ref{fig:cmp02}, in the top left image, DRMF is unable to fit a face t
 \end{figure}
 \newpage
 \section{Remove Head-pose}
-Subjects were unrestricted while they were recording the video, their head pose are vary different. The coordinate of facial feature points are different for each video frame. In order to unite the head, we need to remove the head pose from the coordinates of facial feature points.  If define the honrizontal direction is x, the vertical direction is y and z is the direction, subject facing camera. It is very easy to remove head-pose in x-y direction, just by rotating and scaling the points would remove the head-pose. If the subject had a head-pose in x-z and y-z direction, it would be hard to find the correct transformation matrix for tracked facial points. The algroithm of removing head-pose from tracking points is \cite{saragih2011deformable}. Basically, it has a deformable 3-D Constrained Local Model(CLM), minimize the error of fitting the model and the 2D points and then remove head-pose and give the new 2D points. Figure \ref{fig:RHP01} and \ref{fig:RHP02} gave two example of orginal track points and deformed points. From figure \ref{fig:RHP01} and \ref{fig:RHP02} we can see this method could remove head-pose without losing information of mouth shape.
+Subjects were unrestricted while they were recording the video, their head pose are vary different. The coordinate of facial feature points are different for each video frame. In order to unite the head, we need to remove the head pose from the coordinates of facial feature points.  If define the honrizontal direction is x, the vertical direction is y and z is the direction, subject facing camera. It is very easy to remove head-pose in x-y direction, just by rotating and scaling the points would remove the head-pose. If the subject had a head-pose in x-z and y-z direction, it would be hard to find the correct transformation matrix for tracked facial points. The algroithm of removing head-pose from tracking points is \cite{saragih2011deformable}. Basically, it has a deformable 3-D Constrained Local Model(CLM), minimize the error of fitting the model and the 2D points and then remove head-pose and give the new 2D points. Figure \ref{fig:RHP} gave two example of orginal track points and deformed points. From figure \ref{fig:RHP}, we can see this method could remove head-pose without losing information of mouth shape.
 \begin{figure}[ht]
 \centering
-\includegraphics[width=150mm]{imgs/160954_Deform_213.png}
-\caption{Traking points and Deformed Points, Example 1}
-\label{fig:RHP01}
 \includegraphics[width=150mm]{imgs/160954_Deform_233.png}
-\caption{Traking points and Deformed Points, Example 2}
-\label{fig:RHP02}
+\caption{Traking points and Deformed Points Example}
+\label{fig:RHP}
 \end{figure}
-\newpage
 \section{Warping}
 There are two types of features we need to extract, shape feature and appeanrance feature, the previous section just remove heap-pose of shape feature vector. The appearance of face on image is not correctly showing a face that could be directly used for classification, as the face is not facing to frontal. In order to have head-pose free face, we need to distort the image to the one we need. In here I use Piece-wise Affine\cite{AAMWarp} to warp the image. According to the model in Active Appearance Model. We need to warping image from one to another with respect to the mapping of shape feature points set ${p_{1},p_{2},...p_{n}}$ into another point set ${p'_{1},p'_{2},...p'_{n}}$. Each point is represented as $p = [x,y]^{T}$. The mapping function would be:
 \begin{equation}
@@ -189,9 +185,54 @@ The follow is the warping result, the image was not highly distorted as the face
 \end{figure}
 \newpage
 \section{Feature Extraction}
-The warped images are not directly used for classification, as the image would be very large and the dimension of appearance feature vector would be too large for classification. Feature extraction could keep most of image features and reduce the dimensionality. An effective facial representation from original image is vital for classification. Experiments of \cite{shan2009facial} shwos that Local Binary Pattern(LBP) features are effective and efficient for facial expression recognition. The best performance of \cite{shan2009facial} is obtaine by combing Support Vector Machine and Boosted-LBP features. \cite{shan2009facial} also shows that LBP feature perform stably and robustly on low-resolution facial expresion recognition. 
+The warped images are not directly used for classification, as the image value are sensitive to illumination, and noise. In addition, the dimensionality of image vectro could be very large. An effective facial representation from original image is vital for classification. Experiments of \cite{shan2009facial} shwos that Local Binary Pattern(LBP) features are effective and efficient for facial expression recognition. The best performance of \cite{shan2009facial} is obtaine by combing Support Vector Machine and Boosted-LBP features. \cite{shan2009facial} also shows that LBP feature perform stably and robustly on low-resolution facial expresion recognition. The most important reasons of chosen LBP are: firstly LBP is robust to monotonic changes in illumination shown in figure \ref{fig:LBPE00}; secondly, computational simplicity, the calcualtion only contain integer math and there is no need for preprocessing; thirdly, the time complex is $O(n)$.
+\begin{figure}[ht]
+\centering
+\includegraphics[width = .5\textwidth]{imgs/lbp_yale.jpg}
+\caption[The LOF caption]{LBP Example\footnotemark}
+\label{fig:LBPE00}
+\end{figure}
+\footnotetext{LBP Example From \url{http://docs.opencv.org/modules/contrib/doc/facerec/facerec_tutorial.html#id22}}
 \subsection{Local Binary Pattern}
-Ojala et al introduced the fist generation of LBP operator \cite{shan2009facial}, it was proved to be a powerful texture descriptior. 
+Texture is an imprtant characteristic of images and videos. 2-D surface can be charaterized by two properties: pattern and contrast. In the warping step, the image was transformed to gray scale and we need a gray scale and rotation invariant pattern to measure. LBP is invariant to any monotonic gray level change and it is easy to compute. Ojala et al(1996) introduced the fist generation of LBP operator \cite{shan2009facial}, it was proved to be a powerful texture descriptior. Figure \ref{fig:LBPE01} show how to calculate LBP of a pixel and the contrast of the piexl.
+\begin{figure}[ht]
+\centering
+\captionsetup{justification=centering,margin=3cm}
+\includegraphics[width = .6\textwidth]{imgs/LBP_Example_1.png}
+\caption{An Example of Calculating LBP code and \newline a contrast measure of single pixel, image from \cite{maenpaa2005texture}}
+\label{fig:LBPE01}
+\end{figure}
+\newline
+The binary number could be used for coding types of curved edges, spots, flat area, etc as shown in figure \ref{fig:LBPE02}. Figure \ref{fig:LBPE02} is using circular pattern. In implmentation, the on-grid points($g_{0}-g_{4}$points in figure \ref{fig:LBPE03}) directly use sample data for calculation, but the off-grid points(the points in the second grid($P=8,R=1$), not in grid($P=4,R=1)$) in figure \ref{fig:LBPE03}) are calculating using interpolation. The 3X3 structure can not capture dominant feature for large scale structure\cite{shan2009facial}. So Ojala et al extend LBP to multiple scales as shown in figure \ref{fig:LBPE03}.
+\begin{figure}[ht]
+\centering
+\captionsetup{justification=centering,margin=3cm}
+\includegraphics[width = .6\textwidth]{imgs/LBP_Example_2.png}
+\caption{An Example of feature type coded by LBP and \newline black circles present ones and white circle represent zeros, image from \cite{shan2009facial}}
+\label{fig:LBPE02}
+\end{figure}
+\newline
+Define the operator as $LBP_{P\ R}$. Define texture T in local neighborhood as the joint distribution of gray level of P image pixels, R is the spatial resolution to the central pixel.
+\begin{equation}
+T = t(g_{c},g_{0},...g_{P-1})
+\label{eq:LBPDT}
+\end{equation}
+\begin{figure}[ht]
+\centering
+\captionsetup{justification=centering,margin=1cm}
+\includegraphics[width = \textwidth]{imgs/LBP_Example_3.png}
+\caption{An example for multiscale circular pattern, image from \cite{ojala2002multiresolution}}
+\label{fig:LBPE03}
+\end{figure}
+
+Ojala et al proposed multiscale LBP in \cite{ojala2002multiresolution}, which could be used for arbitrary circular neighborhoods and multiple scales; extend opertor, uniform patterns, which can help reduce the feature vector. Uniform Local Binary Pattern is defined as patterns with at most two contignous regions. The uniform pattern is as shown in figure \ref{fig:LBPE04}. Uniform Patter have significant effect on dimension reduction as the 256($2^8$) elements can be reduced to 59 elements, with 7*8 (uniform pattern from 1-7 in figure \ref{fig:LBPE04}, as there are 8 directions) + 2 (uniform pattern 0 and 8)+ 1 (represent nonuniform patterns). In addtion, most natural images are uniform LBP and uniform pattern is more robust than non-uniform pattern that it perform better result in many applications.
+\begin{figure}[ht]
+\centering
+\captionsetup{justification=centering,margin=1cm}
+\includegraphics[width = \textwidth]{imgs/LBP_Example_4.png}
+\caption{The first row are nine uniform patterns, Black represent 1, white represent 2, image from \cite{ojala2002multiresolution}}
+\label{fig:LBPE04}
+\end{figure}
 \newpage
 \section{Postprocessing}
 As it is known large margin classifiers are sensitive to the way features are scaled, it's better to normalize either the data or the kernal function \cite{ben2010user}. Feature of a image is represented by a vector, the number in the vector would influence the weight of feature in this dimension. As I would like to treat each dimension similar, I scale the number in the range of $[0,1]$.
