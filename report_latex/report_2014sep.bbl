@@ -66,6 +66,12 @@ Gerasimos Potamianos, Chalapathy Neti, Guillaume Gravier, Ashutosh Garg, and
 \newblock Recent advances in the automatic recognition of audiovisual speech.
 \newblock {\em Proceedings of the IEEE}, 91(9):1306--1326, 2003.
 
+\bibitem{powers2011evaluation}
+David~Martin Powers.
+\newblock Evaluation: from precision, recall and f-measure to roc,
+  informedness, markedness and correlation.
+\newblock 2011.
+
 \bibitem{saragih2011deformable}
 Jason~M Saragih, Simon Lucey, and Jeffrey~F Cohn.
 \newblock Deformable model fitting by regularized landmark mean-shift.

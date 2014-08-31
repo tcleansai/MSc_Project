@@ -3,43 +3,44 @@
 \contentsline {section}{\numberline {1.2}Thesis}{2}
 \contentsline {section}{\numberline {1.3}Contribution}{2}
 \contentsline {chapter}{\numberline {2}Background}{3}
-\contentsline {section}{\numberline {2.1}Automatic Speeech Recognition}{3}
+\contentsline {section}{\numberline {2.1}Automatic Speech Recognition}{3}
 \contentsline {section}{\numberline {2.2}Visual Front End}{4}
 \contentsline {subsection}{\numberline {2.2.1}Face Detection}{4}
 \contentsline {subsection}{\numberline {2.2.2}Region of Interest}{4}
-\contentsline {subsection}{\numberline {2.2.3}Visual Feature and Postprocessing}{4}
+\contentsline {subsection}{\numberline {2.2.3}Visual Feature and Postprocessing}{5}
 \contentsline {section}{\numberline {2.3}Facial Expression}{5}
-\contentsline {section}{\numberline {2.4}Nonlinguistic Vocalization}{5}
-\contentsline {section}{\numberline {2.5}Audio-Visual Biometrics}{5}
-\contentsline {chapter}{\numberline {3}Processing and Methodologies}{6}
-\contentsline {section}{\numberline {3.1}Processing Flow}{6}
-\contentsline {paragraph}{Processing Chart}{6}
-\contentsline {paragraph}{Data flow Chart}{7}
-\contentsline {section}{\numberline {3.2}Face Alignment}{7}
-\contentsline {subsection}{\numberline {3.2.1}Active Appearance Model}{8}
-\contentsline {paragraph}{Shape}{8}
-\contentsline {paragraph}{Appearance}{8}
-\contentsline {paragraph}{Model}{8}
-\contentsline {subsection}{\numberline {3.2.2}Trackers}{9}
-\contentsline {subsubsection}{Intraface}{9}
-\contentsline {paragraph}{Tracking Points}{9}
-\contentsline {paragraph}{Eating and Talking Sequence}{9}
-\contentsline {subsubsection}{DRMF}{10}
+\contentsline {subsection}{\numberline {2.3.1}Nonlinguistic Vocalization}{5}
+\contentsline {section}{\numberline {2.4}Audio-Visual Biometrics}{5}
+\contentsline {chapter}{\numberline {3}Processing and Methodologies}{7}
+\contentsline {section}{\numberline {3.1}Processing Flow}{7}
+\contentsline {paragraph}{Processing Chart}{7}
+\contentsline {paragraph}{Data flow Chart}{8}
+\contentsline {section}{\numberline {3.2}Face Alignment}{8}
+\contentsline {subsection}{\numberline {3.2.1}Active Appearance Model}{9}
+\contentsline {paragraph}{Shape}{9}
+\contentsline {paragraph}{Appearance}{9}
+\contentsline {paragraph}{Model}{9}
+\contentsline {subsection}{\numberline {3.2.2}Trackers}{10}
+\contentsline {subsubsection}{Intraface}{10}
 \contentsline {paragraph}{Tracking Points}{10}
-\contentsline {paragraph}{Talking and Talking Sequence}{10}
-\contentsline {subsection}{\numberline {3.2.3}Comparison}{12}
-\contentsline {section}{\numberline {3.3}Remove Head-pose}{15}
-\contentsline {section}{\numberline {3.4}Warping}{15}
-\contentsline {section}{\numberline {3.5}Feature Extraction}{17}
-\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{17}
-\contentsline {section}{\numberline {3.6}Postprocessing}{19}
-\contentsline {paragraph}{Normalization}{19}
-\contentsline {paragraph}{Scaling}{19}
-\contentsline {chapter}{\numberline {4}Experiment and Results}{20}
-\contentsline {section}{\numberline {4.1}Data}{20}
-\contentsline {subsection}{\numberline {4.1.1}Feature}{20}
-\contentsline {section}{\numberline {4.2}Methodology}{21}
-\contentsline {subsection}{\numberline {4.2.1}Find Parameter $c$ and $\gamma $}{21}
-\contentsline {section}{\numberline {4.3}Results and Analysis}{21}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{25}
-\contentsline {chapter}{\numberline {A}Classification Result}{27}
+\contentsline {paragraph}{Eating and Talking Sequence}{10}
+\contentsline {subsubsection}{DRMF}{11}
+\contentsline {paragraph}{Tracking Points}{11}
+\contentsline {paragraph}{Talking and Talking Sequence}{11}
+\contentsline {subsection}{\numberline {3.2.3}Comparison}{13}
+\contentsline {section}{\numberline {3.3}Remove Head-pose}{16}
+\contentsline {section}{\numberline {3.4}Warping}{16}
+\contentsline {section}{\numberline {3.5}Feature Extraction}{18}
+\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{18}
+\contentsline {section}{\numberline {3.6}Postprocessing}{20}
+\contentsline {paragraph}{Normalization}{20}
+\contentsline {paragraph}{Scaling}{20}
+\contentsline {chapter}{\numberline {4}Experiment and Results}{21}
+\contentsline {section}{\numberline {4.1}Data}{21}
+\contentsline {subsection}{\numberline {4.1.1}Feature}{22}
+\contentsline {section}{\numberline {4.2}Methodology}{22}
+\contentsline {subsection}{\numberline {4.2.1}Find Parameter $c$ and $\gamma $}{22}
+\contentsline {subsection}{\numberline {4.2.2}Evaluation}{23}
+\contentsline {section}{\numberline {4.3}Results and Analysis}{23}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{27}
+\contentsline {chapter}{\numberline {A}Classification Result}{30}

@@ -6,45 +6,46 @@ Database file #1: bibliography/bibliography.bib
 Warning--entry type for "AAMWarp" isn't style-file defined
 --line 126 of file bibliography/bibliography.bib
 Warning--empty journal in pantic2007machine
-You've used 15 entries,
+Warning--empty journal in powers2011evaluation
+You've used 16 entries,
             2118 wiz_defined-function locations,
-            592 strings with 6620 characters,
-and the built_in function-call counts, 5688 in all, are:
-= -- 592
-> -- 234
+            596 strings with 6777 characters,
+and the built_in function-call counts, 5891 in all, are:
+= -- 611
+> -- 241
 < -- 4
-+ -- 92
-- -- 76
-* -- 399
-:= -- 903
-add.period$ -- 48
-call.type$ -- 15
-change.case$ -- 83
++ -- 95
+- -- 78
+* -- 407
+:= -- 941
+add.period$ -- 51
+call.type$ -- 16
+change.case$ -- 87
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 211
-empty$ -- 455
-format.name$ -- 76
-if$ -- 1214
+cite$ -- 18
+duplicate$ -- 221
+empty$ -- 472
+format.name$ -- 78
+if$ -- 1254
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 14
-newline$ -- 77
-num.names$ -- 30
-pop$ -- 84
+int.to.str$ -- 16
+missing$ -- 15
+newline$ -- 82
+num.names$ -- 32
+pop$ -- 90
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 71
 quote$ -- 0
-skip$ -- 160
+skip$ -- 167
 stack$ -- 0
-substring$ -- 458
+substring$ -- 463
 swap$ -- 55
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
-warning$ -- 1
-while$ -- 60
-width$ -- 17
-write$ -- 166
-(There were 2 warnings)
+type$ -- 64
+warning$ -- 2
+while$ -- 62
+width$ -- 18
+write$ -- 175
+(There were 3 warnings)
