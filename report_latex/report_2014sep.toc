@@ -39,8 +39,10 @@
 \contentsline {section}{\numberline {4.1}Data}{21}
 \contentsline {subsection}{\numberline {4.1.1}Feature}{22}
 \contentsline {section}{\numberline {4.2}Methodology}{22}
-\contentsline {subsection}{\numberline {4.2.1}Find Parameter $c$ and $\gamma $}{22}
-\contentsline {subsection}{\numberline {4.2.2}Evaluation}{23}
+\contentsline {subsection}{\numberline {4.2.1}Dealing with imbalanced data}{23}
+\contentsline {subsection}{\numberline {4.2.2}libSVM}{23}
+\contentsline {subsection}{\numberline {4.2.3}Find Parameter $c$ and $\gamma $}{23}
+\contentsline {subsection}{\numberline {4.2.4}Evaluation}{23}
 \contentsline {section}{\numberline {4.3}Results and Analysis}{23}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{27}
-\contentsline {chapter}{\numberline {A}Classification Result}{30}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{28}
+\contentsline {chapter}{\numberline {A}Classification Result}{31}

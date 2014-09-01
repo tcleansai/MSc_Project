@@ -15,10 +15,36 @@ Rate		& 0.9552      & 0.9088 & 0.9241  & 0.6992       & 0.8888   & 0.4612       
 \end{table}
 \newline
 There are six labels for each frame, normal face, eating, talking, looking away, occluded, other problem. A frame labelled as eating belong to a image sequence of eating. Label normal face, eating, talking and looking away are disjoint, but one frame can be labelled as one of them and occluded or other problem. It is very hard to track a face that face to camera from a certain angle, so the tracking rate is very small for a face looking away. Only frame with label normal face, eating, talking in the experiment. Not all three labels are included in all videos, most of videos miss one or two or even all three labels.
+\newline
+The three class: Normal Face, Eating, Talking are used for training and classification. The statistical data are show in table \ref{tab:UFD} and \ref{tab:USD}.
+\begin{table}[ht]
+\centering
+\begin{tabular}{l|l|l|l|}
+\cline{2-4}
+                                                   & Normal Face & Eating & Talking \\ \hline
+\multicolumn{1}{|l|}{Tracked Frame Number}         & 33776       & 9460   & 5196    \\ \hline
+\multicolumn{1}{|l|}{Percentage of this class}     & 0.6974      & 0.1953 & 0.1073  \\ \hline
+\multicolumn{1}{|l|}{Percentage of not this class} & 0.3026      & 0.8047 & 0.8927  \\ \hline
+\end{tabular}
+\caption{Extracted Frames of Normal Face, Eating, Talking}
+\label{tab:UFD}
+\end{table}
+\begin{table}[ht]
+\centering
+\begin{tabular}{l|l|l|l|}
+\cline{2-4}
+                                                   & Normal Face & Eating & Talking \\ \hline
+\multicolumn{1}{|l|}{Tracked Sequence Number}      & 871         & 114    & 207     \\ \hline
+\multicolumn{1}{|l|}{Percentage of this class}     & 0.7307      & 0.0956 & 0.1737  \\ \hline
+\multicolumn{1}{|l|}{Percentage of not this class} & 0.2693      & 0.9044 & 0.8263  \\ \hline
+\end{tabular}
+\caption{Extracted Sequences of Normal Face, Eating, Talking}
+\label{tab:USD}
+\end{table}
 \subsection{Feature}
 Each face is aligned with 49 facial feature points as shown in figure \ref{fig:IPI}. As the tracker doesn't provide face bound point,so it's not possible to include jaw and cheek in the ROI.  Only the mouth as Region of Interest. Then Local Binary Pattern feature is extracted from ROI. The size appearance feature vector are different if image of ROI is divided into different number of blocks. 1 block and $1*3$ blocks are tried on dividing the image, the size of appearance feature vector is 95 and 177. As there are 49 shape feature points, so the size of shape feature points is 98.
 \section{Methodology}
-In the classification part, Support Vector Machine for classification. Two different type of appearance feature vectors are experimented, their dimensionality is 95 and 177, to see whether with more detailed appearance feature vector would be better for classification. The experiment focusing on finding answers to two question, would divide the image into more blocks while using LBP to extract features would influence the classification result, whether apply normalisation to each video would improve the classification result. In order to answer the first question, two group of features are examined. Both of them are extracted using blocked uniform pattern. However, one divides the image into 3 blocks, the other treats the image as one block. In order to find the answer to the second question, two different process are applied in normalising the features vector, one normalises both appearance feature and shape feature by each video, the other does not. One thing need mentions is that after put all feature vector together, feature vector of all groups are normalised. There are three types of feature vectors: shape feature vector, appearance feature vector and appearance+shape feature vector. As extracting feature using blocked uniform pattern only affect appearance feature vector, so in total, there are 10 groups of experiment.
+In the classification part, Support Vector Machine for classification. Two different type of appearance feature vectors are experimented, their dimensionality is 95 and 177, to see whether with more detailed appearance feature vector would be better for classification. The experiment focusing on finding answers to two question, would divide the image into more blocks while using LBP to extract features would influence the classification result, whether apply normalisation to each video would improve the classification result. In order to answer the first question, two group of features are examined. Both of them are extracted using blocked uniform pattern. However, one divides the image into 3 blocks, the other treats the image as one block. In order to find the answer to the second question, two different process are applied in normalising the features vector, one normalises both appearance feature and shape feature by each video, the other does not. One thing need mentions is that after put all feature vector together, feature vector of all groups are normalised. There are three types of feature vectors: shape feature vector, appearance feature vector and appearance+shape feature vector. As extracting feature using blocked uniform pattern only affect appearance feature vector, so in total, there are 10 groups of experiments.
 \begin{table}[ht]
 \centering
 \begin{tabular}{|l|*{11}{c|}}
@@ -35,6 +61,12 @@ SVM are fistly tested with linear kernel function and non-linear kernel, the Gau
 K(x,x') = e^{-\gamma||x-x'||^{2}}
 \label{eq:GK}
 \end{equation}
+
+\subsection{Dealing with imbalanced data}
+Random choose approximate the same number of entities for each class and using 10-fold cross validation.
+%need addtional knowledge.
+\subsection{libSVM}
+%need additional knowledge
 \subsection{Find Parameter $c$ and $\gamma$}
 A general way to find parameter $c$ and $\gamma$ is using cross-validation and grid-search. In n-fold cross-validation, first equally divide the data into n fold, leave out one fold of data as testing data and use other $n-1$ fold of data to train the classifier. Thus all the data is predicted once and the cross-validation accuracy is the percentage of data are correctly classified. 
 Grid-search is try various pairs of $c$ and $\gamma$ and choose the one with best cross-validation accuracy. Grid search approach is very simply and the computational time is no more than advanced method. To shorten the time of grid search, it is better to search with a coarse grid and then proceed with a more specific search in the identified grid.
@@ -53,7 +85,7 @@ In order to compare the different classification result, precision rate, recall 
 \label{tab:CM-2}
 \end{table}
 \newline
-Recall rate is the percentage of actual entities that are correctly Predicted Positive\cite{powers2011evaluation}. Precision rate is the percentage of Predicted Positive entities that are correctly real positives\cite{powers2011evaluation}. TP represents the number of positives are correctly classified. FN represents the number of negatives are false classified. FP represents the number of positives are false classified. TN represents the number of negatives that are correctly classified. F measure evaluates both recall rate and precision rate. In this experiment, F1 measure are used for evaluation the result.
+Recall rate is the percentage of actual entities that are correctly Predicted Positive\cite{powers2011evaluation}. Precision rate is the percentage of Predicted Positive entities that are correctly real positives\cite{powers2011evaluation}. TP represents the number of positives are correctly classified. FN represents the number of negatives are false classified. FP represents the number of positives are false classified. TN represents the number of negatives that are correctly classified. F measure evaluates both recall rate and precision rate. In this experiment, F1 measure are used for evaluation the result. The best score for F1 measure is 1 and the worst is 0, it can be interpreted as average weighted recall rate and precision rate.
 \begin{equation}
 \begin{split}
 recall &= \frac{TP}{TP + FN} \times 100\% \\
@@ -64,98 +96,79 @@ F_{\alpha} &= (1+\alpha)\frac{precision*recall}{\alpha*precision+recall}
 
 \section{Results and Analysis}
 In this chapter, a detail results and explanations of analysis are present. Figure \ref{fig:REF}, \ref{fig:RTF}, \ref{fig:RNF}, are frame classification result of Class Eating, Talking, Normal Face, using feature vectors that are normalised by each video. Figure \ref{fig:REF1}, \ref{fig:RTF1}, \ref{fig:RNF1}, are frame classification result of Class Eating, Talking, Normal Face, using feature vectors that are NOT normalised by each video. Figure \ref{fig:RES}, \ref{fig:RTS}, \ref{fig:RNS}, are sequence classification result of Class Eating, Talking, Normal Face, using feature vectors that are normalised by each video. Figure \ref{fig:RES1}, \ref{fig:RTS1}, \ref{fig:RNS1}, are sequence classification result of Class Eating, Talking, Normal Face, using feature vectors that are NOT normalised by each video. Figure \ref{fig:RFF}, \ref{fig:RFS} are frame and sequence F1 measure of all three class using feature vectors that are normalised by each video. Figure \ref{fig:RFF1}, \ref{fig:RFS1} are frame and sequence F1 measure of all three class using feature vectors that are NOT normalised by each video.
-\newline
-As table \ref{tab:UFD} shows, the data is extremely unbalanced.
-\begin{table}[ht]
-\centering
-\begin{tabular}{l|l|l|l|}
-\cline{2-4}
-                                                   & Normal Face & Eating & Talking \\ \hline
-\multicolumn{1}{|l|}{Tracked Frame Number}         & 33776       & 9460   & 5196    \\ \hline
-\multicolumn{1}{|l|}{Percentage of this class}     & 0.6974      & 0.1953 & 0.1073  \\ \hline
-\multicolumn{1}{|l|}{Percentage of not this class} & 0.3026      & 0.8047 & 0.8927  \\ \hline
-\end{tabular}
-\caption{Extracted Frames of Normal Face, Eating, Talking}
-\label{tab:UFD}
-\end{table}
-\begin{table}[h]
-\begin{tabular}{l|l|l|l|}
-\cline{2-4}
-                                                   & Normal Face & Eating & Talking \\ \hline
-\multicolumn{1}{|l|}{Tracked Sequence Number}      & 871         & 114    & 207     \\ \hline
-\multicolumn{1}{|l|}{Percentage of this class}     & 0.7307      & 0.0956 & 0.1737  \\ \hline
-\multicolumn{1}{|l|}{Percentage of not this class} & 0.2693      & 0.9044 & 0.8263  \\ \hline
-\end{tabular}
-\end{table}
-\newpage
+
+Most figure contain result of 5 groups, 1\_A means the appearance feature is extracted by using 1 block uniform pattern and it is using appearance vector for classification. 3\_AS means the appearance feature is extracted by using 3 block uniform pattern and it is using appearance and shape vector for classification. The same for 1\_AS and 3\_A, as using pure shape feature vector, it is not marked as normalised or not normalised.
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Eating_Frame.png}
-  \caption{Class Eating - Classification Result of Frame - Frame nomalised by each video}
+  \caption{Class Eating - Classification Result of Frame - Frame normalised by each video}
   \label{fig:REF}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Eating_Frame_1.png}
-  \caption{Class Eating - Classification Result of Frame - Frame NOT nomalised by each video}
+  \caption{Class Eating - Classification Result of Frame - Frame NOT normalised by each video}
   \label{fig:REF1}
 \end{minipage}
 \end{figure}
-Figure \ref{fig:REF} show precision rate, recall rate and F1 measure of using appearance feature vector that are normalised by each video. Figure \ref{fig:REF} contains result of 5 groups, 1\_A means the appearance feature is extracted by using 1 block uniform pattern and it is using appearance vector for classification. 3\_AS means the appearance feature is extracted by using 3 block uniform pattern and it is using appearance and shape vector for classification. The same for 1\_AS and 3\_A, as using pure shape feature vector, it is not marked as normalised or not normalised. The  largest recall rate and F1 score are obtained by using shape feature vector. There are 
+\newline
+Figure \ref{fig:REF} show precision rate, recall rate and F1 measure of using appearance feature vector that are normalised by each video. The largest recall rate and F1 score are obtained by using shape feature vector in figure \ref{fig:REF} and \ref{fig:REF1}, which means shape feature is very good for classifying eating. The lowest F1 score is obtained by using 1-block appearance feature vector. For F1 score, 3\_A is better than 1\_A and 3\_AS is better than 1\_AS may because using using 3-block LBP provide more information mouth region. The average F1 score of figure \ref{fig:REF} is 0.3, almost the same figure \ref{fig:REF1}, means normalise each feature vector of each video does not influence performance of classification eating. F1 score of both figure are in the range of 0.3$\pm$0.02, it is very close, it may means there is not much difference of using appearance feature or shape feature or both for classification. In addition,  average score of classifying eating is 0.3, personally hypothesis is that distinguish eating from talking may be difficult. 
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Eating_Sequence.png}
-  \caption{Class Eating - Classification Result of Frame - Frame nomalised by each video}
+  \caption{Class Eating - Classification Result of Sequence - Sequence normalised by each video}
   \label{fig:RES}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Eating_Sequence_1.png}
-  \caption{Class Eating - Classification Result of Frame - Frame NOT nomalised by each video}
+  \caption{Class Eating - Classification Result of Sequence - Sequence NOT normalised by each video}
   \label{fig:RES1}
 \end{minipage}
 \end{figure}
-
+\newline
+Figure \ref{fig:RES} and \ref{fig:REF1} shows the sequence classification result of eating. In figure \ref{fig:RES} comparing to figure \ref{fig:REF}, there is a significant increase on recall rate of 1\_AS, 1\_S and 3\_AS, and there is a significant drop of precision rate and F1 score, it may because as percentage of eating class number drop from approximate 0.2 of frames to 0.1 of sequences.  The average of F1 score are almost the same for figure \ref{fig:REF} and \ref{fig:REF1} which the same situation as frame classification. However, the best F1 score is obtained by 3\_AS if figure \ref{fig:REF} and by S in figure \ref{fig:REF1}. In figure \ref{fig:RES} and \ref{fig:RES1} the average F1 scores are 0.224 and 0.216, standard deviation of F1 score in figure \ref{fig:REF} is 0.0365 and standard deviation of F1 score in figure \ref{fig:REF1} is 0.0251, this means in classifying eating although not normalising data by video may lead to a little less in classification performance the result of using different feature vector could be more stable.
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Frame.png}
-  \caption{Class Talking - Classification Result of Frame - Frame nomalised by each video}
+  \caption{Class Talking - Classification Result of Frame - Frame normalised by each video}
   \label{fig:RTF}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Frame_1.png}
-  \caption{Class Talking - Classification Result of Frame - Frame NOT nomalised by each video}
+  \caption{Class Talking - Classification Result of Frame - Frame NOT normalised by each video}
   \label{fig:RTF1}
 \end{minipage}
 \end{figure}
-
+\newline
+Figure \ref{fig:RTF} the best F1 score is obtained by 3\_AS, unlike figure \ref{fig:REF} best F1 score is obtained by S. In addition, F1 score of 1\_AS  is better than S in figure \ref{fig:RTF}, which is different as in figure \ref{fig:REF} F1 score of S is better than 1\_AS. What's more, F1 score of those classification using both appearance and shape feature are larger than others, and it is the same result for figure \ref{fig:RTF1}. This means for talking frames, using both appearance and shape feature is better than using each one of them. 
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Sequence.png}
-  \caption{Class Talking - Classification Result of Sequence - Frame nomalised by each video}
+  \caption{Class Talking - Classification Result of Sequence - Frame normalised by each video}
   \label{fig:RTS}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Sequence_1.png}
-  \caption{Class Talking - Classification Result of Sequence - Frame NOT nomalised by each video}
+  \caption{Class Talking - Classification Result of Sequence - Frame NOT normalised by each video}
   \label{fig:RTS1}
 \end{minipage}
 \end{figure}
@@ -166,14 +179,14 @@ Figure \ref{fig:REF} show precision rate, recall rate and F1 measure of using ap
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Frame.png}
-  \caption{Class Normal Face - Classification Result of Frame - Frame nomalised by each video}
+  \caption{Class Normal Face - Classification Result of Frame - Frame normalised by each video}
   \label{fig:RNF}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Frame_1.png}
-  \caption{Class Normal Face - Classification Result of Frame - Frame NOT nomalised by each video}
+  \caption{Class Normal Face - Classification Result of Frame - Frame NOT normalised by each video}
   \label{fig:RNF1}
 \end{minipage}
 \end{figure}
@@ -184,14 +197,14 @@ Figure \ref{fig:REF} show precision rate, recall rate and F1 measure of using ap
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Sequence.png}
-  \caption{Class Normal Face - Classification Result of Sequence - Frame nomalised by each video}
+  \caption{Class Normal Face - Classification Result of Sequence - Frame normalised by each video}
   \label{fig:RNS}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Sequence_1.png}
-  \caption{Class Normal Face - Classification Result of Sequence - Frame NOT nomalised by each video}
+  \caption{Class Normal Face - Classification Result of Sequence - Frame NOT normalised by each video}
   \label{fig:RNS1}
 \end{minipage}
 \end{figure}
@@ -202,14 +215,14 @@ Figure \ref{fig:REF} show precision rate, recall rate and F1 measure of using ap
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_F1_Frame.png}
-  \caption{Three Class - Classification Result of frame - Frame nomalised by each video}
+  \caption{Three Class - Classification Result of frame - Frame normalised by each video}
   \label{fig:RFF}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_F1_Frame_1.png}
-  \caption{Three Class - Classification Result of frame - Frame NOT nomalised by each video}
+  \caption{Three Class - Classification Result of frame - Frame NOT normalised by each video}
   \label{fig:RFF1}
 \end{minipage}
 \end{figure}
