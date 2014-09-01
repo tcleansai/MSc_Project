@@ -1,3 +1,4 @@
+\select@language {english}
 \contentsline {chapter}{\numberline {1}Introduction}{2}
 \contentsline {section}{\numberline {1.1}Motivation}{2}
 \contentsline {section}{\numberline {1.2}Thesis}{2}
@@ -6,11 +7,11 @@
 \contentsline {section}{\numberline {2.1}Automatic Speech Recognition}{3}
 \contentsline {section}{\numberline {2.2}Visual Front End}{4}
 \contentsline {subsection}{\numberline {2.2.1}Face Detection}{4}
-\contentsline {subsection}{\numberline {2.2.2}Region of Interest}{4}
+\contentsline {subsection}{\numberline {2.2.2}Region of Interest}{5}
 \contentsline {subsection}{\numberline {2.2.3}Visual Feature and Postprocessing}{5}
 \contentsline {section}{\numberline {2.3}Facial Expression}{5}
 \contentsline {subsection}{\numberline {2.3.1}Nonlinguistic Vocalization}{5}
-\contentsline {section}{\numberline {2.4}Audio-Visual Biometrics}{5}
+\contentsline {section}{\numberline {2.4}Audio-Visual Biometrics}{6}
 \contentsline {chapter}{\numberline {3}Processing and Methodologies}{7}
 \contentsline {section}{\numberline {3.1}Processing Flow}{7}
 \contentsline {paragraph}{Processing Chart}{7}
@@ -43,7 +44,7 @@
 \contentsline {subsection}{\numberline {4.2.2}libSVM}{23}
 \contentsline {subsection}{\numberline {4.2.3}Find Parameter $c$ and $\gamma $}{23}
 \contentsline {subsection}{\numberline {4.2.4}Evaluation}{23}
-\contentsline {section}{\numberline {4.3}Experiments}{23}
+\contentsline {section}{\numberline {4.3}Experiments}{24}
 \contentsline {subsection}{\numberline {4.3.1}Results and Analysis}{24}
 \contentsline {chapter}{\numberline {5}Conclusion and Future Work}{29}
 \contentsline {chapter}{\numberline {A}Classification Result}{32}

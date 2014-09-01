@@ -45,6 +45,7 @@ The three class: Normal Face, Eating, Talking are used for training and classifi
 Each face is aligned with 49 facial feature points as shown in figure \ref{fig:IPI}. As the tracker doesn't provide face bound point,so it's not possible to include jaw and cheek in the ROI.  Only the mouth as Region of Interest. Then Local Binary Pattern feature is extracted from ROI. The size appearance feature vector are different if image of ROI is divided into different number of blocks. 1 block and $1*3$ blocks are tried on dividing the image, the size of appearance feature vector is 95 and 177. As there are 49 shape feature points, so the size of shape feature points is 98.
 \section{Methodology}
 In the classification part, Support Vector Machine for classification. Two different type of appearance feature vectors are experimented, their dimensionality is 95 and 177, to see whether with more detailed appearance feature vector would be better for classification. The experiment focusing on finding answers to two question, would divide the image into more blocks while using LBP to extract features would influence the classification result, whether apply normalisation to each video would improve the classification result. In order to answer the first question, two group of features are examined. Both of them are extracted using blocked uniform pattern. However, one divides the image into 3 blocks, the other treats the image as one block. In order to find the answer to the second question, two different process are applied in normalising the features vector, one normalises both appearance feature and shape feature by each video, the other does not. One thing need mentions is that after put all feature vector together, feature vector of all groups are normalised. There are three types of feature vectors: shape feature vector, appearance feature vector and appearance+shape feature vector. As extracting feature using blocked uniform pattern only affect appearance feature vector, so in total, there are 10 groups of experiments.
+
 \begin{table}[ht]
 \centering
 \begin{tabular}{|l|*{11}{c|}}
@@ -56,7 +57,7 @@ In the classification part, Support Vector Machine for classification. Two diffe
 \caption{Experiments}
 \label{tab:exp}
 \end{table}
-\newline
+
 SVM are fistly tested with linear kernel function and non-linear kernel, the Gaussian Kernel shows better result. Gaussian and polynomial kernels often leads to over-fitting in high dimensional database, while linear kernel is easier to tune because the only parameter that affects performance is the soft-margin constant\cite{ben2010user}. The best result is using Gaussian Kernel, so Gaussian Kernel is used for classification. The most important parameters for Gaussian Kernel is  penalty parameter $c$ and $\gamma$ in equation \ref{eq:GK}. Find the proper parameter could significantly increase classification result.\begin{equation}
 K(x,x') = e^{-\gamma||x-x'||^{2}}
 \label{eq:GK}
@@ -185,6 +186,7 @@ In figure \ref{fig:RTF}, the best F1 score is obtained by 3\_AS, unlike figure \
 \end{minipage}
 \end{figure}
 \newline
+
 Average F1 score in figure \ref{fig:RTS} is 0.39, which is much higher than 0.2240 in figure \ref{fig:RES}. Also F1 score in figure \ref{fig:RTS1} is 0.398, which is also better than 0.216 in figure \ref{fig:RES1}. According to two above reasons, 
 \begin{figure}[ht]
 \centering

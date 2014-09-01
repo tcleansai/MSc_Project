@@ -1,18 +1,19 @@
 \documentclass[a4paper,11pt,twoside]{report}
 \usepackage[left=2.5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
-%\usepackage[english]{babel}
-%\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{cite}
 \usepackage{float}
 \usepackage{diagbox}
-\setlength{\parindent}{11pt}
-\usepackage{caption}
 \usepackage{url}
+\usepackage{caption}
 \usepackage[font={small,it}]{caption}
 \usepackage{multirow}
+\usepackage[parfill]{parskip}
+\setlength{\parindent}{11pt}
 %\linespread{1.2}
 %\usepackage[colorinlistoftodos]{todonotes}
 
@@ -25,15 +26,16 @@
 \begin{document}
 \maketitle
 %\newpage\null\thispagestyle{empty}\newpage
-\pagenumbering{Roman}
+\pagenumbering{roman}
 
 \input{abstract/abstract}
 %\newpage\null\thispagestyle{empty}\newpage
 \input{acknowledgements/acknowledgements}
 %\newpage\null\thispagestyle{empty}\newpage
-\pagenumbering{arabic}
+
 \tableofcontents
 
+\pagenumbering{arabic}
 \input{introduction/introduction}
 \input{background/background}
 \input{chapter1/chapter1}

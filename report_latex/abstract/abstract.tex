@@ -1,3 +1,8 @@
 \begin{abstract}
-This is abstract.
+Automatic Speech Recognition(AVR), a integral part of Human Computer Interface(HCI), was extended to Audiovisual Automatic Speech Recognition(AV-AVR) in recent twenty years. Visual information was proven to have significant value for improving performance in AV-ASR. There is a large amount of research on improving performance of recognition speech. However, facial expression and non-linguistic vocalisation is also important part of human daily conversation. Detecting these action from speech could also improve performance of AV-ASR.
+This project try to integrate a series of action to extract proper features from relatively free recorded video. Then use different features to train a classifier and test and analyse the influence of using different features.
+In the process of face alignment, we tried two different face tracker for tracking facial points from video frames. The Intraface\cite{xiong2013supervised} and DRMF\cite{asthana2013robust}. Intraface is more accurate and DRMF provide more point which could be helpful.
+In the process of accurate appearance feature vector, we tried to remove head-pose using deformable model and extract texture feature using block Local Binary Pattern(LBP).
+We try to train, test and analyse using different features train a Support Vector Machine Classifier to classify three classes of frames and sequence, normal face, eating and talking.
+This project evaluate some approaches to extract features and influence of different combination of features on classification performance.
 \end{abstract}
