@@ -30,7 +30,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Comparison}{13}
 \contentsline {section}{\numberline {3.3}Remove Head-pose}{16}
 \contentsline {section}{\numberline {3.4}Warping}{16}
-\contentsline {section}{\numberline {3.5}Feature Extraction}{18}
+\contentsline {section}{\numberline {3.5}Feature Extraction}{17}
 \contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{18}
 \contentsline {section}{\numberline {3.6}Postprocessing}{20}
 \contentsline {paragraph}{Normalization}{20}
@@ -43,6 +43,7 @@
 \contentsline {subsection}{\numberline {4.2.2}libSVM}{23}
 \contentsline {subsection}{\numberline {4.2.3}Find Parameter $c$ and $\gamma $}{23}
 \contentsline {subsection}{\numberline {4.2.4}Evaluation}{23}
-\contentsline {section}{\numberline {4.3}Results and Analysis}{23}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{28}
-\contentsline {chapter}{\numberline {A}Classification Result}{31}
+\contentsline {section}{\numberline {4.3}Experiments}{23}
+\contentsline {subsection}{\numberline {4.3.1}Results and Analysis}{24}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{29}
+\contentsline {chapter}{\numberline {A}Classification Result}{32}

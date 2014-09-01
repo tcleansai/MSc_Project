@@ -94,10 +94,23 @@ F_{\alpha} &= (1+\alpha)\frac{precision*recall}{\alpha*precision+recall}
 \end{split} 
 \end{equation}
 
-\section{Results and Analysis}
-In this chapter, a detail results and explanations of analysis are present. Figure \ref{fig:REF}, \ref{fig:RTF}, \ref{fig:RNF}, are frame classification result of Class Eating, Talking, Normal Face, using feature vectors that are normalised by each video. Figure \ref{fig:REF1}, \ref{fig:RTF1}, \ref{fig:RNF1}, are frame classification result of Class Eating, Talking, Normal Face, using feature vectors that are NOT normalised by each video. Figure \ref{fig:RES}, \ref{fig:RTS}, \ref{fig:RNS}, are sequence classification result of Class Eating, Talking, Normal Face, using feature vectors that are normalised by each video. Figure \ref{fig:RES1}, \ref{fig:RTS1}, \ref{fig:RNS1}, are sequence classification result of Class Eating, Talking, Normal Face, using feature vectors that are NOT normalised by each video. Figure \ref{fig:RFF}, \ref{fig:RFS} are frame and sequence F1 measure of all three class using feature vectors that are normalised by each video. Figure \ref{fig:RFF1}, \ref{fig:RFS1} are frame and sequence F1 measure of all three class using feature vectors that are NOT normalised by each video.
+\section{Experiments}
+In this chapter, a detail description of results and explanations of analysis are presented. Figure \ref{fig:REF}, \ref{fig:RTF}, \ref{fig:RNF}, are frame classification result of Class Eating, Talking, Normal Face, using feature vectors that are normalised by each video. Figure \ref{fig:REF1}, \ref{fig:RTF1}, \ref{fig:RNF1}, are frame classification result of Class Eating, Talking, Normal Face, using feature vectors that are NOT normalised by each video. Figure \ref{fig:RES}, \ref{fig:RTS}, \ref{fig:RNS}, are sequence classification result of Class Eating, Talking, Normal Face, using feature vectors that are normalised by each video. Figure \ref{fig:RES1}, \ref{fig:RTS1}, \ref{fig:RNS1}, are sequence classification result of Class Eating, Talking, Normal Face, using feature vectors that are NOT normalised by each video. Figure \ref{fig:RFF}, \ref{fig:RFS} are frame and sequence F1 measure of all three class using feature vectors that are normalised by each video. Figure \ref{fig:RFF1}, \ref{fig:RFS1} are frame and sequence F1 measure of all three class using feature vectors that are NOT normalised by each video.
 
-Most figure contain result of 5 groups, 1\_A means the appearance feature is extracted by using 1 block uniform pattern and it is using appearance vector for classification. 3\_AS means the appearance feature is extracted by using 3 block uniform pattern and it is using appearance and shape vector for classification. The same for 1\_AS and 3\_A, as using pure shape feature vector, it is not marked as normalised or not normalised.
+Most figure contains result of 5 groups, 1\_A means the appearance feature is extracted by using 1 block uniform pattern and it is using appearance vector for classification. 3\_AS means the appearance feature is extracted by using 3 block uniform pattern and it is using appearance and shape vector for classification. The same for 1\_AS and 3\_A, as using pure shape feature vector, it is not marked as normalised or not normalised. The identification of each group of classification is show in table \ref{tab:RID}.
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|*{11}{c|}}
+\hline
+\begin{tabular}[c]{@{}l@{}}Identification\end{tabular} & 1\_A & 1\_AS & 3\_A & 3\_AS & S   & S\_1   & 1\_A\_1 & 1\_AS\_1 & 3\_A\_1 & 3\_AS\_1 \\ \hline
+\begin{tabular}[c]{@{}l@{}}Normalisation\\ (True if By Video)\end{tabular}            & T & T   & T & T   & T   & F   & F & F   & F & F   \\ \hline
+\begin{tabular}[c]{@{}l@{}}Appearance Feature\\ (Divide by 1 or 3 Block)\end{tabular} & 1 & 1   & 3 & 3   & 1/3 & 1/3 & 1 & 1   & 3 & 3   \\ \hline
+\begin{tabular}[c]{@{}l@{}}Feature\\ A: Appearance\\ S: Shape\end{tabular}            & A & A+S & A & A+S & S   & S   & A & A+S & A & A+S \\ \hline
+\end{tabular}
+\caption{Experiments and Identification in result figure}
+\label{tab:RID}
+\end{table}
+\subsection{Results and Analysis}
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -115,8 +128,7 @@ Most figure contain result of 5 groups, 1\_A means the appearance feature is ext
   \label{fig:REF1}
 \end{minipage}
 \end{figure}
-\newline
-Figure \ref{fig:REF} show precision rate, recall rate and F1 measure of using appearance feature vector that are normalised by each video. The largest recall rate and F1 score are obtained by using shape feature vector in figure \ref{fig:REF} and \ref{fig:REF1}, which means shape feature is very good for classifying eating. The lowest F1 score is obtained by using 1-block appearance feature vector. For F1 score, 3\_A is better than 1\_A and 3\_AS is better than 1\_AS may because using using 3-block LBP provide more information mouth region. The average F1 score of figure \ref{fig:REF} is 0.3, almost the same figure \ref{fig:REF1}, means normalise each feature vector of each video does not influence performance of classification eating. F1 score of both figure are in the range of 0.3$\pm$0.02, it is very close, it may means there is not much difference of using appearance feature or shape feature or both for classification. In addition,  average score of classifying eating is 0.3, personally hypothesis is that distinguish eating from talking may be difficult. 
+Figure \ref{fig:REF} shows precision rate, recall rate and F1 score of using appearance feature vector that are normalised by each video. The largest recall rate and F1 score are obtained by using shape feature vector in figure \ref{fig:REF} and \ref{fig:REF1}, which means shape feature is very good for classifying eating. The lowest F1 score is obtained by using 1-block appearance feature vector. For F1 score, 3\_A is better than 1\_A and 3\_AS is better than 1\_AS may because using using 3-block LBP provides more information mouth region. The average F1 score of figure \ref{fig:REF} is 0.3, almost the same figure \ref{fig:REF1}, means normalise each feature vector of each video does not influence performance of classification eating. F1 score of both figure are in the range of 0.3$\pm$0.02, it is very close, it may means there is not much difference of using appearance feature or shape feature or both for classification. In addition,  average score of classifying eating is 0.3, personally hypothesis is that distinguish eating from talking may be difficult. 
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -154,7 +166,7 @@ Figure \ref{fig:RES} and \ref{fig:REF1} shows the sequence classification result
 \end{minipage}
 \end{figure}
 \newline
-Figure \ref{fig:RTF} the best F1 score is obtained by 3\_AS, unlike figure \ref{fig:REF} best F1 score is obtained by S. In addition, F1 score of 1\_AS  is better than S in figure \ref{fig:RTF}, which is different as in figure \ref{fig:REF} F1 score of S is better than 1\_AS. What's more, F1 score of those classification using both appearance and shape feature are larger than others, and it is the same result for figure \ref{fig:RTF1}. This means for talking frames, using both appearance and shape feature is better than using each one of them. 
+In figure \ref{fig:RTF}, the best F1 score is obtained by 3\_AS, unlike figure \ref{fig:REF}, best F1 score is obtained by S. In addition, F1 score of 1\_AS  is better than S in figure \ref{fig:RTF}, which is different as in figure \ref{fig:REF} F1 score of S is better than 1\_AS. What's more, F1 score of those classification using both appearance and shape feature are larger than others, and it is the same result for figure \ref{fig:RTF1}. This means that for talking frames, using both appearance and shape feature is better than using either one of them. Average of F1 score of talking is less than average F1 score of eating in both figure \ref{fig:RTF} and \ref{fig:RTF1}, it means the the classification of eating is better than talking. Average recall rate of talking is higher than average recall rate of  eating, this means proportion of false positive of talking is less than proportion of false positive of eating. Instead, average precision rate of talking is less than average precision rate of eating, it means proportion of false negative of talking is higher than proportion of false negative of eating. The standard deviation of F1 score in figure \ref{fig:RTF} and \ref{fig:RTF1} are higher than the standard deviation of F1 score in figure \ref{fig:REF} and \ref{fig:REF1}, it means the influence of using different type of feature have more influence on talking than eating. F1 score of 3\_A or 3\_AS is higher or equal to 1\_A or 1\_AS in figure \ref{fig:REF},\ref{fig:REF1},\ref{fig:RTF},\ref{fig:RTF1}, they prove that using  more information in appearance would increase the performance of classification. However, the high F1 score of S also means, using shape feature is better for classification than appearance feature.
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -163,7 +175,7 @@ Figure \ref{fig:RTF} the best F1 score is obtained by 3\_AS, unlike figure \ref{
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Sequence.png}
   \caption{Class Talking - Classification Result of Sequence - Frame normalised by each video}
   \label{fig:RTS}
-\end{minipage}%
+\end{minipage}
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
@@ -172,7 +184,8 @@ Figure \ref{fig:RTF} the best F1 score is obtained by 3\_AS, unlike figure \ref{
   \label{fig:RTS1}
 \end{minipage}
 \end{figure}
-
+\newline
+Average F1 score in figure \ref{fig:RTS} is 0.39, which is much higher than 0.2240 in figure \ref{fig:RES}. Also F1 score in figure \ref{fig:RTS1} is 0.398, which is also better than 0.216 in figure \ref{fig:RES1}. According to two above reasons, 
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
