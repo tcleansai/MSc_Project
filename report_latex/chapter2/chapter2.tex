@@ -64,22 +64,26 @@ K(x,x') = e^{-\gamma||x-x'||^{2}}
 \end{equation}
 
 \subsection{Dealing with imbalanced data}
-Random choose approximate the same number of entities for each class and using 10-fold cross validation.
-%need addtional knowledge.
+We tried several actions to reduce the influence of imbalanced problem.
+\begin{itemize}
+\item Use 10-fold cross validation to all the classification result for all the entities. 
+\item According to the number of training entities of each class, tune the training weight of each class.
+\item Or for each training, random select approximately the same number of entities in each class, usually .
+\end{itemize}
 \subsection{libSVM}
-%need additional knowledge
+libSVM uses 'one-against-one' approach for multi-class classification\cite{CC01a}. If there are $n$ different classes, it will generate $n(n-1)/2$ classifier, each classifier is trained with two classes. It also use a voting strategy: each entity is test with each classifier, the entity belong to the class with most number of votes.
 \subsection{Find Parameter $c$ and $\gamma$}
 A general way to find parameter $c$ and $\gamma$ is using cross-validation and grid-search. In n-fold cross-validation, first equally divide the data into n fold, leave out one fold of data as testing data and use other $n-1$ fold of data to train the classifier. Thus all the data is predicted once and the cross-validation accuracy is the percentage of data are correctly classified. 
 Grid-search is try various pairs of $c$ and $\gamma$ and choose the one with best cross-validation accuracy. Grid search approach is very simply and the computational time is no more than advanced method. To shorten the time of grid search, it is better to search with a coarse grid and then proceed with a more specific search in the identified grid.
 \subsection{Evaluation}
 In order to compare the different classification result, precision rate, recall rate and F measure to evaluate classification result of each group of data. For each class could form a table of 2x2 and 4 result, true position(TP), true negative(TN), false positive(FP), false negative(FN) as shown in table.
-\begin{table}[h]
+\begin{table}[ht]
 \centering
 \begin{tabular}{ll|l|l|}
 \cline{3-4}
 \multicolumn{2}{l}{\multirow{2}{*}{}}                                                                  & \multicolumn{2}{|l|}{Predicted Class} \\ \cline{3-4} 
 \multicolumn{2}{l|}{}                                                                                   & Class             & Other            \\ \hline
-\multicolumn{1}{|l|}{\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Actural\\ Class\end{tabular}}} & Class & TP                & FN               \\ \cline{2-4} 
+\multicolumn{1}{|l|}{\multirow{2}{*}{\begin{tabular}[c]{@{}l@{}}Actual\\ Class\end{tabular}}} & Class & TP                & FN               \\ \cline{2-4} 
 \multicolumn{1}{|l|}{}                                                                         & Other & FP                & TN               \\ \hline
 \end{tabular}
 \caption{Confusion Matrix for two class}
@@ -96,7 +100,7 @@ F_{\alpha} &= (1+\alpha)\frac{precision*recall}{\alpha*precision+recall}
 \end{equation}
 
 \section{Experiments}
-In this chapter, a detail description of results and explanations of analysis are presented. Figure \ref{fig:REF}, \ref{fig:RTF}, \ref{fig:RNF}, are frame classification result of Class Eating, Talking, Normal Face, using feature vectors that are normalised by each video. Figure \ref{fig:REF1}, \ref{fig:RTF1}, \ref{fig:RNF1}, are frame classification result of Class Eating, Talking, Normal Face, using feature vectors that are NOT normalised by each video. Figure \ref{fig:RES}, \ref{fig:RTS}, \ref{fig:RNS}, are sequence classification result of Class Eating, Talking, Normal Face, using feature vectors that are normalised by each video. Figure \ref{fig:RES1}, \ref{fig:RTS1}, \ref{fig:RNS1}, are sequence classification result of Class Eating, Talking, Normal Face, using feature vectors that are NOT normalised by each video. Figure \ref{fig:RFF}, \ref{fig:RFS} are frame and sequence F1 measure of all three class using feature vectors that are normalised by each video. Figure \ref{fig:RFF1}, \ref{fig:RFS1} are frame and sequence F1 measure of all three class using feature vectors that are NOT normalised by each video.
+In this chapter, a detail description of results and explanations of analysis are presented. Figure \ref{fig:REF}, \ref{fig:RTF}, \ref{fig:RNF}, are frame classification result of Class Eating, Talking, Normal Face, using feature vectors that are normalised by each video. Figure \ref{fig:REF1}, \ref{fig:RTF1}, \ref{fig:RNF1}, are frame classification result of Class Eating, Talking, Normal Face, using feature vectors that are NOT normalised by each video. Figure \ref{fig:RES}, \ref{fig:RTS}, \ref{fig:RNS}, are sequence classification result of Class Eating, Talking, Normal Face, using feature vectors that are normalised by each video. Figure \ref{fig:RES1}, \ref{fig:RTS1}, \ref{fig:RNS1}, are sequence classification result of Class Eating, Talking, Normal Face, using feature vectors that are NOT normalised by each video. Figure \ref{fig:RNF}, \ref{fig:RFS} are frame and sequence F1 measure of all three class using feature vectors that are normalised by each video. Figure \ref{fig:RFF1}, \ref{fig:RFS1} are frame and sequence F1 measure of all three class using feature vectors that are NOT normalised by each video.
 
 Most figure contains result of 5 groups, 1\_A means the appearance feature is extracted by using 1 block uniform pattern and it is using appearance vector for classification. 3\_AS means the appearance feature is extracted by using 3 block uniform pattern and it is using appearance and shape vector for classification. The same for 1\_AS and 3\_A, as using pure shape feature vector, it is not marked as normalised or not normalised. The identification of each group of classification is show in table \ref{tab:RID}.
 \begin{table}[ht]
@@ -105,12 +109,13 @@ Most figure contains result of 5 groups, 1\_A means the appearance feature is ex
 \hline
 \begin{tabular}[c]{@{}l@{}}Identification\end{tabular} & 1\_A & 1\_AS & 3\_A & 3\_AS & S   & S\_1   & 1\_A\_1 & 1\_AS\_1 & 3\_A\_1 & 3\_AS\_1 \\ \hline
 \begin{tabular}[c]{@{}l@{}}Normalisation\\ (True if By Video)\end{tabular}            & T & T   & T & T   & T   & F   & F & F   & F & F   \\ \hline
-\begin{tabular}[c]{@{}l@{}}Appearance Feature\\ (Divide by 1 or 3 Block)\end{tabular} & 1 & 1   & 3 & 3   & 1/3 & 1/3 & 1 & 1   & 3 & 3   \\ \hline
+\begin{tabular}[c]{@{}l@{}}Appearance Feature\\ (1 or 3 Block)\end{tabular} & 1 & 1   & 3 & 3   & 1/3 & 1/3 & 1 & 1   & 3 & 3   \\ \hline
 \begin{tabular}[c]{@{}l@{}}Feature\\ A: Appearance\\ S: Shape\end{tabular}            & A & A+S & A & A+S & S   & S   & A & A+S & A & A+S \\ \hline
 \end{tabular}
 \caption{Experiments and Identification in result figure}
 \label{tab:RID}
 \end{table}
+
 \subsection{Results and Analysis}
 \begin{figure}[ht]
 \centering
@@ -174,20 +179,19 @@ In figure \ref{fig:RTF}, the best F1 score is obtained by 3\_AS, unlike figure \
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Sequence.png}
-  \caption{Class Talking - Classification Result of Sequence - Frame normalised by each video}
+  \caption{Class Talking - Classification Result of Sequence - Sequence normalised by each video}
   \label{fig:RTS}
-\end{minipage}
+\end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
   \captionsetup{justification=centering,margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Sequence_1.png}
-  \caption{Class Talking - Classification Result of Sequence - Frame NOT normalised by each video}
+  \caption{Class Talking - Classification Result of Sequence - Sequence NOT normalised by each video}
   \label{fig:RTS1}
 \end{minipage}
 \end{figure}
 \newline
-
-Average F1 score in figure \ref{fig:RTS} is 0.39, which is much higher than 0.2240 in figure \ref{fig:RES}. Also F1 score in figure \ref{fig:RTS1} is 0.398, which is also better than 0.216 in figure \ref{fig:RES1}. According to two above reasons, 
+Average F1 score in figure \ref{fig:RTS} is 0.39, which is much higher than 0.2240 in figure \ref{fig:RES}. Also F1 score in figure \ref{fig:RTS1} is 0.398, which is also better than 0.216 in figure \ref{fig:RES1}. According to two above reasons, the classification of talking is better than eating. Compare figure \ref{fig:RES} and \ref{fig:RTS1}, it easy to find that there is not much increase on average recall rate but average precision rate of talking is much better than talking. It means classifier is better recognise not taking than not eating. This is the main reason why classification of talking is better than eating. In classify talking, there is an obvious increase of using 3\_A and there is a small increase on using 1\_AS and 3\_AS. From observation above, it seems appearance feature has a positive influence in classifier talking sequence. Compare figure \ref{fig:RTS} and \ref{fig:RTS1}, the F1 score in both figure is very similar, again it support the hypothesis that there is not much influence whether normalise data by each video. However, F1 score of S\_1 in figure \ref{fig:RTS1} is better than F1 score of S in figure \ref{fig:RTS}.
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -205,7 +209,8 @@ Average F1 score in figure \ref{fig:RTS} is 0.39, which is much higher than 0.22
   \label{fig:RNF1}
 \end{minipage}
 \end{figure}
-
+\newline
+The best classification result is classify normal face, it is much better than classify eating and talking. In both figure \ref{fig:RNF} and \ref{fig:RNF1}, the average recall rate is 0.51, precision rate is 0.79, and F1 score is 0.62. For normal face, the precision rate is higher than recall rate, which is different from classification result of eating and talking. From all frame classification result, figure \ref{fig:REF}, \ref{fig:REF1}, \ref{fig:RTF}, \ref{fig:RTF1},\ref{fig:RNF}, \ref{fig:RNF1}, comparing F1 score, it easy to see that using shape and appearance feature is always better than using just appearance feature and using 3-block appearance feature is always better than 1-block appearance feature.
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -223,7 +228,8 @@ Average F1 score in figure \ref{fig:RTS} is 0.39, which is much higher than 0.22
   \label{fig:RNS1}
 \end{minipage}
 \end{figure}
-
+\newline
+In figure \ref{fig:RNS} and figure \ref{fig:RNS1}, average precision rate is 0.84, F1 score is 0.7, and recall rate is 0.605. There is 0.1 increase in F1 score comparing to frame classification result of normal face. The performance of using  S in figure \ref{fig:RNS} and \ref{fig:RNS1} is the worst among using different features, which is different from classify eating and talking. The best F1 score is obtained by using 3-block appearance feature and shape feature. It seems appearance feature is good for classifying normal face, but somehow had negative influence on classifying eating and talking. This may explain the reason why, using shape in classifying eating and talking performs relatively better than using appearance feature in classifying normal face.
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -241,7 +247,8 @@ Average F1 score in figure \ref{fig:RTS} is 0.39, which is much higher than 0.22
   \label{fig:RFF1}
 \end{minipage}
 \end{figure}
-
+\newline
+The frame classification result of three classes are shown in figure \ref{fig:RFF} and figure \ref{fig:RFF1}. Classification result from best to worst is normal face, eating, talking, according to F1 score. The process of normalise feature vector by each video does not increase classification result. However, using 3-block uniform pattern appearance feature which provide more appearance information has positive influence on classification result. By calculating the total F1 score of 10-group features, the best classification result is gained by using 3-block uniform pattern feature with shape feature. The worst classification is gained by using just 1-block appearance feature.
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
@@ -259,3 +266,33 @@ Average F1 score in figure \ref{fig:RTS} is 0.39, which is much higher than 0.22
   \label{fig:RFS1}
 \end{minipage}
 \end{figure}
+\newline
+For a sequence, the result of classify this sequence as a sequence of normal face, eating or talking is not directly classified by a classifier. It is calculated using majority voting from the classification result of frames. For example, the sequence is classified as a normal face if majority of frames are classified as normal face. Comparing result of classifying frame in figure \ref{fig:RFF} and sequence in figure \ref{fig:RFS}, the F1 score of normal face has a increase of 0.1, eating has a decrease of 0.08, talking has a increase of 0.14. The result of comparing figure \ref{fig:RFF1} and figure \ref{fig:RFS1} is almost the same. According to average F1 score of 10-group experiments, the best F1 score is gained by using 3-block appearance feature with shape feature, which is the same as frame classification result.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+\diagbox{Actual}{Predict}                             & \begin{tabular}[c]{@{}c@{}}Normal \\ Face\end{tabular}                            & Eating                                                                          & Talking                                                                         \\ \hline
+\begin{tabular}[c]{@{}c@{}}Normal\\ Face\end{tabular} & \cellcolor[HTML]{34CDF9}\begin{tabular}[c]{@{}c@{}}18271\\ (39.06\%)\end{tabular} & \begin{tabular}[c]{@{}c@{}}7880\\ (16.85\%)\end{tabular}                        & \begin{tabular}[c]{@{}c@{}}6791\\ (14.52\%)\end{tabular}                        \\ \hline
+Eating                                                & \begin{tabular}[c]{@{}c@{}}3156\\ (6.75\%)\end{tabular}                           & \cellcolor[HTML]{34CDF9}\begin{tabular}[c]{@{}c@{}}3163\\ (6.76\%)\end{tabular} & \begin{tabular}[c]{@{}c@{}}2425\\ (5.18\%)\end{tabular}                         \\ \hline
+Talking                                               & \begin{tabular}[c]{@{}c@{}}1387\\ (2.97\%)\end{tabular}                           & \begin{tabular}[c]{@{}c@{}}1304\\ (2.79\%)\end{tabular}                         & \cellcolor[HTML]{34CDF9}\begin{tabular}[c]{@{}c@{}}2400\\ (5.13\%)\end{tabular} \\ \hline
+\end{tabular}
+\caption{Confusion Matrix-Frame-3\_AS}
+\label{tab:CMF}
+\end{table}
+ Table \ref{tab:CMF} is an example of confusion matrix of frame using 3-block appearance feature with shape feature, more confusion matrix are in the appendix. 
+\begin{table}[ht]
+\centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\diagbox{Actual}{Predict}                             & \begin{tabular}[c]{@{}c@{}}Normal\\ Face\end{tabular}                           & Eating                                                                       & Talking                                                                        \\ \hline
+\begin{tabular}[c]{@{}c@{}}Normal\\ Face\end{tabular} & \cellcolor[HTML]{34CDF9}\begin{tabular}[c]{@{}c@{}}538\\ (45.13\%)\end{tabular} & \begin{tabular}[c]{@{}c@{}}162\\ (13.59\%)\end{tabular}                      & \begin{tabular}[c]{@{}c@{}}171\\ (13.35\%)\end{tabular}                        \\ \hline
+Eating                                                & \begin{tabular}[c]{@{}c@{}}48\\ (4.03\%)\end{tabular}                           & \cellcolor[HTML]{34CDF9}\begin{tabular}[c]{@{}c@{}}37\\ (3.1\%)\end{tabular} & \begin{tabular}[c]{@{}c@{}}29\\ (2.43\%)\end{tabular}                          \\ \hline
+Talking                                               & \begin{tabular}[c]{@{}c@{}}50\\ (4.30\%)\end{tabular}                           & \begin{tabular}[c]{@{}c@{}}45\\ (3.78\%)\end{tabular}                        & \cellcolor[HTML]{34CDF9}\begin{tabular}[c]{@{}c@{}}112\\ (9.40\%)\end{tabular} \\ \hline
+\end{tabular}
+\caption{Confusion Matrix-Sequence-3\_AS}
+\label{tab:CMS}
+\end{table}
+Table \ref{tab:CMS} is an example of confusion matrix of sequence using 3-block appearance feature with shape feature, more confusion matrix are in the appendix. 
+\paragraph{Conclusion}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.10.23)  1 SEP 2014 22:41
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.10.23)  2 SEP 2014 18:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -486,24 +486,57 @@ Package caption Info: float package is loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
 \bigstrutjot=\dimen136
 )
+(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen137
+\extrarowheight=\dimen138
+\NC@list=\toks26
+\extratabsurround=\skip46
+\backup@length=\skip47
+)
+\everycr=\toks27
+\minrowclearance=\skip48
+)
+\rownum=\count118
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
 )
 (./report_2014sep.aux)
 \openout1 = `report_2014sep.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -541,17 +574,17 @@ LaTeX Font Info:    ... okay on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
-\scratchdimen=\dimen137
+\scratchcounter=\count119
+\scratchdimen=\dimen139
 \scratchbox=\box33
-\nofMPsegments=\count119
-\nofMParguments=\count120
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count121
-\MPscratchDim=\dimen138
-\MPnumerator=\count122
-\makeMPintoPDFobject=\count123
-\everyMPtoPDFconversion=\toks27
+\nofMPsegments=\count120
+\nofMParguments=\count121
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen140
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
+\everyMPtoPDFconversion=\toks29
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -761,23 +794,26 @@ ter2.tex [20]
 Chapter 4.
 [21
 
-] [22] [23]
-Overfull \hbox (15.55183pt too wide) in paragraph at lines 104--111
- [][] 
- []
-
+] [22]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 69.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 69.
+ [23]
 <imgs/Result_Eating_Frame.png, id=129, 449.68pt x 337.26pt>
 File: imgs/Result_Eating_Frame.png Graphic file (type png)
 
 <use imgs/Result_Eating_Frame.png>
-Package pdftex.def Info: imgs/Result_Eating_Frame.png used on input line 120.
+Package pdftex.def Info: imgs/Result_Eating_Frame.png used on input line 125.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
 <imgs/Result_Eating_Frame_1.png, id=130, 449.68pt x 337.26pt>
 File: imgs/Result_Eating_Frame_1.png Graphic file (type png)
 
 <use imgs/Result_Eating_Frame_1.png>
-Package pdftex.def Info: imgs/Result_Eating_Frame_1.png used on input line 127.
+Package pdftex.def Info: imgs/Result_Eating_Frame_1.png used on input line 132.
 
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
@@ -785,7 +821,7 @@ Package pdftex.def Info: imgs/Result_Eating_Frame_1.png used on input line 127.
 File: imgs/Result_Eating_Sequence.png Graphic file (type png)
 
 <use imgs/Result_Eating_Sequence.png>
-Package pdftex.def Info: imgs/Result_Eating_Sequence.png used on input line 138
+Package pdftex.def Info: imgs/Result_Eating_Sequence.png used on input line 143
 .
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
@@ -794,21 +830,21 @@ File: imgs/Result_Eating_Sequence_1.png Graphic file (type png)
 
 <use imgs/Result_Eating_Sequence_1.png>
 Package pdftex.def Info: imgs/Result_Eating_Sequence_1.png used on input line 1
-45.
+50.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
 <imgs/Result_Talking_Frame.png, id=133, 449.68pt x 337.26pt>
 File: imgs/Result_Talking_Frame.png Graphic file (type png)
 
 <use imgs/Result_Talking_Frame.png>
-Package pdftex.def Info: imgs/Result_Talking_Frame.png used on input line 157.
+Package pdftex.def Info: imgs/Result_Talking_Frame.png used on input line 162.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
 <imgs/Result_Talking_Frame_1.png, id=134, 449.68pt x 337.26pt>
 File: imgs/Result_Talking_Frame_1.png Graphic file (type png)
 
 <use imgs/Result_Talking_Frame_1.png>
-Package pdftex.def Info: imgs/Result_Talking_Frame_1.png used on input line 164
+Package pdftex.def Info: imgs/Result_Talking_Frame_1.png used on input line 169
 .
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
@@ -816,8 +852,8 @@ Package pdftex.def Info: imgs/Result_Talking_Frame_1.png used on input line 164
 File: imgs/Result_Talking_Sequence.png Graphic file (type png)
 
 <use imgs/Result_Talking_Sequence.png>
-Package pdftex.def Info: imgs/Result_Talking_Sequence.png used on input line 17
-6.
+Package pdftex.def Info: imgs/Result_Talking_Sequence.png used on input line 18
+1.
 (pdftex.def)             Requested size: 234.73524pt x 158.37936pt.
 
 <imgs/Result_Talking_Sequence_1.png, id=136, 597.432pt x 403.106pt>
@@ -825,104 +861,97 @@ File: imgs/Result_Talking_Sequence_1.png Graphic file (type png)
 
 <use imgs/Result_Talking_Sequence_1.png>
 Package pdftex.def Info: imgs/Result_Talking_Sequence_1.png used on input line 
-183.
+188.
 (pdftex.def)             Requested size: 234.73524pt x 158.37936pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 132--189
-
- []
-
-[24]
-Underfull \vbox (badness 3375) has occurred while \output is active []
-
- [25 <./imgs/Result_Eating_Frame.png (PNG copy)> <./imgs/Result_Eating_Frame_1.
-png (PNG copy)> <./imgs/Result_Eating_Sequence.png (PNG copy)> <./imgs/Result_E
-ating_Sequence_1.png (PNG copy)>]
-<imgs/Result_NormalFace_Frame.png, id=143, 449.68pt x 337.26pt>
+<imgs/Result_NormalFace_Frame.png, id=137, 449.68pt x 337.26pt>
 File: imgs/Result_NormalFace_Frame.png Graphic file (type png)
 
 <use imgs/Result_NormalFace_Frame.png>
-Package pdftex.def Info: imgs/Result_NormalFace_Frame.png used on input line 19
-6.
+Package pdftex.def Info: imgs/Result_NormalFace_Frame.png used on input line 20
+0.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_NormalFace_Frame_1.png, id=144, 449.68pt x 337.26pt>
+<imgs/Result_NormalFace_Frame_1.png, id=138, 449.68pt x 337.26pt>
 File: imgs/Result_NormalFace_Frame_1.png Graphic file (type png)
 
 <use imgs/Result_NormalFace_Frame_1.png>
 Package pdftex.def Info: imgs/Result_NormalFace_Frame_1.png used on input line 
-203.
+207.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_NormalFace_Sequence.png, id=145, 449.68pt x 337.26pt>
+<imgs/Result_NormalFace_Sequence.png, id=139, 449.68pt x 337.26pt>
 File: imgs/Result_NormalFace_Sequence.png Graphic file (type png)
 
 <use imgs/Result_NormalFace_Sequence.png>
 Package pdftex.def Info: imgs/Result_NormalFace_Sequence.png used on input line
- 214.
+ 219.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_NormalFace_Sequence_1.png, id=146, 449.68pt x 337.26pt>
+<imgs/Result_NormalFace_Sequence_1.png, id=140, 449.68pt x 337.26pt>
 File: imgs/Result_NormalFace_Sequence_1.png Graphic file (type png)
 
 <use imgs/Result_NormalFace_Sequence_1.png>
 Package pdftex.def Info: imgs/Result_NormalFace_Sequence_1.png used on input li
-ne 221.
+ne 226.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_F1_Frame.png, id=147, 597.432pt x 403.106pt>
+<imgs/Result_F1_Frame.png, id=141, 597.432pt x 403.106pt>
 File: imgs/Result_F1_Frame.png Graphic file (type png)
 
 <use imgs/Result_F1_Frame.png>
-Package pdftex.def Info: imgs/Result_F1_Frame.png used on input line 232.
+Package pdftex.def Info: imgs/Result_F1_Frame.png used on input line 238.
 (pdftex.def)             Requested size: 234.73524pt x 158.37936pt.
 
-<imgs/Result_F1_Frame_1.png, id=148, 597.432pt x 403.106pt>
+<imgs/Result_F1_Frame_1.png, id=142, 597.432pt x 403.106pt>
 File: imgs/Result_F1_Frame_1.png Graphic file (type png)
 
 <use imgs/Result_F1_Frame_1.png>
-Package pdftex.def Info: imgs/Result_F1_Frame_1.png used on input line 239.
+Package pdftex.def Info: imgs/Result_F1_Frame_1.png used on input line 245.
 (pdftex.def)             Requested size: 234.73524pt x 158.37936pt.
 
-<imgs/Result_F1_Sequence.png, id=149, 449.68pt x 337.26pt>
+<imgs/Result_F1_Sequence.png, id=143, 449.68pt x 337.26pt>
 File: imgs/Result_F1_Sequence.png Graphic file (type png)
 
 <use imgs/Result_F1_Sequence.png>
-Package pdftex.def Info: imgs/Result_F1_Sequence.png used on input line 250.
+Package pdftex.def Info: imgs/Result_F1_Sequence.png used on input line 257.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_F1_Sequence_1.png, id=150, 449.68pt x 337.26pt>
+<imgs/Result_F1_Sequence_1.png, id=144, 449.68pt x 337.26pt>
 File: imgs/Result_F1_Sequence_1.png Graphic file (type png)
 
 <use imgs/Result_F1_Sequence_1.png>
-Package pdftex.def Info: imgs/Result_F1_Sequence_1.png used on input line 257.
+Package pdftex.def Info: imgs/Result_F1_Sequence_1.png used on input line 264.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
-) (./conclusion/conclusion.tex [26 <./imgs/Result_Talking_Frame.png (PNG copy)>
- <./imgs/Result_Talking_Frame_1.png (PNG copy)>] [27 <./imgs/Result_Talking_Seq
-uence.png (PNG copy)> <./imgs/Result_Talking_Sequence_1.png (PNG copy)> <./imgs
-/Result_NormalFace_Frame.png (PNG copy)> <./imgs/Result_NormalFace_Frame_1.png 
-(PNG copy)>] [28 <./imgs/Result_NormalFace_Sequence.png (PNG copy)> <./imgs/Res
-ult_NormalFace_Sequence_1.png (PNG copy)> <./imgs/Result_F1_Frame.png (PNG copy
-)> <./imgs/Result_F1_Frame_1.png (PNG copy)> <./imgs/Result_F1_Sequence.png (PN
-G copy)> <./imgs/Result_F1_Sequence_1.png (PNG copy)>]
+ [24] [25 <./imgs/Result_Eating_Frame.png (PNG copy)> <./imgs/Result_Eating_Fra
+me_1.png (PNG copy)> <./imgs/Result_Eating_Sequence.png (PNG copy)> <./imgs/Res
+ult_Eating_Sequence_1.png (PNG copy)>]
+[26 <./imgs/Result_Talking_Frame.png (PNG copy)> <./imgs/Result_Talking_Frame_1
+.png (PNG copy)> <./imgs/Result_Talking_Sequence.png (PNG copy)> <./imgs/Result
+_Talking_Sequence_1.png (PNG copy)>] [27 <./imgs/Result_NormalFace_Frame.png (P
+NG copy)> <./imgs/Result_NormalFace_Frame_1.png (PNG copy)> <./imgs/Result_Norm
+alFace_Sequence.png (PNG copy)> <./imgs/Result_NormalFace_Sequence_1.png (PNG c
+opy)>] [28 <./imgs/Result_F1_Frame.png (PNG copy)> <./imgs/Result_F1_Frame_1.pn
+g (PNG copy)> <./imgs/Result_F1_Sequence.png (PNG copy)> <./imgs/Result_F1_Sequ
+ence_1.png (PNG copy)>]) (./conclusion/conclusion.tex [29]
 Chapter 5.
-) (./report_2014sep.bbl [29
+) (./report_2014sep.bbl [30
 
-] [30
+] [31
 
-]) (./appendix/appendix.tex [31]
+]) (./appendix/appendix.tex [32]
 Appendix A.
-) [32
+) [33
 
 ] (./report_2014sep.aux) ) 
 Here is how much of TeX's memory you used:
- 5462 strings out of 494966
- 78828 string characters out of 3178674
- 177174 words of memory out of 3000000
- 8473 multiletter control sequences out of 15000+200000
+ 6040 strings out of 494966
+ 85549 string characters out of 3178674
+ 197663 words of memory out of 3000000
+ 9035 multiletter control sequences out of 15000+200000
  13371 words of font info for 48 fonts, out of 3000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,16n,38p,1817b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,19n,38p,1817b,408s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cme
@@ -940,10 +969,10 @@ sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pf
 b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb>
-Output written on report_2014sep.pdf (35 pages, 25114614 bytes).
+Output written on report_2014sep.pdf (36 pages, 25120356 bytes).
 PDF statistics:
- 231 PDF objects out of 1000 (max. 8388607)
- 133 compressed objects within 2 object streams
+ 234 PDF objects out of 1000 (max. 8388607)
+ 135 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  171 words of extra memory for PDF output out of 10000 (max. 10000000)
 
