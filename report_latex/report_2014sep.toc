@@ -1,59 +1,59 @@
 \select@language {english}
-\contentsline {chapter}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {1.1}Motivation}{2}
-\contentsline {section}{\numberline {1.2}Thesis}{2}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {section}{\numberline {1.1}Motivation}{1}
+\contentsline {section}{\numberline {1.2}Thesis}{1}
 \contentsline {section}{\numberline {1.3}Contribution}{2}
-\contentsline {section}{\numberline {1.4}Outline of Report}{3}
-\contentsline {paragraph}{Section 2:}{3}
-\contentsline {paragraph}{Section 3:}{3}
-\contentsline {paragraph}{Section 4:}{3}
-\contentsline {paragraph}{Section 5:}{3}
-\contentsline {chapter}{\numberline {2}Background}{4}
-\contentsline {section}{\numberline {2.1}Automatic Speech Recognition}{4}
-\contentsline {section}{\numberline {2.2}Visual Front End}{5}
+\contentsline {section}{\numberline {1.4}Outline of Report}{2}
+\contentsline {paragraph}{Chapter 2:}{2}
+\contentsline {paragraph}{Chapter 3:}{2}
+\contentsline {paragraph}{Chapter 4:}{2}
+\contentsline {paragraph}{Chapter 5:}{2}
+\contentsline {chapter}{\numberline {2}Background}{3}
+\contentsline {section}{\numberline {2.1}Automatic Speech Recognition}{3}
+\contentsline {section}{\numberline {2.2}Visual Front End}{4}
 \contentsline {subsection}{\numberline {2.2.1}Face Detection}{5}
-\contentsline {subsection}{\numberline {2.2.2}Region of Interest}{6}
+\contentsline {subsection}{\numberline {2.2.2}Region of Interest}{5}
 \contentsline {subsection}{\numberline {2.2.3}Visual Feature and Postprocessing}{6}
 \contentsline {section}{\numberline {2.3}Facial Expression}{6}
-\contentsline {subsection}{\numberline {2.3.1}Nonlinguistic Vocalization}{6}
+\contentsline {subsection}{\numberline {2.3.1}Nonlinguistic Vocalization}{7}
 \contentsline {section}{\numberline {2.4}Audio-Visual Biometrics}{7}
 \contentsline {chapter}{\numberline {3}Processing and Methodologies}{8}
 \contentsline {section}{\numberline {3.1}Processing Flow}{8}
-\contentsline {paragraph}{Processing Chart}{8}
+\contentsline {paragraph}{Processing Chart}{9}
 \contentsline {paragraph}{Data flow Chart}{9}
-\contentsline {section}{\numberline {3.2}Face Alignment}{9}
+\contentsline {section}{\numberline {3.2}Face Alignment}{10}
 \contentsline {subsection}{\numberline {3.2.1}Active Appearance Model}{10}
-\contentsline {paragraph}{Shape}{10}
-\contentsline {paragraph}{Appearance}{10}
-\contentsline {paragraph}{Model}{10}
-\contentsline {subsection}{\numberline {3.2.2}Trackers}{11}
-\contentsline {subsubsection}{Intraface}{11}
-\contentsline {paragraph}{Tracking Points}{11}
-\contentsline {paragraph}{Eating and Talking Sequence}{11}
-\contentsline {subsubsection}{DRMF}{12}
+\contentsline {paragraph}{Shape}{11}
+\contentsline {paragraph}{Appearance}{11}
+\contentsline {paragraph}{Model}{11}
+\contentsline {subsection}{\numberline {3.2.2}Trackers}{12}
+\contentsline {subsubsection}{Intraface}{12}
 \contentsline {paragraph}{Tracking Points}{12}
-\contentsline {paragraph}{Talking and Talking Sequence}{12}
-\contentsline {subsection}{\numberline {3.2.3}Comparison}{14}
-\contentsline {section}{\numberline {3.3}Remove Head-pose}{17}
-\contentsline {section}{\numberline {3.4}Warping}{17}
-\contentsline {section}{\numberline {3.5}Feature Extraction}{18}
-\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{19}
-\contentsline {section}{\numberline {3.6}Postprocessing}{21}
-\contentsline {paragraph}{Normalization}{21}
-\contentsline {paragraph}{Scaling}{21}
-\contentsline {chapter}{\numberline {4}Experiment and Results}{22}
-\contentsline {section}{\numberline {4.1}Data}{22}
-\contentsline {subsection}{\numberline {4.1.1}Feature}{23}
-\contentsline {section}{\numberline {4.2}Methodology}{23}
-\contentsline {subsection}{\numberline {4.2.1}Dealing with imbalanced data}{24}
-\contentsline {subsection}{\numberline {4.2.2}libSVM}{24}
-\contentsline {subsection}{\numberline {4.2.3}Parameter Optimisation for SVM}{24}
-\contentsline {subsection}{\numberline {4.2.4}Evaluation}{24}
-\contentsline {section}{\numberline {4.3}Experiments}{25}
-\contentsline {subsection}{\numberline {4.3.1}Results and Analysis}{25}
-\contentsline {subsection}{\numberline {4.3.2}Data and Analysis}{30}
-\contentsline {subsection}{\numberline {4.3.3}Examples of Wrong Classification}{31}
-\contentsline {paragraph}{Conclusion}{32}
-\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{33}
-\contentsline {chapter}{\numberline {A}Classification Result}{36}
-\contentsline {chapter}{\numberline {B}Data Statistics}{39}
+\contentsline {paragraph}{Eating and Talking Sequence}{13}
+\contentsline {subsubsection}{DRMF}{15}
+\contentsline {paragraph}{Tracking Points}{15}
+\contentsline {paragraph}{Talking and Talking Sequence}{15}
+\contentsline {subsection}{\numberline {3.2.3}Comparison}{17}
+\contentsline {section}{\numberline {3.3}Remove Head-pose}{19}
+\contentsline {section}{\numberline {3.4}Warping}{19}
+\contentsline {section}{\numberline {3.5}Feature Extraction}{21}
+\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{21}
+\contentsline {section}{\numberline {3.6}Postprocessing}{23}
+\contentsline {paragraph}{Normalization}{24}
+\contentsline {paragraph}{Scaling}{24}
+\contentsline {chapter}{\numberline {4}Experiment and Results}{25}
+\contentsline {section}{\numberline {4.1}Data}{25}
+\contentsline {subsection}{\numberline {4.1.1}Feature}{26}
+\contentsline {section}{\numberline {4.2}Methodology}{27}
+\contentsline {subsection}{\numberline {4.2.1}Dealing with imbalanced data}{27}
+\contentsline {subsection}{\numberline {4.2.2}libSVM}{28}
+\contentsline {subsection}{\numberline {4.2.3}Parameter Optimisation for SVM}{28}
+\contentsline {subsection}{\numberline {4.2.4}Evaluation}{28}
+\contentsline {section}{\numberline {4.3}Experiments}{29}
+\contentsline {subsection}{\numberline {4.3.1}Results and Analysis}{30}
+\contentsline {subsection}{\numberline {4.3.2}Data and Analysis}{35}
+\contentsline {subsection}{\numberline {4.3.3}Examples of Wrong Classification}{36}
+\contentsline {paragraph}{Conclusion}{37}
+\contentsline {chapter}{\numberline {5}Conclusion and Future Work}{39}
+\contentsline {chapter}{\numberline {A}Classification Result}{42}
+\contentsline {chapter}{\numberline {B}Data Statistics}{45}

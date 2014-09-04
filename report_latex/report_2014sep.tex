@@ -8,37 +8,37 @@
 \usepackage{cite}
 \usepackage{float}
 \usepackage{diagbox}
+\usepackage{indentfirst}
 \usepackage{url}
 \usepackage{caption}
 \usepackage[font={small,it}]{caption}
 \usepackage{multirow}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage[parfill]{parskip}
-\setlength{\parindent}{11pt}
-%\linespread{1.2}
-%\usepackage[colorinlistoftodos]{todonotes}
+%\setlength{\parindent}{11pt}
+\linespread{1.5}
 
-\title{Detecting eating and talking from webcam videos}
+%\title{Detecting eating and talking from webcam videos}
 
-\author{Wenyang Cai}
+%\author{Wenyang Cai}
 
-\date{\today}
+%\date{\today}
 
 \begin{document}
-\maketitle
+\include{cover/cover}
+%\maketitle
 %\newpage\null\thispagestyle{empty}\newpage
-\pagenumbering{roman}
 
 \input{abstract/abstract}
 %\newpage\null\thispagestyle{empty}\newpage
 \input{acknowledgements/acknowledgements}
 %\newpage\null\thispagestyle{empty}\newpage
 
+\pagenumbering{roman}
 \tableofcontents
 \listoffigures
 \listoftables
 
-\pagenumbering{arabic}
 \input{introduction/introduction}
 \input{background/background}
 \input{chapter1/chapter1}
@@ -47,7 +47,6 @@
 
 \bibliographystyle{plain}
 \bibliography{bibliography/bibliography}
-%\chapter{Reference}
 
 \input{appendix/appendix}
 

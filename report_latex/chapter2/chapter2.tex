@@ -1,7 +1,7 @@
 \chapter{Experiment and Results}
 In this chapter, section 4.1 describe component of database used in experiment, and section 4.2 introduce methodologies of classification and evaluation. Section 4.3 presents the result and give explanation of analysis.
 \section{Data}
-There are 450 videos in two formats, avi and flv, 89 of them are flv videos, 361 of them are avi videos. The time of videos are from seconds to dozens of seconds. Videos were recorded using web-cam of different PCs. Video background are vary as the video are recorded in a place chosen by subject. People are free to do anything while recording the video, a male disappear from the camera for half of the video sequence while recording. As a result, there are no faces in most of the video frames. The Intraface tracker \cite{xiong2013supervised} is used to track those videos. It is able to track 439 videos. 1 video is tracked, but the tracking result does not match the label. 10 videos are tracked, but unable to identify the face in the video. The face in those untracked video can be clear identify by visual. One possible may be the resolution of the image. Maximum untracked video frame is $240*960$ pixels. Minimum tracked video frame size is $240*960$, the same as the maximum size of untracked video frame. It is reasonable to say tracker \cite{xiong2013supervised} may not be good at tracking low resolution videos. The observation mentioned in comparing tracker \cite{xiong2013supervised} and tracker \cite{asthana2013robust} also support this hypothesis. The maximum frame tracked is $600*2400$. For each video there is a label file indicate the label of each frame, The frame number of each video is quite different, from around 200 to more than 900. The frame rate is 30 fps. Table\ref{tab:TR} shows the tracking result of tracker \cite{xiong2013supervised}.
+There are 450 videos in two formats, avi and flv, 89 of them are flv videos, 361 of them are avi videos. The time of videos are from seconds to dozens of seconds. Videos were recorded using web-cam of different PCs. Video background are varied, as the video are recorded in a place chosen by subject. People are free to do anything while recording the video, a male disappear from the camera for half of the video sequence while recording. As a result, there are no faces in most of the video frames. The Intraface tracker \cite{xiong2013supervised} is used to track those videos. It is able to track 439 videos. 1 video is tracked, but the tracking result does not match the label. 10 videos are tracked, but unable to identify the face in the video. The face in those untracked video can be clear identify by visual. One possible may be the resolution of the image. Maximum untracked video frame is $240*960$ pixels. Minimum tracked video frame size is $240*960$, the same as the maximum size of untracked video frame. It is reasonable to say tracker \cite{xiong2013supervised} may not be good at tracking low resolution videos. The observation mentioned in comparing tracker \cite{xiong2013supervised} and tracker \cite{asthana2013robust} also support this hypothesis. The maximum frame tracked is $600*2400$. For each video there is a label file indicate the label of each frame, The frame number of each video is quite different, from around 200 to more than 900. The frame rate is 30 fps. Table\ref{tab:TR} shows the tracking result of tracker \cite{xiong2013supervised}.
 \begin{table}[ht]
 \begin{tabular}{|l|*{6}{c|}}
 \hline
@@ -14,7 +14,7 @@ Rate		& 0.9552      & 0.9088 & 0.9241  & 0.6992       & 0.8888   & 0.4612       
 \label{tab:TR}
 \end{table}
 \newline
-There are six labels for each frame, normal face, eating, talking, looking away, occluded, other problem. A frame labelled as eating belong to a image sequence of eating. Label normal face, eating, talking and looking away are disjoint, but one frame can be labelled as one of them and occluded or other problem. It is very hard to track a face that face to camera from a certain angle, so the tracking rate is very small for a face looking away. Only frame with label normal face, eating, talking in the experiment. Not all three labels are included in all videos, most of videos miss one or two or even all three labels.
+There are six labels for each frame, normal face, eating, talking, looking away, occluded, other problem. A frame labelled as eating belong to an image sequence of eating. Label normal face, eating, talking and looking away are disjoint, but one frame can be labelled as one of them and occluded or other problem. It is very hard to track a face that face to camera from a certain angle, so the tracking rate is very small for a face looking away. Only frame with label normal face, eating, talking in the experiment. Not all three labels are included in all videos, most videos miss one or two or even all three labels.
 \newline
 The three class: Normal Face, Eating, Talking are used for training and classification. The statistical data are show in table \ref{tab:UFD} and \ref{tab:USD}.
 \begin{table}[ht]
@@ -42,11 +42,11 @@ The three class: Normal Face, Eating, Talking are used for training and classifi
 \label{tab:USD}
 \end{table}
 \subsection{Feature}
-Each face is aligned with 49 facial feature points as shown in figure \ref{fig:IPI}. As the tracker doesn't provide face bound point,so it's not possible to include jaw and cheek in the ROI.  Only the mouth as Region of Interest. Then Local Binary Pattern feature is extracted from ROI. The size appearance feature vector are different if image of ROI is divided into different number of blocks. 1 block and $1*3$ blocks are tried on dividing the image, the size of appearance feature vector is 95 and 177. As there are 49 shape feature points, so the size of shape feature points is 98.
+Each face is aligned with 49 facial feature points as shown in figure \ref{fig:IPI}. As the tracker doesn't provide face bound point, so it's not possible to include jaw and cheek in the ROI.  Only the mouth as Region of Interest. Then Local Binary Pattern feature is extracted from ROI. The size appearance feature vector are different if image of ROI is divided into different number of blocks. 1 block and $1*3$ blocks are tried on dividing the image, the size of appearance feature vector is 95 and 177. As there are 49 shape feature points, so the size of shape feature points is 98.
 \section{Methodology}
 In the classification part, Support Vector Machine for classification. Two different type of appearance feature vectors are experimented, their dimensionality is 95 and 177, to see whether with more detailed appearance feature vector would be better for classification. The experiment focusing on finding answers to two question, would divide the image into more blocks while using LBP to extract features would influence the classification result, whether apply normalisation to each video would improve the classification result. In order to answer the first question, two group of features are examined. Both of them are extracted using blocked uniform pattern. However, one divides the image into 3 blocks, the other treats the image as one block. In order to find the answer to the second question, two different process are applied in normalising the features vector, one normalises both appearance feature and shape feature by each video, the other does not. One thing need mentions is that after put all feature vector together, feature vector of all groups are normalised. There are three types of feature vectors: shape feature vector, appearance feature vector and appearance+shape feature vector. As extracting feature using blocked uniform pattern only affect appearance feature vector, so in total, there are 10 groups of experiments.
 
-SVM are fistly tested with linear kernel function and non-linear kernel, the Gaussian Kernel shows better result. Gaussian and polynomial kernels often leads to over-fitting in high dimensional database, while linear kernel is easier to tune because the only parameter that affects performance is the soft-margin constant\cite{ben2010user}. The best result is using Gaussian Kernel, so Gaussian Kernel is used for classification. The most important parameters for Gaussian Kernel is  penalty parameter $c$ and $\gamma$ in equation \ref{eq:GK}. Find the proper parameter could significantly increase classification result.\begin{equation}
+SVM are firstly tested with linear kernel function and non-linear kernel, the Gaussian Kernel shows better result. Gaussian and polynomial kernels often leads to over-fitting in high dimensional database, while linear kernel is easier to tune because the only parameter that affects performance is the soft-margin constant\cite{ben2010user}. The best result is using Gaussian Kernel, so Gaussian Kernel is used for classification. The most important parameters for Gaussian Kernel is  penalty parameter $c$ and $\gamma$ in equation \ref{eq:GK}. Find the proper parameter could significantly increase classification result.\begin{equation}
 K(x,x') = e^{-\gamma||x-x'||^{2}}
 \label{eq:GK}
 \end{equation}
@@ -61,8 +61,8 @@ We tried several actions to reduce the influence of imbalanced problem.
 \subsection{libSVM}
 libSVM uses 'one-against-one' approach for multi-class classification\cite{CC01a}. If there are $n$ different classes, it will generate $n(n-1)/2$ classifier, each classifier is trained with two classes. It also use a voting strategy: each entity is test with each classifier, the entity belong to the class with most number of votes.
 \subsection{Parameter Optimisation for SVM}
-A general way to find parameter $c$ and $\gamma$ is using cross-validation and grid-search. In n-fold cross-validation, first equally divide the data into n fold, leave out one fold of data as testing data and use other $n-1$ fold of data to train the classifier. Thus all the data is predicted once and the cross-validation accuracy is the percentage of data are correctly classified. 
-Grid-search is try various pairs of $c$ and $\gamma$ and choose the one with best cross-validation accuracy. Grid search approach is very simply and the computational time is no more than advanced method. To shorten the time of grid search, it is better to search with a coarse grid and then proceed with a more specific search in the identified grid.
+A general way to find parameter $c$ and $\gamma$ is using cross-validation and grid-search. In n-fold cross-validation, first equally divide the data into n fold, leave out one fold of data as testing data and use other $n-1$ fold of data to train the classifier. Thus, all the data is predicted once and the cross-validation accuracy is the percentage of data are correctly classified. 
+Grid-search is try various pairs of $c$ and $\gamma$ and choose the one with the best cross-validation accuracy. Grid search approach is very simply and the computational time is no more than advanced method. To shorten the time of grid search, it is better to search with a coarse grid and then proceed with a more specific search in the identified grid.
 \subsection{Evaluation}
 In order to compare the different classification result, precision rate, recall rate and F measure to evaluate classification result of each group of data. For each class could form a table of 2x2 and 4 result, true position(TP), true negative(TN), false positive(FP), false negative(FN) as shown in table.
 \begin{table}[ht]
@@ -109,32 +109,32 @@ Most figure contains result of 5 groups, 1\_A means the appearance feature is ex
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Eating_Frame.png}
   \caption{Class Eating - Classification Result of Frame - Frame normalised by each video}
   \label{fig:REF}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Eating_Frame_1.png}
   \caption{Class Eating - Classification Result of Frame - Frame NOT normalised by each video}
   \label{fig:REF1}
 \end{minipage}
 \end{figure}
-Figure \ref{fig:REF} shows precision rate, recall rate and F1 score of using appearance feature vector that are normalised by each video. The largest recall rate and F1 score are obtained by using shape feature vector in figure \ref{fig:REF} and \ref{fig:REF1}, which means shape feature is very good for classifying eating. The lowest F1 score is obtained by using 1-block appearance feature vector. For F1 score, 3\_A is better than 1\_A and 3\_AS is better than 1\_AS may because using using 3-block LBP provides more information mouth region. The average F1 score of figure \ref{fig:REF} is 0.3, almost the same figure \ref{fig:REF1}, means normalise each feature vector of each video does not influence performance of classification eating. F1 score of both figure are in the range of 0.3$\pm$0.02, it is very close, it may means there is not much difference of using appearance feature or shape feature or both for classification. In addition,  average score of classifying eating is 0.3, personally hypothesis is that distinguish eating from talking may be difficult. 
+Figure \ref{fig:REF} shows precision rate, recall rate and F1 score of using appearance feature vector that are normalised by each video. The largest recall rate and F1 score are obtained by using shape feature vector in figure \ref{fig:REF} and \ref{fig:REF1}, which means shape feature is very good for classifying eating. The lowest F1 score is obtained by using 1-block appearance feature vector. For F1 score, 3\_A is better than 1\_A and 3\_AS is better than 1\_AS may because using 3-block LBP provides more information mouth region. The average F1 score of figure \ref{fig:REF} is 0.3, almost the same figure \ref{fig:REF1}, means normalise each feature vector of each video does not influence performance of classification eating. F1 score of both figure are in the range of 0.3$\pm$0.02, it is very close, it may means there is not much difference of using appearance feature or shape feature or both for classification. In addition,  average score of classifying eating is 0.3, personally hypothesis is that distinguish eating from talking may be difficult. 
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Eating_Sequence.png}
   \caption{Class Eating - Classification Result of Sequence - Sequence normalised by each video}
   \label{fig:RES}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Eating_Sequence_1.png}
   \caption{Class Eating - Classification Result of Sequence - Sequence NOT normalised by each video}
   \label{fig:RES1}
@@ -146,71 +146,71 @@ Figure \ref{fig:RES} and \ref{fig:REF1} shows the sequence classification result
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Frame.png}
   \caption{Class Talking - Classification Result of Frame - Frame normalised by each video}
   \label{fig:RTF}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Frame_1.png}
   \caption{Class Talking - Classification Result of Frame - Frame NOT normalised by each video}
   \label{fig:RTF1}
 \end{minipage}
 \end{figure}
 \newline
-In figure \ref{fig:RTF}, the best F1 score is obtained by 3\_AS, unlike figure \ref{fig:REF}, best F1 score is obtained by S. In addition, F1 score of 1\_AS  is better than S in figure \ref{fig:RTF}, which is different as in figure \ref{fig:REF} F1 score of S is better than 1\_AS. What's more, F1 score of those classification using both appearance and shape feature are larger than others, and it is the same result for figure \ref{fig:RTF1}. This means that for talking frames, using both appearance and shape feature is better than using either one of them. Average of F1 score of talking is less than average F1 score of eating in both figure \ref{fig:RTF} and \ref{fig:RTF1}, it means the the classification of eating is better than talking. Average recall rate of talking is higher than average recall rate of  eating, this means proportion of false positive of talking is less than proportion of false positive of eating. Instead, average precision rate of talking is less than average precision rate of eating, it means proportion of false negative of talking is higher than proportion of false negative of eating. The standard deviation of F1 score in figure \ref{fig:RTF} and \ref{fig:RTF1} are higher than the standard deviation of F1 score in figure \ref{fig:REF} and \ref{fig:REF1}, it means the influence of using different type of feature have more influence on talking than eating. F1 score of 3\_A or 3\_AS is higher or equal to 1\_A or 1\_AS in figure \ref{fig:REF},\ref{fig:REF1},\ref{fig:RTF},\ref{fig:RTF1}, they prove that using  more information in appearance would increase the performance of classification. However, the high F1 score of S also means, using shape feature is better for classification than appearance feature.
+In figure \ref{fig:RTF}, the best F1 score is obtained by 3\_AS, unlike figure \ref{fig:REF}, best F1 score is obtained by S. In addition, F1 score of 1\_AS  is better than S in figure \ref{fig:RTF}, which is different as in figure \ref{fig:REF} F1 score of S is better than 1\_AS. What's more, F1 score of those classifications using both appearance and shape feature are larger than others, and it is the same result for figure \ref{fig:RTF1}. This means that for talking frames, using both appearance and shape feature is better than using either one of them. Average of F1 score of talking is less than average F1 score of eating in both figure \ref{fig:RTF} and \ref{fig:RTF1}, it means the classification of eating is better than talking. Average recall rate of talking is higher than average recall rate of  eating, this means proportion of false positive of talking is less than proportion of false positive of eating. Instead, average precision rate of talking is less than average precision rate of eating, it means proportion of false negative of talking is higher than proportion of false negative of eating. The standard deviation of F1 score in figure \ref{fig:RTF} and \ref{fig:RTF1} are higher than the standard deviation of F1 score in figure \ref{fig:REF} and \ref{fig:REF1}, it means the influence of using different type of feature have more influence on talking than eating. F1 score of 3\_A or 3\_AS is higher or equal to 1\_A or 1\_AS in figure \ref{fig:REF},\ref{fig:REF1},\ref{fig:RTF},\ref{fig:RTF1}, they prove that using  more information in appearance would increase the performance of classification. However, the high F1 score of S also means, using shape feature is better for classification than appearance feature.
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Sequence.png}
   \caption{Class Talking - Classification Result of Sequence - Sequence normalised by each video}
   \label{fig:RTS}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_Talking_Sequence_1.png}
   \caption{Class Talking - Classification Result of Sequence - Sequence NOT normalised by each video}
   \label{fig:RTS1}
 \end{minipage}
 \end{figure}
 \newline
-Average F1 score in figure \ref{fig:RTS} is 0.39, which is much higher than 0.2240 in figure \ref{fig:RES}. Also F1 score in figure \ref{fig:RTS1} is 0.398, which is also better than 0.216 in figure \ref{fig:RES1}. According to two above reasons, the classification of talking is better than eating. Compare figure \ref{fig:RES} and \ref{fig:RTS1}, it easy to find that there is not much increase on average recall rate but average precision rate of talking is much better than talking. It means classifier is better recognise not taking than not eating. This is the main reason why classification of talking is better than eating. In classify talking, there is an obvious increase of using 3\_A and there is a small increase on using 1\_AS and 3\_AS. From observation above, it seems appearance feature has a positive influence in classifier talking sequence. Compare figure \ref{fig:RTS} and \ref{fig:RTS1}, the F1 score in both figure is very similar, again it support the hypothesis that there is not much influence whether normalise data by each video. However, F1 score of S\_1 in figure \ref{fig:RTS1} is better than F1 score of S in figure \ref{fig:RTS}.
+Average F1 score in figure \ref{fig:RTS} is 0.39, which is much higher than 0.2240 in figure \ref{fig:RES}. Also, F1 score in figure \ref{fig:RTS1} is 0.398, which is also better than 0.216 in figure \ref{fig:RES1}. According to two above reasons, the classification of talking is better than eating. Compare figure \ref{fig:RES} and \ref{fig:RTS1}, it easy to find that there is not much increase on average recall rate but average precision rate of talking is much better than talking. It means classifier is better recognise not taking than not eating. This is the main reason why classification of talking is better than eating. In classify talking, there is an obvious increase of using 3\_A and there is a small increase on using 1\_AS and 3\_AS. From observation above, it seems appearance feature has a positive influence in classifier talking sequence. Compare figure \ref{fig:RTS} and \ref{fig:RTS1}, the F1 score in both figure is very similar, again it supports the hypothesis that there is not much influence whether normalise data by each video. However, F1 score of S\_1 in figure \ref{fig:RTS1} is better than F1 score of S in figure \ref{fig:RTS}.
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Frame.png}
   \caption{Class Normal Face - Classification Result of Frame - Frame normalised by each video}
   \label{fig:RNF}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Frame_1.png}
   \caption{Class Normal Face - Classification Result of Frame - Frame NOT normalised by each video}
   \label{fig:RNF1}
 \end{minipage}
 \end{figure}
 \newline
-The best classification result is classify normal face, it is much better than classify eating and talking. In both figure \ref{fig:RNF} and \ref{fig:RNF1}, the average recall rate is 0.51, precision rate is 0.79, and F1 score is 0.62. For normal face, the precision rate is higher than recall rate, which is different from classification result of eating and talking. From all frame classification result, figure \ref{fig:REF}, \ref{fig:REF1}, \ref{fig:RTF}, \ref{fig:RTF1},\ref{fig:RNF}, \ref{fig:RNF1}, comparing F1 score, it easy to see that using shape and appearance feature is always better than using just appearance feature and using 3-block appearance feature is always better than 1-block appearance feature.
+The best classification result is classifying normal face, it is much better than classify eating and talking. In both figure \ref{fig:RNF} and \ref{fig:RNF1}, the average recall rate is 0.51, precision rate is 0.79, and F1 score is 0.62. For normal face, the precision rate is higher than recall rate, which is different from classification result of eating and talking. From all frame classification result, figure \ref{fig:REF}, \ref{fig:REF1}, \ref{fig:RTF}, \ref{fig:RTF1},\ref{fig:RNF}, \ref{fig:RNF1}, comparing F1 score, it easy to see that using shape and appearance feature is always better than using just appearance feature and using 3-block appearance feature is always better than 1-block appearance feature.
 \begin{figure}[ht]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Sequence.png}
   \caption{Class Normal Face - Classification Result of Sequence - Frame normalised by each video}
   \label{fig:RNS}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_NormalFace_Sequence_1.png}
   \caption{Class Normal Face - Classification Result of Sequence - Frame NOT normalised by each video}
   \label{fig:RNS1}
@@ -222,14 +222,14 @@ In figure \ref{fig:RNS} and figure \ref{fig:RNS1}, average precision rate is 0.8
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_F1_Frame.png}
   \caption{Three Class - Classification Result of frame - Frame normalised by each video}
   \label{fig:RFF}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_F1_Frame_1.png}
   \caption{Three Class - Classification Result of frame - Frame NOT normalised by each video}
   \label{fig:RFF1}
@@ -241,21 +241,21 @@ The frame classification result of three classes are shown in figure \ref{fig:RF
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_F1_Sequence.png}
   \caption{Three Class - Classification Result of sequence - Frame nomalised by each video}
   \label{fig:RFS}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \captionsetup{justification=centering,margin=1cm}
+  \captionsetup{justification=centering, margin=1cm}
   \includegraphics[width=\linewidth]{imgs/Result_F1_Sequence_1.png}
   \caption{Three Class - Classification Result of sequence - Frame NOT nomalised by each video}
   \label{fig:RFS1}
 \end{minipage}
 \end{figure}
 \newline
-For a sequence, the result of classify this sequence as a sequence of normal face, eating or talking is not directly classified by a classifier. It is calculated using majority voting from the classification result of frames. For example, the sequence is classified as a normal face if majority of frames are classified as normal face. Comparing result of classifying frame in figure \ref{fig:RFF} and sequence in figure \ref{fig:RFS}, the F1 score of normal face has a increase of 0.1, eating has a decrease of 0.08, talking has a increase of 0.14. The result of comparing figure \ref{fig:RFF1} and figure \ref{fig:RFS1} is almost the same. According to average F1 score of 10-group experiments, the best F1 score is gained by using 3-block appearance feature with shape feature, which is the same as frame classification result.
+For a sequence, the result of classify this sequence as a sequence of normal face, eating or talking is not directly classified by a classifier. It is calculated using majority voting from the classification result of frames. For example, the sequence is classified as a normal face if majority of frames are classified as normal face. Comparing result of classifying frame in figure \ref{fig:RFF} and sequence in figure \ref{fig:RFS}, the F1 score of normal face has an increase of 0.1, eating has a decrease of 0.08, talking has an increase of 0.14. The result of comparing figure \ref{fig:RFF1} and figure \ref{fig:RFS1} is almost the same. According to average F1 score of 10-group experiments, the best F1 score is gained by using 3-block appearance feature with shape feature, which is the same as frame classification result.
 
 \begin{table}[ht]
 \centering
@@ -283,11 +283,11 @@ Talking                                               & \begin{tabular}[c]{@{}c@
 \label{tab:CMS}
 \end{table}
 \newline
-Table \ref{tab:CMS} is an example of confusion matrix of sequence using 3-block appearance feature with shape feature, more confusion matrix are in the appendix.The approximate percentage of sequences classified as normal face, eating, talking is $54\% $, $21\% $, $25\% $. Comparing to frames, an obvious change is that there is increase in normal face and there is a decrease in eating. It seems, there are more sequence with low number of frames in normal face than eating. This hypothesis was proven and the evidence is in next subsection. 
+Table \ref{tab:CMS} is an example of confusion matrix of sequence using 3-block appearance feature with shape feature, more confusion matrix are in the appendix. The approximate percentage of sequences classified as normal face, eating, talking is $54\% $, $21\% $, $25\% $. Comparing to frames, an obvious change is that there is increase in normal face and there is a decrease in eating. It seems, there are more sequence with low number of frames in normal face than eating. This hypothesis was proven and the evidence is in next subsection. 
 \subsection{Data and Analysis}
 \begin{table}[h]
 \centering
-\captionsetup{justification=centering,margin=4cm}
+\captionsetup{justification=centering, margin=4cm}
 \begin{tabular}{|c|c|c|c|}
 \hline
       & \begin{tabular}[c]{@{}c@{}}Normal\\ Face\end{tabular} & Eating & Talking \\ \hline
@@ -317,7 +317,7 @@ In this dataset, there is no smiling label and smiling is treated as normal face
 \label{fig:EXPE}
 \end{figure}
 \newline
-Figure \ref{fig:EXPE} gave an example of wrong classification of eating. As you can see subject's mouth barely moves while chewing. And usually for a long video of eating sequence, it will contain many images of normal face as the subject would not keep eating and chewing without rest. The state of eating is always changing, it's more like a continuous states instead of a constant state of eating. SVM is good for modelling this type of state changing. Hidden Markov Model or long-term memory neural network may be better in modelling state changing. However, as database does not contain small sequence which just contain one complete eating. The time for doing this project is limited, it is  impossible to label the videos by hands.
+Figure \ref{fig:EXPE} gave an example of wrong classification of eating. As you can see subject's mouth barely moves while chewing. And usually for a long video of eating sequence, it will contain many images of normal face as the subject would not keep eating and chewing without rest. The state of eating is always changing, it's more like a continuous state instead of a constant state of eating. SVM is good for modelling this type of state changing. Hidden Markov Model or long-term memory neural network may be better in modelling state changing. However, as database does not contain small sequence which just contain one complete eating. The time for doing this project is limited, it is  impossible to label the videos by hands.
 \begin{figure}[ht]
 \centering
 \includegraphics[width = \textwidth]{imgs/Wrong_T00.jpg}
@@ -327,4 +327,4 @@ Figure \ref{fig:EXPE} gave an example of wrong classification of eating. As you 
 \newline
 Figure \ref{fig:EXPT} is a complete sequence of talking. Just by observing the image, it is hard to tell that the subject is talking. Four of the frames are classified as normal face, and these images looked very similar as normal face.
 \paragraph{Conclusion}
-Video set used in this project is recorded in uncontrolled environment, the condition of each video is different. The lighting condition ,head moving, resolution of frames and the proportion of face inside the frame are very different. The number of each sequence is very different, it contains too many short sequence which should be filtered while using the data. In conclusion,more process should be done for filtering the sequences for classification step. Normal face frame may be not suitable for detection in this image as normal face contain many action such as smiling, this would increase the difficulty of classifying normal face from other facial expressions. The model may be not good for expressing eating and talking.
+Video set used in this project is recorded in uncontrolled environment, the condition of each video is different. The lighting condition ,head moving, resolution of frames and the proportion of face inside the frame are very different. The number of each sequence is very different, it contains too many short sequence which should be filtered while using the data. In conclusion, more process should be done for filtering the sequences for classification step. Normal face frame may be not suitable for detection in this image as normal face contain many actions such as smiling, this would increase the difficulty of classifying normal face from other facial expressions. The model may be not good for expressing eating and talking.
