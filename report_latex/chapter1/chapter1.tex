@@ -181,7 +181,7 @@ The follow is the warping result, the image was not highly distorted as the face
 \begin{figure}[ht]
 \centering
 \includegraphics[width=.5\textwidth]{imgs/Warping_Intraface_213.png}
-\caption{Talking sequence tracked by DRMF}
+\caption{Talking sequence tracked by Intraface}
 \end{figure}
 \section{Feature Extraction}
 The warped images are not directly used for classification, as the image value are sensitive to illumination, and noise. In addition, the dimensionality of image vector could be very large. An effective facial representation from original image is vital for classification. Experiments of \cite{shan2009facial} shows that Local Binary Pattern(LBP) features are effective and efficient for facial expression recognition. The best performance of \cite{shan2009facial} is obtained by combing Support Vector Machine and Boosted-LBP features. \cite{shan2009facial} also shows that LBP feature perform stably and robustly on low-resolution facial expression recognition. There are several reasons to use LBP: firstly LBP is robust to monotonic changes in illumination shown in figure \ref{fig:LBPE00}; secondly, computational simplicity, the calculation only contain integer math and there is no need for preprocessing; thirdly, the time complex is $O(n)$.

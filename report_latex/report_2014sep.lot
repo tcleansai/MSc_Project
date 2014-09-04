@@ -1,0 +1,27 @@
+\select@language {english}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces Frame tracking result by tracker \cite {xiong2013supervised}\relax }}{22}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Extracted Frames of Normal Face, Eating, Talking\relax }}{23}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Extracted Sequences of Normal Face, Eating, Talking\relax }}{23}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Confusion Matrix for two class\relax }}{24}
+\contentsline {table}{\numberline {4.5}{\ignorespaces Experiments and Identification in result figure\relax }}{25}
+\contentsline {table}{\numberline {4.6}{\ignorespaces Confusion Matrix-Frame-3\_AS\relax }}{30}
+\contentsline {table}{\numberline {4.7}{\ignorespaces Confusion Matrix-Sequence-3\_AS\relax }}{30}
+\contentsline {table}{\numberline {4.8}{\ignorespaces The left column is frame number, first row is the class name. This table shows the number of sequences with frame number in the certain range.\relax }}{30}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {A.1}{\ignorespaces Classification Confusion Matrix: 1\_A, left side is frame, right side is sequence\relax }}{36}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Classification Confusion Matrix: 1\_A\_1, left side is frame, right side is sequence\relax }}{36}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Classification Confusion Matrix: 1\_AS, left side is frame, right side is sequence\relax }}{36}
+\contentsline {table}{\numberline {A.4}{\ignorespaces Classification Confusion Matrix: 1\_AS\_1, left side is frame, right side is sequence\relax }}{37}
+\contentsline {table}{\numberline {A.5}{\ignorespaces Classification Confusion Matrix: S, left side is frame, right side is sequence\relax }}{37}
+\contentsline {table}{\numberline {A.6}{\ignorespaces Classification Confusion Matrix: S\_1, left side is frame, right side is sequence\relax }}{37}
+\contentsline {table}{\numberline {A.7}{\ignorespaces Classification Confusion Matrix: 3\_A, left side is frame, right side is sequence\relax }}{37}
+\contentsline {table}{\numberline {A.8}{\ignorespaces Classification Confusion Matrix: 3\_A\_1, left side is frame, right side is sequence\relax }}{37}
+\contentsline {table}{\numberline {A.9}{\ignorespaces Classification Confusion Matrix: 3\_AS, left side is frame, right side is sequence\relax }}{37}
+\contentsline {table}{\numberline {A.10}{\ignorespaces Classification Confusion Matrix: 3\_AS, left side is frame, right side is sequence\relax }}{38}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {B.1}{\ignorespaces The left column is frame number,the first row is the different classes. This table is the number of sequences contain certain number of frame. \relax }}{39}

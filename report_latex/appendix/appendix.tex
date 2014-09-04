@@ -1,7 +1,117 @@
 \appendix
 \chapter{Classification Result}
-\chapter{Data Statistics}
+\begin{table}[ht]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\cline{1-4} \cline{6-9}
+\diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating        & Talking       & \multirow{4}{*}{} & \diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating      & Talking     \\ \cline{1-4} \cline{6-9} 
+\begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{14833}                                        & 9872          & 8237          &                   & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{518}                                          & 226         & 127         \\ \cline{1-4} \cline{6-9} 
+Eating                                                & 3020                                                  & \textbf{3229} & 2495          &                   & Eating                                                & 54                                                    & \textbf{44} & 16          \\ \cline{1-4} \cline{6-9} 
+Talking                                               & 1618                                                  & 1631          & \textbf{1842} &                   & Talking                                               & 62                                                    & 75          & \textbf{70} \\ \cline{1-4} \cline{6-9} 
+\end{tabular}
+\caption{Classification Confusion Matrix: 1\_A, left side is frame, right side is sequence}
+\end{table}
+
+\begin{table}[ht]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\cline{1-4} \cline{6-9}
+\diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating        & Talking       & \multirow{4}{*}{} & \diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating      & Talking     \\ \cline{1-4} \cline{6-9} 
+\begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{15161}                                        & 9797          & 7984          &                   & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{518}                                          & 230         & 125         \\ \cline{1-4} \cline{6-9} 
+Eating                                                & 3129                                                  & \textbf{3256} & 2359          &                   & Eating                                                & 54                                                    & \textbf{48} & 12          \\ \cline{1-4} \cline{6-9} 
+Talking                                               & 1643                                                  & 1704          & \textbf{1744} &                   & Talking                                               & 71                                                    & 73          & \textbf{63} \\ \cline{1-4} \cline{6-9} 
+\end{tabular}
+\caption{Classification Confusion Matrix: 1\_A\_1, left side is frame, right side is sequence}
+\end{table}
+
+\begin{table}[ht]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\cline{1-4} \cline{6-9}
+\diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating        & Talking       & \multirow{4}{*}{} & \diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating      & Talking     \\ \cline{1-4} \cline{6-9} 
+\begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{16783}                                        & 8956          & 7203          &                   & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{509}                                          & 194         & 168         \\ \cline{1-4} \cline{6-9} 
+Eating                                                & 2855                                                  & \textbf{3385} & 2504          &                   & Eating                                                & 42                                                    & \textbf{51} & 21          \\ \cline{1-4} \cline{6-9} 
+Talking                                               & 1413                                                  & 1457          & \textbf{2221} &                   & Talking                                               & 52                                                    & 55          & \textbf{63} \\ \cline{1-4} \cline{6-9} 
+\end{tabular}
+\caption{Classification Confusion Matrix: 1\_AS, left side is frame, right side is sequence}
+\end{table}
+
+\begin{table}[ht]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\cline{1-4} \cline{6-9}
+\diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating        & Talking       & \multirow{4}{*}{} & \diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating      & Talking      \\ \cline{1-4} \cline{6-9} 
+\begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{16779}                                        & 8940          & 7223          &                   & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{500}                                          & 202         & 169          \\ \cline{1-4} \cline{6-9} 
+Eating                                                & 2914                                                  & \textbf{3338} & 2492          &                   & Eating                                                & 41                                                    & \textbf{51} & 22           \\ \cline{1-4} \cline{6-9} 
+Talking                                               & 1433                                                  & 1417          & \textbf{2241} &                   & Talking                                               & 52                                                    & 50          & \textbf{100} \\ \cline{1-4} \cline{6-9} 
+\end{tabular}
+\caption{Classification Confusion Matrix: 1\_AS\_1, left side is frame, right side is sequence}
+\end{table}
+
+\begin{table}[ht]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\cline{1-4} \cline{6-9}
+\diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating        & Talking       & \multirow{4}{*}{} & \diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating      & Talking     \\ \cline{1-4} \cline{6-9} 
+\begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{16634}                                        & 9499          & 6809          &                   & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{499}                                          & 239         & 133         \\ \cline{1-4} \cline{6-9} 
+Eating                                                & 2745                                                  & \textbf{3805} & 2194          &                   & Eating                                                & 38                                                    & \textbf{57} & 19          \\ \cline{1-4} \cline{6-9} 
+Talking                                               & 1358                                                  & 1761          & \textbf{1972} &                   & Talking                                               & 57                                                    & 68          & \textbf{82} \\ \cline{1-4} \cline{6-9} 
+\end{tabular}
+\caption{Classification Confusion Matrix: S, left side is frame, right side is sequence}
+\end{table}
+
+\begin{table}[ht]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\cline{1-4} \cline{6-9}
+\diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating        & Talking       & \multirow{4}{*}{} & \diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating      & Talking      \\ \cline{1-4} \cline{6-9} 
+\begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{17225}                                        & 8957          & 6760          &                   & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{489}                                          & 225         & 157          \\ \cline{1-4} \cline{6-9} 
+Eating                                                & 2707                                                  & \textbf{3683} & 2354          &                   & Eating                                                & 37                                                    & \textbf{53} & 24           \\ \cline{1-4} \cline{6-9} 
+Talking                                               & 1229                                                  & 1669          & \textbf{2193} &                   & Talking                                               & 51                                                    & 54          & \textbf{102} \\ \cline{1-4} \cline{6-9} 
+\end{tabular}
+\caption{Classification Confusion Matrix: S\_1, left side is frame, right side is sequence}
+\end{table}
+
+\begin{table}[ht]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\cline{1-4} \cline{6-9}
+\diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating        & Talking       & \multirow{4}{*}{} & \diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating      & Talking     \\ \cline{1-4} \cline{6-9} 
+\begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{17774}                                        & 8359          & 6809          &                   & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{562}                                          & 161         & 149         \\ \cline{1-4} \cline{6-9} 
+Eating                                                & 3273                                                  & \textbf{3102} & 2369          &                   & Eating                                                & 58                                                    & \textbf{33} & 23          \\ \cline{1-4} \cline{6-9} 
+Talking                                               & 1472                                                  & 1497          & \textbf{2122} &                   & Talking                                               & 50                                                    & 58          & \textbf{99} \\ \cline{1-4} \cline{6-9} 
+\end{tabular}
+\caption{Classification Confusion Matrix: 3\_A, left side is frame, right side is sequence}
+\end{table}
+
+\begin{table}[ht]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\cline{1-4} \cline{6-9}
+\diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating        & Talking       & \multirow{4}{*}{} & \diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating      & Talking     \\ \cline{1-4} \cline{6-9} 
+\begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{17750}                                        & 8283          & 6909          &                   & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{562}                                          & 168         & 141         \\ \cline{1-4} \cline{6-9} 
+Eating                                                & 3202                                                  & \textbf{3122} & 2420          &                   & Eating                                                & 56                                                    & \textbf{33} & 25          \\ \cline{1-4} \cline{6-9} 
+Talking                                               & 1448                                                  & 1493          & \textbf{2150} &                   & Talking                                               & 52                                                    & 58          & \textbf{97} \\ \cline{1-4} \cline{6-9} 
+\end{tabular}
+\caption{Classification Confusion Matrix: 3\_A\_1, left side is frame, right side is sequence}
+\end{table}
+
 \begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\cline{1-4} \cline{6-9}
+\diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating        & Talking       & \multirow{4}{*}{} & \diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating      & Talking      \\ \cline{1-4} \cline{6-9} 
+\begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{18354}                                        & 7887          & 6701          &                   & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{549}                                          & 151         & 171          \\ \cline{1-4} \cline{6-9} 
+Eating                                                & 3201                                                  & \textbf{3141} & 2402          &                   & Eating                                                & 46                                                    & \textbf{46} & 22           \\ \cline{1-4} \cline{6-9} 
+Talking                                               & 1432                                                  & 1219          & \textbf{2440} &                   & Talking                                               & 55                                                    & 41          & \textbf{111} \\ \cline{1-4} \cline{6-9} 
+\end{tabular}
+\caption{Classification Confusion Matrix: 3\_AS, left side is frame, right side is sequence}
+\end{table}
+
+\begin{table}[h]
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+\cline{1-4} \cline{6-9}
+\diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating        & Talking       & \multirow{4}{*}{} & \diagbox{Actual}{Predict}                          & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & Eating      & Talking      \\ \cline{1-4} \cline{6-9} 
+\begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{18271}                                        & 7880          & 6791          &                   & \begin{tabular}[c]{@{}l@{}}Normal\\ Face\end{tabular} & \textbf{538}                                          & 162         & 171          \\ \cline{1-4} \cline{6-9} 
+Eating                                                & 3156                                                  & \textbf{3163} & 2425          &                   & Eating                                                & 48                                                    & \textbf{37} & 29           \\ \cline{1-4} \cline{6-9} 
+Talking                                               & 1387                                                  & 1304          & \textbf{2400} &                   & Talking                                               & 50                                                    & 45          & \textbf{112} \\ \cline{1-4} \cline{6-9} 
+\end{tabular}
+\caption{Classification Confusion Matrix: 3\_AS, left side is frame, right side is sequence}
+\end{table}
+
+\chapter{Data Statistics}
+\begin{table}[ht]
 \centering
 \captionsetup{justification=centering,margin=3cm}
 \begin{tabular}{|l|l|l|l|}
