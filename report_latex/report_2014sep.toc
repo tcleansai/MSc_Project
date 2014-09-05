@@ -23,9 +23,10 @@
 \contentsline {paragraph}{Data flow Chart}{9}
 \contentsline {section}{\numberline {3.2}Face Alignment}{10}
 \contentsline {subsection}{\numberline {3.2.1}Active Appearance Model}{10}
-\contentsline {paragraph}{Shape}{11}
-\contentsline {paragraph}{Appearance}{11}
+\contentsline {subsubsection}{Shape Feature}{11}
+\contentsline {subsubsection}{Appearance Feature}{11}
 \contentsline {paragraph}{Model}{11}
+\contentsline {subsubsection}{Combined AAMs}{11}
 \contentsline {subsection}{\numberline {3.2.2}Trackers}{12}
 \contentsline {subsubsection}{Intraface}{12}
 \contentsline {paragraph}{Tracking Points}{12}
@@ -37,8 +38,8 @@
 \contentsline {section}{\numberline {3.3}Remove Head-pose}{19}
 \contentsline {section}{\numberline {3.4}Warping}{19}
 \contentsline {section}{\numberline {3.5}Feature Extraction}{21}
-\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{21}
-\contentsline {section}{\numberline {3.6}Postprocessing}{23}
+\contentsline {subsection}{\numberline {3.5.1}Local Binary Pattern}{22}
+\contentsline {section}{\numberline {3.6}Postprocessing}{24}
 \contentsline {paragraph}{Normalization}{24}
 \contentsline {paragraph}{Scaling}{24}
 \contentsline {chapter}{\numberline {4}Experiment and Results}{25}
@@ -50,10 +51,10 @@
 \contentsline {subsection}{\numberline {4.2.3}Parameter Optimisation for SVM}{28}
 \contentsline {subsection}{\numberline {4.2.4}Evaluation}{28}
 \contentsline {section}{\numberline {4.3}Experiments}{29}
-\contentsline {subsection}{\numberline {4.3.1}Results and Analysis}{30}
-\contentsline {subsection}{\numberline {4.3.2}Data and Analysis}{35}
+\contentsline {subsection}{\numberline {4.3.1}Results and Analysis}{29}
+\contentsline {subsection}{\numberline {4.3.2}Data and Analysis}{36}
 \contentsline {subsection}{\numberline {4.3.3}Examples of Wrong Classification}{36}
-\contentsline {paragraph}{Conclusion}{37}
+\contentsline {paragraph}{Conclusion}{38}
 \contentsline {chapter}{\numberline {5}Conclusion and Future Work}{39}
 \contentsline {chapter}{\numberline {A}Classification Result}{42}
 \contentsline {chapter}{\numberline {B}Data Statistics}{45}

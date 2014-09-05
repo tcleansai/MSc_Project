@@ -1,16 +1,21 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=pdflatex 2013.10.23)  4 SEP 2014 23:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.8.11)  5 SEP 2014 01:22
 entering extended mode
- restricted \write18 enabled.
- %&-line parsing enabled.
 **report_2014sep.tex
-(./report_2014sep.tex
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\report_2014sep.tex
 LaTeX2e <2011/06/27>
-Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, us
-englishmax, ukenglish, ngerman, german, swissgerman, ngerman-x-2012-05-30, germ
-an-x-2012-05-30, loaded.
-(/usr/share/texlive/texmf-dist/tex/latex/base/report.cls
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size11.clo"
 File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -26,22 +31,22 @@ File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
 Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count88
@@ -56,14 +61,21 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
-)
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
 Package: babel 2008/07/08 v3.8m The Babel package
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/english.ldf
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\english.ldf"
 Language: english 2005/03/30 v3.3o English support from the babel system
 
-(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
 File: babel.def 2008/07/08 v3.8m Babel common definitions
 \babel@savecnt=\count91
 \U@D=\dimen111
@@ -72,19 +84,19 @@ File: babel.def 2008/07/08 v3.8m Babel common definitions
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2008/03/30 v1.1d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.dfu
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
 File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -234,7 +246,7 @@ File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/ot1enc.dfu
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
 File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
@@ -265,7 +277,7 @@ File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
-(/usr/share/texlive/texmf-dist/tex/latex/base/omsenc.dfu
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
 File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
@@ -289,41 +301,41 @@ Now handling font encoding U ...
    defining Unicode char U+2122 (decimal 8482)
    defining Unicode char U+2423 (decimal 9251)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2000/07/18 v2.13 AMS math features
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen112
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen113
 )
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count92
-LaTeX Info: Redefining \frac on input line 211.
+LaTeX Info: Redefining \frac on input line 210.
 \uproot@=\count93
 \leftroot@=\count94
-LaTeX Info: Redefining \overline on input line 307.
+LaTeX Info: Redefining \overline on input line 306.
 \classnum@=\count95
 \DOTSCASE@=\count96
-LaTeX Info: Redefining \ldots on input line 379.
-LaTeX Info: Redefining \dots on input line 382.
-LaTeX Info: Redefining \cdots on input line 467.
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen114
-LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \macc@depth=\count97
 \c@MaxMatrixCols=\count98
 \dotsspace@=\muskip10
@@ -344,30 +356,30 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
 \multlinegap=\skip44
 \multlinetaggap=\skip45
 \mathdisplay@stack=\toks22
-LaTeX Info: Redefining \[ on input line 2666.
-LaTeX Info: Redefining \] on input line 2667.
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count104
@@ -375,12 +387,12 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen121
 \Gin@req@width=\dimen122
 )
-(/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cite\cite.sty"
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 373.
 Package: cite 2010/09/10  v 5.3
 )
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count105
 \float@exts=\toks23
@@ -388,19 +400,19 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks24
 \@floatcapt=\box29
 )
-(/usr/share/texlive/texmf-dist/tex/latex/diagbox/diagbox.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\diagbox\diagbox.sty"
 Package: diagbox 2011/11/23 v2.0 Making table heads with diagonal lines
 
-(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.sty
-Package: pict2e 2011/04/05 v0.2y Improved picture commands (HjG,RN,JT)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pict2e\pict2e.sty"
+Package: pict2e 2014/01/12 v0.2z Improved picture commands (HjG,RN,JT)
 
-(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.cfg
-File: pict2e.cfg 2011/04/05 v0.1t pict2e configuration for teTeX/TeXLive
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\pict2e.cfg"
+File: pict2e.cfg 2005/12/29 v1.0 MiKTeX 'pict2e' configuration
 )
 Package pict2e Info: Driver file: pdftex.def on input line 119.
 Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pict2e\p2e-pdftex.def"
 File: p2e-pdftex.def 2011/04/05 v0.1t Driver-dependant file (RN,HjG,JT)
 )
 \pIIe@GRAPH=\toks25
@@ -408,15 +420,15 @@ File: p2e-pdftex.def 2011/04/05 v0.1t Driver-dependant file (RN,HjG,JT)
 \@arcrad=\dimen124
 \@tempdimd=\dimen125
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp.sty"
 Package: fp 1995/04/02
 
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
-(/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\defpattern.sty"
 Package: defpattern 1994/10/12
 \actioncount=\count106
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-basic.sty"
 Package: fp-basic 1996/05/13
 \FP@xs=\count107
 \FP@xia=\count108
@@ -428,32 +440,32 @@ Package: fp-basic 1996/05/13
 \FP@regs=\count114
 \FP@times=\count115
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-addons.sty"
 Package: fp-addons 1995/03/15
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-snap.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-snap.sty"
 Package: fp-snap 1995/04/05
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-exp.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-exp.sty"
 Package: fp-exp 1995/04/03
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-trigo.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-trigo.sty"
 Package: fp-trigo 1995/04/14
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-pas.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-pas.sty"
 Package: fp-pas 1994/08/29
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-random.sty"
 Package: fp-random 1995/02/23
 \FPseed=\count116
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-eqn.sty"
 Package: fp-eqn 1995/04/03
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-upn.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-upn.sty"
 Package: fp-upn 1996/10/21
 )
-(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fp\fp-eval.sty"
 Package: fp-eval 1995/04/03
 ))
 \diagbox@boxa=\box30
@@ -464,46 +476,48 @@ Package: fp-eval 1995/04/03
 \diagbox@sepl=\dimen128
 \diagbox@sepr=\dimen129
 )
-(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\indentfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2012/02/19 v3.2f Customizing captions (AR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2012/01/12 v1.4b caption3 kernel (AR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen130
 \captionmargin@=\dimen131
 \captionwidth=\dimen132
-\caption@indent=\dimen133
-\caption@parindent=\dimen134
-\caption@hangindent=\dimen135
+\caption@tempdima=\dimen133
+\caption@indent=\dimen134
+\caption@parindent=\dimen135
+\caption@hangindent=\dimen136
 )
 \c@ContinuedFloat=\count117
 Package caption Info: float package is loaded.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen136
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen137
 )
-(/usr/share/texmf/tex/latex/xcolor/xcolor.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen137
-\extrarowheight=\dimen138
+\col@sep=\dimen138
+\extrarowheight=\dimen139
 \NC@list=\toks26
 \extratabsurround=\skip46
 \backup@length=\skip47
@@ -522,12 +536,11 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\parskip.sty"
 Package: parskip 2001/04/09 non-zero parskip adjustments
 )
-(./report_2014sep.aux (./cover/cover.aux))
-\openout1 = `report_2014sep.aux'.
-
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\report_2014sep.aux
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\cover/cover.aux))
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
@@ -575,69 +588,24 @@ LaTeX Font Info:    ... okay on input line 27.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count119
-\scratchdimen=\dimen139
+\scratchdimen=\dimen140
 \scratchbox=\box33
 \nofMPsegments=\count120
 \nofMParguments=\count121
 \everyMPshowfont=\toks28
 \MPscratchCnt=\count122
-\MPscratchDim=\dimen140
+\MPscratchDim=\dimen141
 \MPnumerator=\count123
 \makeMPintoPDFobject=\count124
 \everyMPtoPDFconversion=\toks29
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
-Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
-))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-\openout2 = `cover/cover.aux'.
-
-
-(./cover/cover.tex <imgs/ImperialCrest.jpg, id=1, 429.605pt x 429.605pt>
+ (C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\cover/cover.tex
+<imgs/ImperialCrest.jpg, id=1, 429.605pt x 429.605pt>
 File: imgs/ImperialCrest.jpg Graphic file (type jpg)
 
 <use imgs/ImperialCrest.jpg>
@@ -646,32 +614,34 @@ Package pdftex.def Info: imgs/ImperialCrest.jpg used on input line 10.
  [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./imgs/ImperialCrest.jpg>]
-) (./abstract/abstract.tex [1
+{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <C:/Users/Sidney/Documents
+/GitHub/MSc_Project/report_latex/imgs/ImperialCrest.jpg>])
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\abstract/abstract.te
+x [1
 
 ])
-(./acknowledgements/acknowledgements.tex [1]) (./report_2014sep.toc [1
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\acknowledgements/ack
+nowledgements.tex [1])
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\report_2014sep.toc
+[1
 
 ])
 \tf@toc=\write3
-\openout3 = `report_2014sep.toc'.
-
-
-[2] (./report_2014sep.lof
+ [2]
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\report_2014sep.lof
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3
 
 ])
 \tf@lof=\write4
-\openout4 = `report_2014sep.lof'.
 
-
-[4] (./report_2014sep.lot)
+[4]
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\report_2014sep.lot)
 \tf@lot=\write5
-\openout5 = `report_2014sep.lot'.
 
- (./introduction/introduction.tex [5
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\introduction/introdu
+ction.tex [5
 
 ]
 Chapter 1.
@@ -681,13 +651,16 @@ Underfull \vbox (badness 4954) has occurred while \output is active []
  [1
 
 ])
-(./background/background.tex [2]
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\background/backgroun
+d.tex [2]
 Chapter 2.
 [3
 
-] [4] [5] [6]) (./chapter1/chapter1.tex [7]
+] [4] [5] [6])
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\chapter1/chapter1.te
+x [7]
 Chapter 3.
-<imgs/ProcedureChart.png, id=57, 883.3pt x 582.175pt>
+<imgs/ProcedureChart.png, id=56, 883.3pt x 582.175pt>
 File: imgs/ProcedureChart.png Graphic file (type png)
 
 <use imgs/ProcedureChart.png>
@@ -695,314 +668,356 @@ Package pdftex.def Info: imgs/ProcedureChart.png used on input line 7.
 (pdftex.def)             Requested size: 469.47049pt x 309.42184pt.
  [8
 
- <./imgs/ProcedureChart.png (PNG copy)>]
-<imgs/DataFlowChart.png, id=62, 1656.1875pt x 752.8125pt>
+ <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/ProcedureChart
+.png (PNG copy)>]
+<imgs/DataFlowChart.png, id=61, 1656.1875pt x 752.8125pt>
 File: imgs/DataFlowChart.png Graphic file (type png)
 
 <use imgs/DataFlowChart.png>
 Package pdftex.def Info: imgs/DataFlowChart.png used on input line 15.
 (pdftex.def)             Requested size: 469.47049pt x 213.3936pt.
- [9 <./imgs/DataFlowChart.png (PNG copy)>] [10]
-<imgs/AAM_Model.png, id=69, 986.68625pt x 643.40375pt>
+ [9 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/DataFlowCha
+rt.png (PNG copy)>] [10]
+<imgs/AAM_Model.png, id=68, 986.68625pt x 643.40375pt>
 File: imgs/AAM_Model.png Graphic file (type png)
 
 <use imgs/AAM_Model.png>
-Package pdftex.def Info: imgs/AAM_Model.png used on input line 62.
+Package pdftex.def Info: imgs/AAM_Model.png used on input line 60.
 (pdftex.def)             Requested size: 469.47049pt x 306.14029pt.
  [11]
-<imgs/FacialIndexIntraface.png, id=77, 479.54156pt x 402.00188pt>
+<imgs/FacialIndexIntraface.png, id=76, 479.54156pt x 402.00188pt>
 File: imgs/FacialIndexIntraface.png Graphic file (type png)
 
 <use imgs/FacialIndexIntraface.png>
-Package pdftex.def Info: imgs/FacialIndexIntraface.png used on input line 75.
+Package pdftex.def Info: imgs/FacialIndexIntraface.png used on input line 73.
 (pdftex.def)             Requested size: 227.62204pt x 190.81792pt.
- [12 <./imgs/AAM_Model.png>]
-<imgs/Tracking_Intraface_eating_red.png, id=81, 965.10562pt x 965.10562pt>
+ [12 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/AAM_Model.
+png>]
+<imgs/Tracking_Intraface_eating_red.png, id=80, 965.10562pt x 965.10562pt>
 File: imgs/Tracking_Intraface_eating_red.png Graphic file (type png)
 
 <use imgs/Tracking_Intraface_eating_red.png>
 Package pdftex.def Info: imgs/Tracking_Intraface_eating_red.png used on input l
-ine 84.
+ine 81.
 (pdftex.def)             Requested size: 312.9803pt x 312.9782pt.
 
-<imgs/Talking_Intraface_140711_176_184.png, id=83, 374.14781pt x 374.14781pt>
+<imgs/Talking_Intraface_140711_176_184.png, id=82, 374.14781pt x 374.14781pt>
 File: imgs/Talking_Intraface_140711_176_184.png Graphic file (type png)
 
 <use imgs/Talking_Intraface_140711_176_184.png>
 Package pdftex.def Info: imgs/Talking_Intraface_140711_176_184.png used on inpu
-t line 87.
+t line 84.
 (pdftex.def)             Requested size: 312.9803pt x 312.99747pt.
- [13 <./imgs/FacialIndexIntraface.png (PNG copy)>] [14 <./imgs/Tracking_Intrafa
-ce_eating_red.png> <./imgs/Talking_Intraface_140711_176_184.png>]
-<imgs/FacialIndexDRMF.png, id=92, 421.575pt x 363.60844pt>
+ [13 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/FacialInde
+xIntraface.png (PNG copy)>]
+[14 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Tracking_In
+traface_eating_red.png> <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_la
+tex/imgs/Talking_Intraface_140711_176_184.png>]
+<imgs/FacialIndexDRMF.png, id=91, 421.575pt x 363.60844pt>
 File: imgs/FacialIndexDRMF.png Graphic file (type png)
 
 <use imgs/FacialIndexDRMF.png>
-Package pdftex.def Info: imgs/FacialIndexDRMF.png used on input line 98.
+Package pdftex.def Info: imgs/FacialIndexDRMF.png used on input line 95.
 (pdftex.def)             Requested size: 227.62204pt x 196.32898pt.
 
-<imgs/Tracking_DRMF_eating.png, id=93, 965.10562pt x 965.10562pt>
+<imgs/Tracking_DRMF_eating.png, id=92, 965.10562pt x 965.10562pt>
 File: imgs/Tracking_DRMF_eating.png Graphic file (type png)
 
 <use imgs/Tracking_DRMF_eating.png>
-Package pdftex.def Info: imgs/Tracking_DRMF_eating.png used on input line 106.
+Package pdftex.def Info: imgs/Tracking_DRMF_eating.png used on input line 103.
 (pdftex.def)             Requested size: 284.52756pt x 284.52698pt.
 
-<imgs/Talking_DRMF_140711_176_184.png, id=94, 1356.56813pt x 1356.56813pt>
+<imgs/Talking_DRMF_140711_176_184.png, id=93, 1356.56813pt x 1356.56813pt>
 File: imgs/Talking_DRMF_140711_176_184.png Graphic file (type png)
 
 <use imgs/Talking_DRMF_140711_176_184.png>
 Package pdftex.def Info: imgs/Talking_DRMF_140711_176_184.png used on input lin
-e 109.
+e 106.
 (pdftex.def)             Requested size: 284.52756pt x 284.51512pt.
- [15 <./imgs/FacialIndexDRMF.png (PNG copy)>] [16 <./imgs/Tracking_DRMF_eating.
-png> <./imgs/Talking_DRMF_140711_176_184.png>]
-<imgs/Tracking_Intraface_DRMF_compare_00.png, id=103, 1928.70563pt x 1928.70563
+ [15 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/FacialInde
+xDRMF.png (PNG copy)>] [16 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report
+_latex/imgs/Tracking_DRMF_eating.png> <C:/Users/Sidney/Documents/GitHub/MSc_Pro
+ject/report_latex/imgs/Talking_DRMF_140711_176_184.png>]
+<imgs/Tracking_Intraface_DRMF_compare_00.png, id=102, 1928.70563pt x 1928.70563
 pt>
 File: imgs/Tracking_Intraface_DRMF_compare_00.png Graphic file (type png)
  <use imgs/Tracking_Intraface_DRMF_compare_00.png>
 Package pdftex.def Info: imgs/Tracking_Intraface_DRMF_compare_00.png used on in
-put line 122.
+put line 119.
 (pdftex.def)             Requested size: 312.9803pt x 312.95479pt.
 
-<imgs/Tracking_Intraface_DRMF_comparison.png, id=104, 1928.70563pt x 1928.70563
+<imgs/Tracking_Intraface_DRMF_comparison.png, id=103, 1928.70563pt x 1928.70563
 pt>
 File: imgs/Tracking_Intraface_DRMF_comparison.png Graphic file (type png)
  <use imgs/Tracking_Intraface_DRMF_comparison.png>
 Package pdftex.def Info: imgs/Tracking_Intraface_DRMF_comparison.png used on in
-put line 125.
+put line 122.
 (pdftex.def)             Requested size: 312.9803pt x 312.95479pt.
- [17] [18 <./imgs/Tracking_Intraface_DRMF_compare_00.png> <./imgs/Tracking_Intr
-aface_DRMF_comparison.png>] <imgs/160954_Deform_233.png, id=114, 681.29532pt x 
-284.56313pt>
+ [17] [18 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Track
+ing_Intraface_DRMF_compare_00.png> <C:/Users/Sidney/Documents/GitHub/MSc_Projec
+t/report_latex/imgs/Tracking_Intraface_DRMF_comparison.png>]
+<imgs/160954_Deform_233.png, id=113, 681.29532pt x 284.56313pt>
 File: imgs/160954_Deform_233.png Graphic file (type png)
 
 <use imgs/160954_Deform_233.png>
-Package pdftex.def Info: imgs/160954_Deform_233.png used on input line 134.
+Package pdftex.def Info: imgs/160954_Deform_233.png used on input line 131.
 (pdftex.def)             Requested size: 281.68515pt x 117.65294pt.
- [19 <./imgs/160954_Deform_233.png (PNG copy)>] <imgs/Warping_Intraface_213.png
-, id=119, 1206.00563pt x 603.75563pt>
+
+Underfull \vbox (badness 1067) has occurred while \output is active []
+
+ [19 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/160954_Def
+orm_233.png (PNG copy)>]
+<imgs/Warping_Intraface_213.png, id=118, 1206.00563pt x 603.75563pt>
 File: imgs/Warping_Intraface_213.png Graphic file (type png)
 
 <use imgs/Warping_Intraface_213.png>
-Package pdftex.def Info: imgs/Warping_Intraface_213.png used on input line 182.
+Package pdftex.def Info: imgs/Warping_Intraface_213.png used on input line 179.
 
 (pdftex.def)             Requested size: 234.73524pt x 117.50616pt.
-
-<imgs/lbp_yale.jpg, id=120, 666.49pt x 381.425pt>
+ [20]
+<imgs/lbp_yale.jpg, id=122, 666.49pt x 381.425pt>
 File: imgs/lbp_yale.jpg Graphic file (type jpg)
  <use imgs/lbp_yale.jpg>
-Package pdftex.def Info: imgs/lbp_yale.jpg used on input line 189.
+Package pdftex.def Info: imgs/lbp_yale.jpg used on input line 187.
 (pdftex.def)             Requested size: 234.73524pt x 134.33301pt.
 
-[20] <imgs/LBP_Example_1.png, id=124, 771.88374pt x 448.67625pt>
+[21 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Warping_Int
+raface_213.png> <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs
+/lbp_yale.jpg>] <imgs/LBP_Example_1.png, id=128, 771.88374pt x 448.67625pt>
 File: imgs/LBP_Example_1.png Graphic file (type png)
 
 <use imgs/LBP_Example_1.png>
-Package pdftex.def Info: imgs/LBP_Example_1.png used on input line 199.
+Package pdftex.def Info: imgs/LBP_Example_1.png used on input line 197.
 (pdftex.def)             Requested size: 281.68515pt x 163.73466pt.
 
-<imgs/LBP_Example_2.png, id=125, 830.10126pt x 194.7275pt>
+<imgs/LBP_Example_2.png, id=129, 830.10126pt x 194.7275pt>
 File: imgs/LBP_Example_2.png Graphic file (type png)
 
 <use imgs/LBP_Example_2.png>
-Package pdftex.def Info: imgs/LBP_Example_2.png used on input line 208.
+Package pdftex.def Info: imgs/LBP_Example_2.png used on input line 205.
 (pdftex.def)             Requested size: 281.68515pt x 66.07869pt.
- [21 <./imgs/Warping_Intraface_213.png> <./imgs/lbp_yale.jpg>] <imgs/LBP_Exampl
-e_3.png, id=134, 1243.64626pt x 297.11pt>
+
+Underfull \vbox (badness 1127) has occurred while \output is active []
+
+ [22 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/LBP_Exampl
+e_1.png> <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/LBP_Ex
+ample_2.png>] <imgs/LBP_Example_3.png, id=136, 1243.64626pt x 297.11pt>
 File: imgs/LBP_Example_3.png Graphic file (type png)
 
 <use imgs/LBP_Example_3.png>
-Package pdftex.def Info: imgs/LBP_Example_3.png used on input line 221.
+Package pdftex.def Info: imgs/LBP_Example_3.png used on input line 218.
 (pdftex.def)             Requested size: 469.47049pt x 112.15494pt.
 
-<imgs/LBP_Example_4.png, id=135, 883.3pt x 385.44pt>
+<imgs/LBP_Example_4.png, id=137, 883.3pt x 385.44pt>
 File: imgs/LBP_Example_4.png Graphic file (type png)
 
 <use imgs/LBP_Example_4.png>
-Package pdftex.def Info: imgs/LBP_Example_4.png used on input line 230.
+Package pdftex.def Info: imgs/LBP_Example_4.png used on input line 227.
 (pdftex.def)             Requested size: 469.47049pt x 204.8586pt.
- [22 <./imgs/LBP_Example_1.png> <./imgs/LBP_Example_2.png>]
-Underfull \vbox (badness 4108) has occurred while \output is active []
 
- [23 <./imgs/LBP_Example_3.png> <./imgs/LBP_Example_4.png>]) (./chapter2/chapte
-r2.tex
-[24]
+Underfull \vbox (badness 2418) has occurred while \output is active []
+
+ [23 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/LBP_Exampl
+e_3.png> <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/LBP_Ex
+ample_4.png>])
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\chapter2/chapter2.te
+x [24]
 Chapter 4.
 [25
 
 ] [26]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 60.
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 60.
 
-Underfull \vbox (badness 1226) has occurred while \output is active []
-
- [27]
-[28] <imgs/Result_Eating_Frame.png, id=159, 449.68pt x 337.26pt>
+[27] [28] <imgs/Result_Eating_Frame.png, id=158, 449.68pt x 337.26pt>
 File: imgs/Result_Eating_Frame.png Graphic file (type png)
 
 <use imgs/Result_Eating_Frame.png>
-Package pdftex.def Info: imgs/Result_Eating_Frame.png used on input line 113.
+Package pdftex.def Info: imgs/Result_Eating_Frame.png used on input line 117.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_Eating_Frame_1.png, id=160, 449.68pt x 337.26pt>
+<imgs/Result_Eating_Frame_1.png, id=159, 449.68pt x 337.26pt>
 File: imgs/Result_Eating_Frame_1.png Graphic file (type png)
 
 <use imgs/Result_Eating_Frame_1.png>
-Package pdftex.def Info: imgs/Result_Eating_Frame_1.png used on input line 120.
+Package pdftex.def Info: imgs/Result_Eating_Frame_1.png used on input line 124.
 
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
- [29]
-<imgs/Result_Eating_Sequence.png, id=165, 449.68pt x 337.26pt>
+
+<imgs/Result_Eating_Sequence.png, id=160, 449.68pt x 337.26pt>
 File: imgs/Result_Eating_Sequence.png Graphic file (type png)
 
 <use imgs/Result_Eating_Sequence.png>
-Package pdftex.def Info: imgs/Result_Eating_Sequence.png used on input line 131
+Package pdftex.def Info: imgs/Result_Eating_Sequence.png used on input line 135
 .
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_Eating_Sequence_1.png, id=166, 449.68pt x 337.26pt>
+<imgs/Result_Eating_Sequence_1.png, id=161, 449.68pt x 337.26pt>
 File: imgs/Result_Eating_Sequence_1.png Graphic file (type png)
 
 <use imgs/Result_Eating_Sequence_1.png>
 Package pdftex.def Info: imgs/Result_Eating_Sequence_1.png used on input line 1
-38.
+42.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_Talking_Frame.png, id=167, 449.68pt x 337.26pt>
+<imgs/Result_Talking_Frame.png, id=162, 449.68pt x 337.26pt>
 File: imgs/Result_Talking_Frame.png Graphic file (type png)
 
 <use imgs/Result_Talking_Frame.png>
-Package pdftex.def Info: imgs/Result_Talking_Frame.png used on input line 150.
+Package pdftex.def Info: imgs/Result_Talking_Frame.png used on input line 154.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_Talking_Frame_1.png, id=168, 449.68pt x 337.26pt>
+<imgs/Result_Talking_Frame_1.png, id=163, 449.68pt x 337.26pt>
 File: imgs/Result_Talking_Frame_1.png Graphic file (type png)
 
 <use imgs/Result_Talking_Frame_1.png>
-Package pdftex.def Info: imgs/Result_Talking_Frame_1.png used on input line 157
+Package pdftex.def Info: imgs/Result_Talking_Frame_1.png used on input line 161
 .
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_Talking_Sequence.png, id=169, 597.432pt x 403.106pt>
+<imgs/Result_Talking_Sequence.png, id=164, 597.432pt x 403.106pt>
 File: imgs/Result_Talking_Sequence.png Graphic file (type png)
 
 <use imgs/Result_Talking_Sequence.png>
-Package pdftex.def Info: imgs/Result_Talking_Sequence.png used on input line 16
-9.
+Package pdftex.def Info: imgs/Result_Talking_Sequence.png used on input line 17
+3.
 (pdftex.def)             Requested size: 234.73524pt x 158.37936pt.
 
-<imgs/Result_Talking_Sequence_1.png, id=170, 597.432pt x 403.106pt>
+<imgs/Result_Talking_Sequence_1.png, id=165, 597.432pt x 403.106pt>
 File: imgs/Result_Talking_Sequence_1.png Graphic file (type png)
 
 <use imgs/Result_Talking_Sequence_1.png>
 Package pdftex.def Info: imgs/Result_Talking_Sequence_1.png used on input line 
-176.
+180.
 (pdftex.def)             Requested size: 234.73524pt x 158.37936pt.
 
-<imgs/Result_NormalFace_Frame.png, id=171, 449.68pt x 337.26pt>
+<imgs/Result_NormalFace_Frame.png, id=166, 449.68pt x 337.26pt>
 File: imgs/Result_NormalFace_Frame.png Graphic file (type png)
 
 <use imgs/Result_NormalFace_Frame.png>
-Package pdftex.def Info: imgs/Result_NormalFace_Frame.png used on input line 18
-8.
+Package pdftex.def Info: imgs/Result_NormalFace_Frame.png used on input line 19
+2.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_NormalFace_Frame_1.png, id=172, 449.68pt x 337.26pt>
+<imgs/Result_NormalFace_Frame_1.png, id=167, 449.68pt x 337.26pt>
 File: imgs/Result_NormalFace_Frame_1.png Graphic file (type png)
 
 <use imgs/Result_NormalFace_Frame_1.png>
 Package pdftex.def Info: imgs/Result_NormalFace_Frame_1.png used on input line 
-195.
+199.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_NormalFace_Sequence.png, id=173, 449.68pt x 337.26pt>
+<imgs/Result_NormalFace_Sequence.png, id=168, 449.68pt x 337.26pt>
 File: imgs/Result_NormalFace_Sequence.png Graphic file (type png)
 
 <use imgs/Result_NormalFace_Sequence.png>
 Package pdftex.def Info: imgs/Result_NormalFace_Sequence.png used on input line
- 207.
+ 211.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_NormalFace_Sequence_1.png, id=174, 449.68pt x 337.26pt>
+<imgs/Result_NormalFace_Sequence_1.png, id=169, 449.68pt x 337.26pt>
 File: imgs/Result_NormalFace_Sequence_1.png Graphic file (type png)
 
 <use imgs/Result_NormalFace_Sequence_1.png>
 Package pdftex.def Info: imgs/Result_NormalFace_Sequence_1.png used on input li
-ne 214.
+ne 218.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_F1_Frame.png, id=175, 597.432pt x 403.106pt>
+<imgs/Result_F1_Frame.png, id=170, 597.432pt x 403.106pt>
 File: imgs/Result_F1_Frame.png Graphic file (type png)
 
 <use imgs/Result_F1_Frame.png>
-Package pdftex.def Info: imgs/Result_F1_Frame.png used on input line 226.
+Package pdftex.def Info: imgs/Result_F1_Frame.png used on input line 230.
 (pdftex.def)             Requested size: 234.73524pt x 158.37936pt.
 
-<imgs/Result_F1_Frame_1.png, id=176, 597.432pt x 403.106pt>
+<imgs/Result_F1_Frame_1.png, id=171, 597.432pt x 403.106pt>
 File: imgs/Result_F1_Frame_1.png Graphic file (type png)
 
 <use imgs/Result_F1_Frame_1.png>
-Package pdftex.def Info: imgs/Result_F1_Frame_1.png used on input line 233.
+Package pdftex.def Info: imgs/Result_F1_Frame_1.png used on input line 237.
 (pdftex.def)             Requested size: 234.73524pt x 158.37936pt.
 
-<imgs/Result_F1_Sequence.png, id=177, 449.68pt x 337.26pt>
+<imgs/Result_F1_Sequence.png, id=172, 449.68pt x 337.26pt>
 File: imgs/Result_F1_Sequence.png Graphic file (type png)
 
 <use imgs/Result_F1_Sequence.png>
-Package pdftex.def Info: imgs/Result_F1_Sequence.png used on input line 245.
+Package pdftex.def Info: imgs/Result_F1_Sequence.png used on input line 249.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
 
-<imgs/Result_F1_Sequence_1.png, id=178, 449.68pt x 337.26pt>
+<imgs/Result_F1_Sequence_1.png, id=173, 449.68pt x 337.26pt>
 File: imgs/Result_F1_Sequence_1.png Graphic file (type png)
 
 <use imgs/Result_F1_Sequence_1.png>
-Package pdftex.def Info: imgs/Result_F1_Sequence_1.png used on input line 252.
+Package pdftex.def Info: imgs/Result_F1_Sequence_1.png used on input line 256.
 (pdftex.def)             Requested size: 234.73524pt x 176.05035pt.
- [30 <./imgs/Result_Eating_Frame.png (PNG copy)> <./imgs/Result_Eating_Frame_1.
-png (PNG copy)>] [31 <./imgs/Result_Eating_Sequence.png (PNG copy)> <./imgs/Res
-ult_Eating_Sequence_1.png (PNG copy)> <./imgs/Result_Talking_Frame.png (PNG cop
-y)> <./imgs/Result_Talking_Frame_1.png (PNG copy)>] [32 <./imgs/Result_Talking_
-Sequence.png (PNG copy)> <./imgs/Result_Talking_Sequence_1.png (PNG copy)>] [33
- <./imgs/Result_NormalFace_Frame.png (PNG copy)> <./imgs/Result_NormalFace_Fram
-e_1.png (PNG copy)> <./imgs/Result_NormalFace_Sequence.png (PNG copy)> <./imgs/
-Result_NormalFace_Sequence_1.png (PNG copy)>] [34 <./imgs/Result_F1_Frame.png (
-PNG copy)> <./imgs/Result_F1_Frame_1.png (PNG copy)> <./imgs/Result_F1_Sequence
-.png (PNG copy)> <./imgs/Result_F1_Sequence_1.png (PNG copy)>]
+ [29]
+Underfull \vbox (badness 1077) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+ [30 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Result_Eat
+ing_Frame.png (PNG copy)> <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_
+latex/imgs/Result_Eating_Frame_1.png (PNG copy)>] [31 <C:/Users/Sidney/Document
+s/GitHub/MSc_Project/report_latex/imgs/Result_Eating_Sequence.png (PNG copy)> <
+C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Result_Eating_Se
+quence_1.png (PNG copy)> <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_l
+atex/imgs/Result_Talking_Frame.png (PNG copy)> <C:/Users/Sidney/Documents/GitHu
+b/MSc_Project/report_latex/imgs/Result_Talking_Frame_1.png (PNG copy)>] [32 <C:
+/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Result_Talking_Seq
+uence.png (PNG copy)> <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_late
+x/imgs/Result_Talking_Sequence_1.png (PNG copy)>] [33 <C:/Users/Sidney/Document
+s/GitHub/MSc_Project/report_latex/imgs/Result_NormalFace_Frame.png (PNG copy)> 
+<C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Result_NormalFa
+ce_Frame_1.png (PNG copy)> <C:/Users/Sidney/Documents/GitHub/MSc_Project/report
+_latex/imgs/Result_NormalFace_Sequence.png (PNG copy)> <C:/Users/Sidney/Documen
+ts/GitHub/MSc_Project/report_latex/imgs/Result_NormalFace_Sequence_1.png (PNG c
+opy)>]
+Underfull \vbox (badness 1783) has occurred while \output is active []
 
-[35] <imgs/Wrong_NF00.jpg, id=198, 1927.2pt x 963.6pt>
+ [34 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Result_F1_
+Frame.png (PNG copy)> <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_late
+x/imgs/Result_F1_Frame_1.png (PNG copy)> <C:/Users/Sidney/Documents/GitHub/MSc_
+Project/report_latex/imgs/Result_F1_Sequence.png (PNG copy)> <C:/Users/Sidney/D
+ocuments/GitHub/MSc_Project/report_latex/imgs/Result_F1_Sequence_1.png (PNG cop
+y)>]
+[35] <imgs/Wrong_NF00.jpg, id=197, 1927.2pt x 963.6pt>
 File: imgs/Wrong_NF00.jpg Graphic file (type jpg)
 
 <use imgs/Wrong_NF00.jpg>
-Package pdftex.def Info: imgs/Wrong_NF00.jpg used on input line 308.
+Package pdftex.def Info: imgs/Wrong_NF00.jpg used on input line 312.
 (pdftex.def)             Requested size: 469.47049pt x 234.724pt.
- <imgs/Wrong_E00.jpg, id=199, 1927.2pt x 963.6pt>
+ [36]
+<imgs/Wrong_E00.jpg, id=201, 1927.2pt x 963.6pt>
 File: imgs/Wrong_E00.jpg Graphic file (type jpg)
-
-<use imgs/Wrong_E00.jpg>
-Package pdftex.def Info: imgs/Wrong_E00.jpg used on input line 315.
+ <use imgs/Wrong_E00.jpg>
+Package pdftex.def Info: imgs/Wrong_E00.jpg used on input line 320.
 (pdftex.def)             Requested size: 469.47049pt x 234.724pt.
- <imgs/Wrong_T00.jpg, id=200, 963.6pt x 481.8pt>
-File: imgs/Wrong_T00.jpg Graphic file (type jpg)
 
-<use imgs/Wrong_T00.jpg>
-Package pdftex.def Info: imgs/Wrong_T00.jpg used on input line 323.
+<imgs/Wrong_T00.jpg, id=202, 963.6pt x 481.8pt>
+File: imgs/Wrong_T00.jpg Graphic file (type jpg)
+ <use imgs/Wrong_T00.jpg>
+Package pdftex.def Info: imgs/Wrong_T00.jpg used on input line 327.
 (pdftex.def)             Requested size: 469.47049pt x 234.73135pt.
- [36 <./imgs/Wrong_NF00.jpg>])
-(./conclusion/conclusion.tex [37 <./imgs/Wrong_E00.jpg>] [38 <./imgs/Wrong_T00.
-jpg>]
+
+Underfull \vbox (badness 3209) has occurred while \output is active []
+
+ [37 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Wrong_NF00
+.jpg> <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Wrong_E00
+.jpg>])
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\conclusion/conclusio
+n.tex [38 <C:/Users/Sidney/Documents/GitHub/MSc_Project/report_latex/imgs/Wrong
+_T00.jpg>]
 Chapter 5.
-) (./report_2014sep.bbl [39
+) (C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\report_2014sep.bbl
+[39
 
 ] [40
 
-]) (./appendix/appendix.tex [41]
+])
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\appendix/appendix.te
+x [41]
 Appendix A.
 
 Overfull \hbox (12.5499pt too wide) in paragraph at lines 4--11
@@ -1066,35 +1081,37 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 Appendix B.
 ) [45
 
-] (./report_2014sep.aux (./cover/cover.aux)) ) 
+]
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\report_2014sep.aux
+(C:\Users\Sidney\Documents\GitHub\MSc_Project\report_latex\cover/cover.aux)) ) 
 Here is how much of TeX's memory you used:
- 6080 strings out of 494966
- 86363 string characters out of 3178674
- 219065 words of memory out of 3000000
- 9055 multiletter control sequences out of 15000+200000
+ 5805 strings out of 493921
+ 84609 string characters out of 3144873
+ 210899 words of memory out of 3000000
+ 8882 multiletter control sequences out of 15000+200000
  12233 words of font info for 44 fonts, out of 3000000 for 9000
- 36 hyphenation exceptions out of 8191
- 41i,19n,38p,1814b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmtt9.pfb>
-Output written on report_2014sep.pdf (53 pages, 25818123 bytes).
+ 841 hyphenation exceptions out of 8191
+ 41i,19n,38p,1814b,409s stack positions out of 5000i,500n,10000p,200000b,50000s
+<
+C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/P
+rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmtt9.pfb>
+Output written on report_2014sep.pdf (53 pages, 25845095 bytes).
 PDF statistics:
- 286 PDF objects out of 1000 (max. 8388607)
- 168 compressed objects within 2 object streams
+ 283 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  191 words of extra memory for PDF output out of 10000 (max. 10000000)
 

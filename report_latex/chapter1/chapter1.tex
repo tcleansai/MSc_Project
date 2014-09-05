@@ -16,15 +16,15 @@ Figure \ref{fig:proc} shows main procedure of the whole project. At beginning, s
 \caption{Data Flow}
 \label{fig:DF}
 \end{figure}
-Figure \ref{fig:DF} shows at how data flows from step to step. There are two types of encoded video, one is in format of flv and the other is avi. Extracting frames from videos is proceeded with Intraface and stored in formats of jpeg and mat which used for processing of matlab. Interface integrate the function of opencv and provide the interface for extracting frames from video. However, there are several situations that a track is unable to track a face in the image such as no subject in the image such as when the head is facing away from camera or face is partially not shown in the frame. Frame index points used to keep tracking those frame index that the tracker is able to tracker a face in a frame. Data 'Images' is the frame images stored in mat format. Different tracker may track different number of characteristic facial points. Intraface tracks 49 facial points and DRMF tracks 66 points. Deformed points is the tracking point after the facial feature point were transformed to frontal face, as a deformable model was used, it is named as deformed points. Warped Images is the face after warping to frontal and usually it contains the part of face covered by mesh grid built by tracking points. Appearance feature is face feature extracted using local binary pattern (LBP). As the image size from image to warped images are changed, the points is rescaled from deformed point to scaled points.
+Figure \ref{fig:DF} shows how data flows from step to step. There are two types of encoded video, one is in format of flv and the other is avi. Extracting frames from videos is proceeded with Intraface and stored in formats of jpeg and mat which used for processing of matlab. Interface integrate the function of opencv and provide the interface for extracting frames from video. However, there are several situations that a track is unable to track a face in the image such as no subject in the image such as when the head is facing away from camera or face is partially not shown in the frame. Frame index points used to keep tracking those frame index that the tracker is able to tracker a face in a frame. Data 'Images' is the frame images stored in mat format. Different tracker may track different number of characteristic facial points. Intraface tracks 49 facial points and DRMF tracks 66 points. Deformed points is the tracking point after the facial feature point were transformed to frontal face, as a deformable model was used, it is named as deformed points. Warped Images is the face after warping to frontal and usually it contains the part of face covered by mesh grid built by tracking points. Appearance feature is face feature extracted using local binary pattern (LBP). As the image size from image to warped images are changed, the points is rescaled from deformed point to scaled points.
 
 \section{Face Alignment}
 
 Face alignment is to align face in one image with respect to the same face in another image. Face alignment techniques are used to track characteristic facial points in image sequences. In this project, the aim of face alignment is to localise the feature points on face images. The points are usually around eyes, nose, mouth, and outline. Face alignment techniques are essential on face recognition, modelling and synthesis. There are three main different approaches Parametrized Appearance Models(PAMs), Discriminative approaches, Part-based deformable models. Parametrized appearance models contains many models such as active appearance models (AAMs), morphrable models, eigentrackings, and template tracking \cite{xiong2013supervised}. All these models are using Principle Component Analysis(PCA) method to parametrize a face. A face could approximately be decomposed as linear combination of shape basis and appearance basis. The problem of face alignment could be referred as minimising the difference between the constructed PAM and the face. Common approach is use Gauss-Newton methods \cite{xiong2013supervised}. Discriminative approaches are to learn the linear regression between the head move and appearance change. Part-based deformable model perform face alignment by maximising the posterior likelihood of part locations given image\cite{xiong2013supervised}.
 
 \subsection{Active Appearance Model}
-Active Appearance Model (AAMs) is defined as a generative model of a certain visual phenomenon in \cite{matthews2004active}. AAMs are conceptually related to morphable models, constrained models and active blobs. In this project, it is refer to a model of face. As AAM is conceptually related to other parameterized appearance model and both Intraface and DRMF used parameterized models, so it is introduced as an example of parameterized appearance model for understanding purpose. According to \cite{matthews2004active}, there are two types of AAMs, one refers as independent shape and appearance models, which model shape and appearance independently, and the other refers as combined shape and appearance models, which parameterized shape and appearance model with a single set of linear parameters \cite{matthews2004active}. Normally AAMs appears along with a fitting algorithm. However, in the following context, it only refers to a model.\cite{matthews2004active} gave a well explain about what is an AAM, most of following theory are from \cite{matthews2004active}.
-\paragraph{Shape}
+Active Appearance Model (AAMs) is defined as a generative model of a certain visual phenomenon in \cite{matthews2004active}. AAMs are conceptually related to morphable models, constrained models and active blobs. In this project, it is refer to a model of face. As AAM is conceptually related to other parameterized appearance model and both Intraface and DRMF used parameterized models, so it is introduced as an example of parameterized appearance model for understanding purpose. According to \cite{matthews2004active}, there are two types of AAMs, one refers as independent shape and appearance models, which model shape and appearance independently, and the other refers as combined shape and appearance models, which parameterized shape and appearance model with a single set of linear parameters \cite{matthews2004active}. Normally AAMs appears along with a fitting algorithm. However, in the following context, it only refers to a model.\cite{matthews2004active} gives a well explaination about what is an AAM, most of following theory are from \cite{matthews2004active}.
+\subsubsection{Shape Feature}
 Shape of a face $s$ is defined by coordinates $(x,y)$ of $v$ vertices of face points and the mesh they built:
 \begin{equation}
 s = (x_{1},y_{1},x_{2},y_{2},...,x_{v},y_{v})^{T}
@@ -34,21 +34,19 @@ $s$ also can be expressed as a base shape $s_{0}$ plus linear combination of $n$
 \begin{equation}
 s = s_{i} + \sum_{i =1}^{n}p_{i}s_{i}
 \end{equation}
-\paragraph{Appearance}
+\subsubsection{Appearance Feature}
 For all pixels x in the mesh $s_{0}$, appearance $A(0)$ can be expressed by base appearance $A_{0}(x)$ and m appearance images $A_{i}(x)$.
 \begin{equation}
 A(x) = A_{0}(x) + \sum_{i=1}^{m}\lambda_{i}A_{i}(x) \qquad \forall x \in s_{0}
 \end{equation}
 \newline
-AAMs are usually computed by applying Principle Component Analysis (PCA) to choose images. The chosen images contains a variety of shapes. The base shape $s_{0}$ is the mean shape and the vector $s_{v}$ is the eigenvector corresponding to the largest $v$ eigenvalues. Base appearance $A_{0}$ and appearance $A_{i}$ is computed by applying Principle Component Analysis to a set of shape normalised images.
+AAMs are usually computed by applying Principle Component Analysis (PCA) to chosen images. The chosen images have a variety of shapes. The base shape $s_{0}$ is the mean shape and vector $s_{v}$ is the eigenvector corresponding to the largest $v$ eigenvalues. Base appearance $A_{0}$ and appearance $A_{i}$ is computed by applying Principle Component Analysis to a set of shape normalised images.
 \paragraph{Model} 
 $W(x:p)$ is the warp from $s_{0}$ to $s$. Then the model $M$ set the appearance of $W(x:p)$ to $A(x)$.
 \begin{equation}
 M(W(x:p)) = A(x)
 \end{equation}
-\newline
-Combined AAMs
-\newline
+\subsubsection{Combined AAMs}
 Combined AAMs just use parameter $c = (c_{1},c_{2}, ...)^{T}$ to parametrize shape:
 \begin{equation}
 s = s_{0} + \sum_{i=1}^{l}c_{i}s_{i}
@@ -78,7 +76,6 @@ Figure \ref{fig:IPI} shows the tracking points of Intraface. This tracker tracks
 \end{figure}
 \paragraph{Eating and Talking Sequence}
 Figure \ref{fig:IES} shows a sequence of image of eating tracked by Intraface. The point are aligned very precisely along the face. Figure \ref{fig:ITS} shows a talking sequences of image tracked by Intraface. The landmark points of mouth is very accurate.
-
 \begin{figure}[p]
 \centering
 \includegraphics[width=110mm]{imgs/Tracking_Intraface_eating_red.png}
@@ -128,7 +125,7 @@ In figure \ref{fig:cmp02}, in the top left image, DRMF is unable to fit a face t
 \end{figure}
 \newpage
 \section{Remove Head-pose}
-Subjects were unrestricted while they were recording the video, their head pose are vary different. The coordinate of facial feature points are different for each video frame. In order to unite the head, we need to remove the head pose from the coordinates of facial feature points.  If define the horizontal direction is x, the vertical direction is y and z is the direction, subject facing camera. It is very easy to remove head-pose in x-y direction, just by rotating and scaling the points would remove the head-pose. If the subject had a head-pose in x-z and y-z direction, it would be hard to find the correct transformation matrix for tracked facial points. The algorithm of removing head-pose from tracking points is \cite{saragih2011deformable}. Basically, it has a deformable 3-D Constrained Local Model(CLM), minimize the error of fitting the model and the 2D points and then remove head-pose and give the new 2D points. Figure \ref{fig:RHP} gave two example of original track points and deformed points. From figure \ref{fig:RHP}, we can see this method could remove head-pose without losing information of mouth shape.
+Remove head-pose means, to transform shape feature vector to frontal and warp appearance feature vector to frontal. Subjects were unrestricted while they were recording the video, their head pose are vary different. The coordinate of facial feature points are different for each video frame. In order to unite the head, we need to remove the head pose from the coordinates of facial feature points.  If define the horizontal direction is x, the vertical direction is y and z is the direction, subject facing camera. It is very easy to remove head-pose in x-y direction, just by rotating and scaling the points would remove the head-pose. If the subject had a head-pose in x-z and y-z direction, it would be hard to find the correct transformation matrix for tracked facial points. The algorithm of removing head-pose from tracking points is \cite{saragih2011deformable}. Basically, it has a deformable 3-D Constrained Local Model(CLM), minimize the error of fitting the model with the 2D points and then remove head-pose and give the new 2D points. Figure \ref{fig:RHP} gave one example of original track points and deformed points. From figure \ref{fig:RHP}, we can see this method could remove head-pose without losing or changing too much information of mouth shape.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=.6\textwidth]{imgs/160954_Deform_233.png}
@@ -136,13 +133,13 @@ Subjects were unrestricted while they were recording the video, their head pose 
 \label{fig:RHP}
 \end{figure}
 \section{Warping}
-There are two types of features we need to extract, shape feature and appearance feature, the previous section just remove heap-pose of shape feature vector. The appearance of face on image is not correctly showing a face that could be directly used for classification, as the face is not facing to frontal. In order to have head-pose free face, we need to distort the image to the one we need. In here I use Piece-wise Affine\cite{AAMWarp} to warp the image. According to the model in Active Appearance Model. We need to warping image from one to another with respect to the mapping of shape feature points set ${p_{1}, p_{2}, ...p_{n}}$ into another point set ${p'_{1}, p'_{2}, ... p'_{n}}$. Each point is represented as $p = [x,y]^{T}$. The mapping function would be:
+There are two types of features we need to extract, shape feature and appearance feature, the previous section just remove heap-pose of shape feature vector, in order to remove warp face image to frontal. Appearance of face on image is not correctly showing a face so it could not be directly used for classification, as the face is not facing to frontal. In order to have head-pose free face, we need to distort the image to frontal face that we need. In this step Piece-wise Affine\cite{AAMWarp} is used to warp the face image. According to the model in Active Appearance Model. We need to warping image from one to another with respect to the mapping of shape feature points set ${p_{1}, p_{2}, ...p_{n}}$ into another point set ${p'_{1}, p'_{2}, ... p'_{n}}$ which we calculated in the previous step. Each point is represented as $p = [x,y]^{T}$. The mapping function would be:
 \begin{equation}
 f(p_{i}) = p'_{i} \quad \forall \ i = 1...n
 \label{eq:W1}
 \end{equation}
 \newline
-Piece-wise Affine assume that f is locally linear. In 2-D framework like 2-D AAM, first find the mesh-grid constructed by all shape feature points. Delaunay triangulation is a good way to express it. In Delaunay triangulation, there are no points inside its circumcise. Then the problem is to find the mapping function $f$ to map the triangle mesh of the first point set and the second point set. For each points on each triangle of the first point set $I$ can be mapped to unique points on each triangles of the second point set $I'$ by affine transformation, which is combination of translation, rotation and scaling. Assume $p_{1}$, $p_{2}$ and $p_{3}$ are vertices of a triangle in $I$, then the points inside the triangle can be written as:
+Piece-wise Affine assume that $f$ is locally linear. In 2-D framework like 2-D AAM, first find the mesh-grid constructed by all shape feature points. Delaunay triangulation is a good way to express it. In Delaunay triangulation, there are no points inside its circumcise. Then the problem is to find the mapping function $f$ to map the triangle mesh of the first point set and the second point set. For each points on each triangle of the first point set $I$ can be mapped to unique points on each triangles of the second point set $I'$ by affine transformation, which is combination of translation, rotation and scaling. Assume $p_{1}$, $p_{2}$ and $p_{3}$ are vertices of a triangle in $I$, then the points inside the triangle can be written as:
 \begin{equation}
 \begin{split}
 p 
@@ -176,14 +173,15 @@ Equation \ref{eq:CABR} give the function to calculate $\alpha$,$\beta$,$\gamma$,
 \item set the value of $p'$ in $I$ to the value of $p$ in $I$
 \item end
 \end{enumerate}
-Following is the warping result, the image was not highly distorted as the face is basically facing to the frontal. However, it is easy to notice the face is a little rotated to the right and there is a small change on the shape of mouth.
+Figure \ref{fig:warp} is an example warping, the image was not highly distorted as the face is basically facing to the frontal. However, it is also to visual that the face is a little rotated to the right and there is a small change on the shape of mouth region.
 \begin{figure}[ht]
 \centering
 \includegraphics[width=.5\textwidth]{imgs/Warping_Intraface_213.png}
 \caption{Talking sequence tracked by Intraface}
+\label{fig:warp}
 \end{figure}
 \section{Feature Extraction}
-The warped images are not directly used for classification, as the image value are sensitive to illumination, and noise. In addition, the dimensionality of image vector could be very large. An effective facial representation from original image is vital for classification. Experiments of \cite{shan2009facial} shows that Local Binary Pattern(LBP) features are effective and efficient for facial expression recognition. The best performance of \cite{shan2009facial} is obtained by combing Support Vector Machine and Boosted-LBP features. \cite{shan2009facial} also shows that LBP feature perform stably and robustly on low-resolution facial expression recognition. There are several reasons to use LBP: firstly LBP is robust to monotonic changes in illumination shown in figure \ref{fig:LBPE00}; secondly, computational simplicity, the calculation only contain integer math and there is no need for preprocessing; thirdly, the time complex is $O(n)$.
+Feature extraction is to extract suitable feature that is able to represent ROI according to the requirement of classification. The warped images are not directly used for classification, as the image value are sensitive to illumination, and noise. In addition, the dimensionality of image vector could be very large. An effective facial representation from original image is vital for classification. Experiments of \cite{shan2009facial} shows that Local Binary Pattern(LBP) features are effective and efficient for facial expression recognition. The best performance of \cite{shan2009facial} is obtained by combing Support Vector Machine and Boosted-LBP features. \cite{shan2009facial} also shows that LBP feature perform stably and robustly on low-resolution facial expression recognition. There are several reasons to use LBP: firstly LBP is robust to monotonic changes in illumination shown in figure \ref{fig:LBPE00}; secondly, computational simplicity, the calculation only contain integer math and there is no need for preprocessing; thirdly, the time complex is $O(n)$.
 \begin{figure}[ht]
 \centering
 \includegraphics[width = .5\textwidth]{imgs/lbp_yale.jpg}
@@ -192,7 +190,7 @@ The warped images are not directly used for classification, as the image value a
 \end{figure}
 \footnotetext{LBP Example From \url{http://docs.opencv.org/modules/contrib/doc/facerec/facerec_tutorial.html#id22}}
 \subsection{Local Binary Pattern}
-Texture is an important characteristic of images and videos. 2-D surface can be characterized by two properties: pattern and contrast. In the warping step, the image was transformed to gray scale and we need a grayscale rotation invariant pattern to measure. LBP is invariant to any monotonic gray level change and it is easy to compute. Ojala et al(1996) introduced the fist generation of LBP operator \cite{shan2009facial}, it was proved to be a powerful texture descriptor. Figure \ref{fig:LBPE01} show how to calculate LBP value of a pixel and the contrast of the pixel.
+Texture is an important characteristic of images and videos. 2-D surface can be characterized by two properties: pattern and contrast. In the warping step, the image was transformed to gray scale and we need a gray-scale rotation invariant pattern to measure. LBP is invariant to any monotonic gray level change and it is easy to compute. Ojala et al(1996) introduced the fist generation of LBP operator \cite{shan2009facial}, it was proved to be a powerful texture descriptor. Figure \ref{fig:LBPE01} show how to calculate LBP value of a pixel and the contrast of the pixel.
 \begin{figure}[ht]
 \centering
 \captionsetup{justification=centering, margin=3cm}
@@ -200,7 +198,6 @@ Texture is an important characteristic of images and videos. 2-D surface can be 
 \caption{An Example of Calculating LBP code and \newline a contrast measure of single pixel, image from \cite{maenpaa2005texture}}
 \label{fig:LBPE01}
 \end{figure}
-\newline
 The binary number could be used for coding types of curved edges, spots, flat area, etc as shown in figure \ref{fig:LBPE02}. Figure \ref{fig:LBPE02} is using circular pattern. In implementation, the on-grid points($g_{0}-g_{4}$points in figure \ref{fig:LBPE03}) directly use sample data for calculation, but the off-grid points(the points in the second grid($P=8,R=1$), not in grid($P=4,R=1)$) in figure \ref{fig:LBPE03}) are calculating using interpolation. The 3X3 structure can not capture dominant feature for large scale structure\cite{shan2009facial}. So Ojala et al extend LBP to multiple scales as shown in figure \ref{fig:LBPE03}.
 \begin{figure}[ht]
 \centering
@@ -232,8 +229,8 @@ Ojala et al proposed multi-scale LBP in \cite{ojala2002multiresolution}, which c
 \label{fig:LBPE04}
 \end{figure}
 \section{Postprocessing}
-As it is known large margin classifiers are sensitive to the way features are scaled, it's better to normalize either the data or the kernel function \cite{ben2010user}. Feature of an image is represented by a vector, the number in the vector would influence the weight of feature in this dimension. As I would like to treat each dimension similar, I scale the number in the range of $[0,1]$.
+As it is known large margin classifiers are sensitive to the way features are scaled, it's better to normalize either the data or the kernel function \cite{ben2010user}. Feature of an image is represented by a vector, the number in the vector would influence the weight of feature in this dimension. In this experiment each dimension is treated equally, the number in the vector is scaled to$[0,1]$.
 \paragraph{Normalization}
-The performance of SVM is usually better if the data is normalized. There are two ways of applying normalization, standardizing the input features or normalizing the kernel function. As I am using the built-in function of libsvm \cite{CC01a}, so I standardising the input features by subtracting its mean and divide by its standard deviation.
+It is proven that the performance of SVM is usually better if the data is normalized. There are two ways of applying normalization, standardizing the input features or normalizing the kernel function. In the training part, the data was standardising by subtracting its mean and divide by its standard deviation.
 \paragraph{Scaling}
 The range of appearance feature vector and shape feature vector is different. I would like to treat then as the same. So I scale all the vector into the range of $[0, 1]$, by subtract the minimum and divide by the maximum number of each dimension.
