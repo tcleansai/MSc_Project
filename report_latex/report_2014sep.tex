@@ -38,16 +38,22 @@
 \tableofcontents
 \listoffigures
 \listoftables
+%\newpage\null\thispagestyle{empty}\newpage
 
 \input{introduction/introduction}
 \input{background/background}
+%\newpage\null\thispagestyle{empty}\newpage
 \input{chapter1/chapter1}
+%\newpage\null\thispagestyle{empty}\newpage
 \input{chapter2/chapter2}
 \input{conclusion/conclusion}
+%\newpage\null\thispagestyle{empty}\newpage
 
 \bibliographystyle{plain}
 \bibliography{bibliography/bibliography}
-
-\input{appendix/appendix}
+\appendix
+\input{appendix/appendixA}
+%\newpage\null\thispagestyle{empty}\newpage
+\input{appendix/appendixB}
 
 \end{document}
